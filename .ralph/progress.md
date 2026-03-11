@@ -588,3 +588,55 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - All solution page content was already extracted in S02 (solutionsPageData) — just needed widget components
   - MediaQuery children pattern works with JSX children (not children prop) per S05 learnings
 ---
+
+## [2026-03-11] - S11: Ecosystem Page
+Thread:
+Run: 20260311-151158-48493 (iteration 11)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-11.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-11.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 173beb1 feat(ecosystem): add ecosystem page with project grid, filtering, and grant section
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (ecosystem page 9.88 kB, 17 static pages)
+  - Command: Browser screenshot desktop (1440px) -> PASS (hero, controls, projects grid, grant, disclaimer)
+  - Command: Browser screenshot mobile (375px) -> PASS (responsive layout, stacked filters, single-col grid)
+- Files changed:
+  - src/app/ecosystem/page.tsx (ecosystem page route with EcosystemProvider and DefaultLayout)
+  - src/widgets/ecosystem-screens/index.ts (barrel export)
+  - src/widgets/ecosystem-screens/ui/index.ts (barrel export for Hero, Controls, Projects, Grant, Disclaimer)
+  - src/widgets/ecosystem-screens/provider/index.tsx (EcosystemProvider context with search/type/category filters)
+  - src/widgets/ecosystem-screens/ui/hero/index.tsx (hero with Lottie animation, title, card, CTA, HeroDapps)
+  - src/widgets/ecosystem-screens/ui/hero/hero.module.scss (responsive hero with overlaid card, dApps cutout)
+  - src/widgets/ecosystem-screens/ui/hero-dapps/index.tsx (100+ dApps counter with logo avatars)
+  - src/widgets/ecosystem-screens/ui/hero-dapps/hero-dapps.module.scss (avatar overlap, counter styling)
+  - src/widgets/ecosystem-screens/ui/controls/index.tsx (search input, type Select2, category Select2)
+  - src/widgets/ecosystem-screens/ui/controls/controls.module.scss (search field, selects, responsive stacking)
+  - src/widgets/ecosystem-screens/ui/projects/index.tsx (filtered projects with useMemo, pagination state)
+  - src/widgets/ecosystem-screens/ui/projects/projects.module.scss (last update pill, view more button)
+  - src/widgets/ecosystem-screens/ui/projects-list/index.tsx (project card grid with icon, type badge, categories)
+  - src/widgets/ecosystem-screens/ui/projects-list/projects-list.module.scss (4->3->2->1 responsive grid, card hover)
+  - src/widgets/ecosystem-screens/ui/grant/index.tsx (grant section with suptitle, rich text, Banner CTA)
+  - src/widgets/ecosystem-screens/ui/grant/grant.module.scss (two-column layout, gradient banner border)
+  - src/widgets/ecosystem-screens/ui/disclaimer/index.tsx (disclaimer text with GitHub repo link)
+  - src/widgets/ecosystem-screens/ui/disclaimer/disclaimer.module.scss (card with hover effect, pink text)
+- What was implemented:
+  - Ecosystem page (/ecosystem) with 5 sections: Hero, Controls, Projects, Grant, Disclaimer
+  - Hero: Lottie animation (desktop/mobile variants via MediaQuery), "Explore the Taiko Ecosystem" title with pink span, white card overlay with description and "Submit your project" CTA, 100+ dApps counter with avatar logos and box-shadow cutout
+  - Controls: search input with magnifier icon, type filter Select2 (All Types, Mainnet, Testnet, Coming Soon), category filter Select2 (All Categories + 8 project categories)
+  - Projects: client-side filtering by search (name/description), type, and category using useMemo; pagination with 12 items per page and "View more" button; "Last updated on" timestamp pill with timer icon
+  - ProjectsList: responsive grid (4->3->2->1 columns), project cards with icon, type badge (color-coded: green Mainnet, orange Testnet, gray Coming Soon), name, description (3-line clamp), category pills, hover elevation effect
+  - Grant: two-column with "TAIKO GRANTS" pink suptitle, "Building on Taiko and need financial or other support? Apply for a grant!" rich text, Banner component with gradient border and "Learn more" CTA linking to /grant-program
+  - Disclaimer: hoverable card with pink disclaimer text and GitHub repo link
+  - EcosystemProvider context wrapping Controls + Projects for shared filter state
+  - All content from static ecosystemPageData, projects, and projectCategories data files
+- **Learnings for future iterations:**
+  - EcosystemProvider needs to wrap both Controls and Projects since they share filter state — placed at page level
+  - Select2 component from src/components/select-2 works well as drop-in replacement for source repo's TaikoSelect
+  - Client-side filtering with useMemo is simpler than source repo's React Query infinite scroll approach
+  - Project card type badges use data-type attribute for CSS color variants (green/orange/gray)
+  - setGrid mixin uses flex with calc-based widths for responsive grid — matches source repo's grid pattern
+  - LottiePlayer needs 'use client' wrapper component for SSR safety (already available from S04)
+---
