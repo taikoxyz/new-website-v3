@@ -849,7 +849,7 @@
       "id": "S07",
       "title": "About Page",
       "description": "Implement the About page (/about) with all sections. Hero with title. Community section (suptitle, title, text). Mission section (suptitle, title, text, fact sub-section). Brand link section (our brand, view brand CTA linking to /brand-assets). Careers section (suptitle, title with HTML, text, view button linking to /careers). Use content from source repo translation files.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -860,14 +860,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-11T20:56:34.019853+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T20:56:34.020009+00:00"
+      "completedAt": "2026-03-11T21:04:22.901203+00:00",
+      "updatedAt": "2026-03-11T21:04:22.900860+00:00"
     },
     {
       "id": "S08",
       "title": "Blog Listing & Article Pages",
       "description": "Implement the Blog listing page (/blog) with paginated grid of blog cards (image, title, date, timeToRead, category), category filter sidebar, date filter dropdown, and pagination. Implement the Blog article page (/blog/[slug]) with article header (title, date, timeToRead, category, image), MDX article body rendering, optional How to Apply section, latest articles sidebar, and previous/next navigation. Use blog data from src/content/blog/ MDX files and src/content/data/blog-categories.ts. Content utility functions should handle pagination and filtering.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -880,7 +880,10 @@
         "Previous/next navigation works between articles",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T21:04:24.958663+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T21:04:24.958883+00:00"
     },
     {
       "id": "S09",

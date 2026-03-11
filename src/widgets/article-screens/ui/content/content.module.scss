@@ -1,0 +1,83 @@
+.content {
+    padding: 40px 36px;
+    border-radius: 30px;
+    background: #FFF;
+}
+
+.nav {
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid rgba(#000, .15);
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #22282B;
+    font-family: $kFontPublicSans;
+
+    h2, h3 {
+        font: 500 28px/1.2 $kFontClashGrotesk;
+        letter-spacing: -.01em;
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+
+    h4, h5 {
+        font: 600 26px/1.255 $kFontClashGrotesk;
+        letter-spacing: -.01em;
+        margin-top: 32px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    strong {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    a {
+        color: $kColorPink;
+        text-decoration: underline;
+    }
+
+    ul, ol {
+        padding-left: 24px;
+        margin-bottom: 16px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    code {
+        background: #F8F8F8;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .content {
+        padding: 32px 28px;
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .content {
+        padding: 26px 20px;
+    }
+
+    .text {
+        font-size: 16px;
+
+        strong {
+            font-size: 16px;
+        }
+    }
+}
