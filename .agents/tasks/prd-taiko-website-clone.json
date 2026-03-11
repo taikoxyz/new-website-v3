@@ -867,7 +867,7 @@
       "id": "S08",
       "title": "Blog Listing & Article Pages",
       "description": "Implement the Blog listing page (/blog) with paginated grid of blog cards (image, title, date, timeToRead, category), category filter sidebar, date filter dropdown, and pagination. Implement the Blog article page (/blog/[slug]) with article header (title, date, timeToRead, category, image), MDX article body rendering, optional How to Apply section, latest articles sidebar, and previous/next navigation. Use blog data from src/content/blog/ MDX files and src/content/data/blog-categories.ts. Content utility functions should handle pagination and filtering.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -882,14 +882,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-11T21:04:24.958663+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T21:04:24.958883+00:00"
+      "completedAt": "2026-03-11T21:24:35.167619+00:00",
+      "updatedAt": "2026-03-11T21:24:35.167358+00:00"
     },
     {
       "id": "S09",
       "title": "Careers Listing & Detail Pages",
       "description": "Implement the Careers listing page (/careers) with hero (title with HTML, about button), about section (suptitle, title, text), positions table (title, location, type), and contact banner (title, contact us CTA). Implement the Career position detail page (/careers/[slug]) with position header (title, location, type), MDX content for about position and how to apply sections, and Apply Now CTA. Use career data from src/content/careers/ MDX files.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -900,7 +900,10 @@
         "Navigation between listing and detail pages works",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T21:24:37.232579+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T21:24:37.232873+00:00"
     },
     {
       "id": "S10",

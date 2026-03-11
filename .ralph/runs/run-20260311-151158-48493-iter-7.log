@@ -1,0 +1,9 @@
+All acceptance criteria met:
+- All about page sections render with correct content (Hero, Community, Mission, Brand, Careers)
+- Links to /brand-assets and /careers work
+- Responsive layout works across all breakpoints (verified at 1440px desktop and 375px mobile)
+- `pnpm run build` succeeds
+- `pnpm tsc --noEmit` passes
+- Clean working tree after commit
+
+<promise>COMPLETE</promise>

@@ -1,0 +1,122 @@
+.gap {
+    padding: 30px 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.children {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.side {
+    position: sticky;
+    top: 100px;
+}
+
+.backButton {
+    font-size: 0;
+
+    svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        stroke: $kColorBlack;
+        transform: rotate(-180deg);
+    }
+
+    span {
+        font: 600 12px/1.255 $kFontPublicSans;
+        letter-spacing: -0.01em;
+        color: rgba($kColorBlack, 0.6);
+        text-transform: uppercase;
+    }
+}
+
+.backContent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav {
+    margin-top: 84px;
+}
+
+.header {
+    padding: 12px 22px 28px;
+    border-radius: 20px;
+    background: #FFF;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    max-width: 1050px;
+    font: 500 40px/1 $kFontClashGrotesk;
+    color: #22282B;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        stroke: #909DA2;
+    }
+
+    span {
+        font: 500 16px/1.4 $kFontPublicSans;
+        letter-spacing: -.02em;
+        color: #909DA2;
+    }
+}
+
+.applyCta {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .title {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: $kLaptopSM) {
+    .title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .header {
+        padding: 12px 20px 20px;
+    }
+
+    .meta {
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: $kMobileSM) {
+    .title {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,8 @@
+S08 is complete. All tasks done:
+
+- **Blog listing** (`/blog`): 3-column grid with category/date filters, pagination (9 per page), responsive
+- **Blog article** (`/blog/[slug]`): Hero, preview image, markdown content with XSS-safe renderer, TOC sidebar, share buttons, prev/next nav, latest articles carousel
+- **Build**: `pnpm run build` PASS, `pnpm tsc --noEmit` PASS
+- **Commits**: `97954f2` (feature) + `fb26327` (docs)
+
+<promise>COMPLETE</promise>

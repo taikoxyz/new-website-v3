@@ -1,0 +1,64 @@
+.about {
+    padding: 60px 0;
+}
+
+.suptitle {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: $kColorPink;
+
+    font: 600 12px/1.255 $kFontPublicSans;
+    letter-spacing: -.01em;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 20px;
+    max-width: 900px;
+    font: 500 40px/1.15 $kFontClashGrotesk;
+    color: #22282B;
+
+    span {
+        color: $kColorPink;
+    }
+
+    a {
+        color: $kColorPink;
+        text-decoration: underline;
+    }
+}
+
+.text {
+    margin-top: 20px;
+    max-width: 700px;
+    font: 400 18px/1.6 $kFontPublicSans;
+    color: #5A6169;
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .title {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .about {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: $kMobileSM) {
+    .title {
+        font-size: 24px;
+    }
+}

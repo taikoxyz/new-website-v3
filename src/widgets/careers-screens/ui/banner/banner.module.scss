@@ -1,0 +1,41 @@
+.banner {
+    padding: 0 0 100px;
+}
+
+.inner {
+    padding: 40px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #EA36A4 -9.56%, #F997D0 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title {
+    font: 500 28px/1.2 $kFontClashGrotesk;
+    color: #FFF;
+}
+
+@media screen and (max-width: $kTabletM) {
+    .inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 24px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .banner {
+        padding: 0 0 60px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
