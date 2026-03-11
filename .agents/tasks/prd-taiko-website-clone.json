@@ -1,5 +1,5 @@
 {
-  "title": "Taiko Website Clone — Static Content, Pixel-Perfect Reproduction",
+  "title": "Taiko Website Clone \u2014 Static Content, Pixel-Perfect Reproduction",
   "slug": "taiko-website-clone",
   "overview": "Clone the Taiko (taiko.xyz) website from the existing Next.js 14 + Strapi CMS codebase into a new, self-contained Next.js 15 (App Router) application where ALL content lives in the repo (no CMS). The result must be visually identical to the original, deployed on Vercel, and use the latest stable versions of all frameworks and libraries.",
   "source_repo": "/Users/gustavo/taiko/website-v3",
@@ -85,7 +85,7 @@
       "description": "Individual blog post with rich content, how-to-apply section, and previous/next navigation",
       "sections": [
         "Article header (title, date, timeToRead, category, image)",
-        "Article body (rich text content — was Strapi Blocks, now Markdown or MDX)",
+        "Article body (rich text content \u2014 was Strapi Blocks, now Markdown or MDX)",
         "How to Apply section (optional, rich text)",
         "Latest articles sidebar",
         "Previous / Next navigation"
@@ -120,8 +120,8 @@
       "description": "Solutions showcase page with platform and infrastructure sections",
       "sections": [
         "Hero (ourSolutions label, title with HTML, text)",
-        "Platform section (suptitle, title — Bridge & Explorer items with icon, title, text, image, URL)",
-        "Infrastructure section (suptitle — BCR & BBR items with title, icon, Lottie animation, text, URL)"
+        "Platform section (suptitle, title \u2014 Bridge & Explorer items with icon, title, text, image, URL)",
+        "Infrastructure section (suptitle \u2014 BCR & BBR items with title, icon, Lottie animation, text, URL)"
       ]
     },
     {
@@ -163,7 +163,7 @@
         "Key Dates (title, date/description table)",
         "Mission (title with HTML, 4 mission items with icon/title/text)",
         "Community approach (suptitle, title, text, learn more)",
-        "Grant Tracks — 3 tracks: Community, Partner, RFP (icon, title, track label, link, text, timeline, active status)",
+        "Grant Tracks \u2014 3 tracks: Community, Partner, RFP (icon, title, track label, link, text, timeline, active status)",
         "Support / FAQs (title, text, FAQ accordion with Q&A pairs)",
         "Learn More banner"
       ]
@@ -190,14 +190,14 @@
         "Features list (suptitle, array of features with title/text/disabled)",
         "Explore section (suptitle, title, text)",
         "Cards list (title, text, href, disabled, icon)",
-        "FAQ (title, text, accordion with question/answer pairs — answers are rich text)"
+        "FAQ (title, text, accordion with question/answer pairs \u2014 answers are rich text)"
       ],
       "data_source": "Static page data in repo (was Strapi /alethia-page)"
     },
     {
       "route": "/gwyneth",
       "name": "Gwyneth",
-      "description": "Gwyneth product feature page — same structure as Alethia",
+      "description": "Gwyneth product feature page \u2014 same structure as Alethia",
       "sections": [
         "Hero (title, text, logo image)",
         "About (title, text, subtext)",
@@ -236,32 +236,54 @@
   ],
   "shared_components": {
     "layout": [
-      "MainLayout — page wrapper with SEO meta tags (title, description, OG, Twitter cards), font preloading, viewport",
-      "DefaultLayout — standard page layout with header + footer",
-      "SideLayout — layout variant with sidebar"
+      "MainLayout \u2014 page wrapper with SEO meta tags (title, description, OG, Twitter cards), font preloading, viewport",
+      "DefaultLayout \u2014 standard page layout with header + footer",
+      "SideLayout \u2014 layout variant with sidebar"
     ],
     "header": {
       "description": "Global navigation header with mega-menu dropdowns",
       "navigation_groups": [
         {
           "name": "Alethia",
-          "links": ["About", "Apps", "Docs", "Block Explorers (3 sub-items)"]
+          "links": [
+            "About",
+            "Apps",
+            "Docs",
+            "Block Explorers (3 sub-items)"
+          ]
         },
         {
           "name": "Gwyneth",
-          "links": ["About", "Apps (disabled)", "Docs", "Block Explorers"]
+          "links": [
+            "About",
+            "Apps (disabled)",
+            "Docs",
+            "Block Explorers"
+          ]
         },
         {
           "name": "Governance",
-          "links": ["Learn", "Aragon"]
+          "links": [
+            "Learn",
+            "Aragon"
+          ]
         },
         {
           "name": "Learn",
-          "links": ["About", "Blog", "Brand Kit", "Careers"]
+          "links": [
+            "About",
+            "Blog",
+            "Brand Kit",
+            "Careers"
+          ]
         },
         {
           "name": "Engage",
-          "links": ["Trailblazer", "Snaefell NFT", "Taikoons NFT"]
+          "links": [
+            "Trailblazer",
+            "Snaefell NFT",
+            "Taikoons NFT"
+          ]
         }
       ],
       "features": [
@@ -282,31 +304,31 @@
       ]
     },
     "ui_components": [
-      "Button — primary CTA button",
-      "ArrowButton — button with arrow icon",
-      "BackLink — back navigation link",
-      "Accordion — expandable Q&A or content sections",
-      "Input — form input with normalization",
-      "Select / Select-2 — dropdown selectors",
-      "MultiSelect — multi-option selector",
-      "Modal — modal dialog system with provider",
-      "FileInput / DragFile — file upload components",
-      "Image — Next.js Image wrapper",
-      "NextLink — Next Link wrapper",
-      "ShareButton — social sharing button",
-      "MediaQuery — responsive conditional rendering component",
-      "MediaLoader — lazy loading for media/images",
-      "Sprite — SVG sprite renderer",
-      "SubscribeSection — newsletter subscription form",
-      "Socials — social media link icons",
-      "Label — form labels",
-      "TextSplitter — text splitting animation utility",
-      "LinkDropdown — dropdown link menu",
-      "RangeCalendar — date range picker",
-      "RichText — rich text renderer (replaces Strapi Blocks renderer)",
-      "AlertCard — alert notification card",
-      "Banner — promotional banner component",
-      "Grants — grant information display"
+      "Button \u2014 primary CTA button",
+      "ArrowButton \u2014 button with arrow icon",
+      "BackLink \u2014 back navigation link",
+      "Accordion \u2014 expandable Q&A or content sections",
+      "Input \u2014 form input with normalization",
+      "Select / Select-2 \u2014 dropdown selectors",
+      "MultiSelect \u2014 multi-option selector",
+      "Modal \u2014 modal dialog system with provider",
+      "FileInput / DragFile \u2014 file upload components",
+      "Image \u2014 Next.js Image wrapper",
+      "NextLink \u2014 Next Link wrapper",
+      "ShareButton \u2014 social sharing button",
+      "MediaQuery \u2014 responsive conditional rendering component",
+      "MediaLoader \u2014 lazy loading for media/images",
+      "Sprite \u2014 SVG sprite renderer",
+      "SubscribeSection \u2014 newsletter subscription form",
+      "Socials \u2014 social media link icons",
+      "Label \u2014 form labels",
+      "TextSplitter \u2014 text splitting animation utility",
+      "LinkDropdown \u2014 dropdown link menu",
+      "RangeCalendar \u2014 date range picker",
+      "RichText \u2014 rich text renderer (replaces Strapi Blocks renderer)",
+      "AlertCard \u2014 alert notification card",
+      "Banner \u2014 promotional banner component",
+      "Grants \u2014 grant information display"
     ]
   },
   "content_architecture": {
@@ -390,18 +412,18 @@
         "location": "src/content/pages/",
         "format": "TypeScript objects per page",
         "files": [
-          "home.ts — homepage dynamic content (hero, solutions, about, governance, explore, roadmap)",
-          "alethia.ts — Alethia page data (hero, about, features, explore, cards, FAQ)",
-          "gwyneth.ts — Gwyneth page data (same structure as Alethia)",
-          "gwyneth-apps.ts — Gwyneth Apps page data (hero, about, dapps, apps list, disclaimer)",
-          "dao.ts — DAO page data (welcome, about, join, FAQ)"
+          "home.ts \u2014 homepage dynamic content (hero, solutions, about, governance, explore, roadmap)",
+          "alethia.ts \u2014 Alethia page data (hero, about, features, explore, cards, FAQ)",
+          "gwyneth.ts \u2014 Gwyneth page data (same structure as Alethia)",
+          "gwyneth-apps.ts \u2014 Gwyneth Apps page data (hero, about, dapps, apps list, disclaimer)",
+          "dao.ts \u2014 DAO page data (welcome, about, join, FAQ)"
         ]
       },
       {
         "type": "navigation",
         "location": "src/content/data/navigation.ts",
         "format": "TypeScript object",
-        "description": "Header and footer navigation structure — groups, links, icons, social links"
+        "description": "Header and footer navigation structure \u2014 groups, links, icons, social links"
       }
     ]
   },
@@ -412,14 +434,19 @@
         "type": "fonts",
         "location": "public/fonts/",
         "fonts": [
-          "ClashDisplay (Medium, Semibold) — display headings",
+          "ClashDisplay (Medium, Semibold) \u2014 display headings",
           "ClashGrotesk (Medium, Semibold)",
           "Gilroy (Medium)",
           "Helvetica Neue Cyr (Medium)",
           "Onest (Medium)",
-          "Public Sans (Regular, Medium, SemiBold) — body text"
+          "Public Sans (Regular, Medium, SemiBold) \u2014 body text"
         ],
-        "formats": ["woff2", "woff", "ttf", "eot"],
+        "formats": [
+          "woff2",
+          "woff",
+          "ttf",
+          "eot"
+        ],
         "note": "Copy all 42 font files from original repo"
       },
       {
@@ -499,7 +526,7 @@
       "package": "@lottiefiles/react-lottie-player"
     },
     "aos": {
-      "description": "Custom Animate On Scroll utility — adds '--animate' class when elements with 'aos' class enter viewport",
+      "description": "Custom Animate On Scroll utility \u2014 adds '--animate' class when elements with 'aos' class enter viewport",
       "usage": "Replicate the custom AOS utility from src/shared/lib/utils/aos.ts"
     },
     "sequential_dots": {
@@ -539,7 +566,7 @@
       "PublicSans-SemiBold.woff2"
     ],
     "additional": [
-      "Generate sitemap.xml (not present in original — add for improved SEO)",
+      "Generate sitemap.xml (not present in original \u2014 add for improved SEO)",
       "Generate robots.txt",
       "Use Next.js Metadata API (App Router) for all meta tags"
     ]
@@ -665,7 +692,7 @@
       "mitigation": "Use the live taiko.xyz site as reference to manually capture any content not found in source files. Blog posts, careers, events, and ecosystem data must be scraped or exported from Strapi."
     },
     {
-      "risk": "Font licensing — custom fonts may have restrictions",
+      "risk": "Font licensing \u2014 custom fonts may have restrictions",
       "mitigation": "Copy fonts as-is from original repo. The project already includes these fonts in the public directory."
     },
     {
@@ -675,7 +702,7 @@
   ],
   "acceptance_criteria": [
     "All 15 pages render and are visually identical to the original taiko.xyz",
-    "All content is stored in the repository — no external CMS or API dependencies",
+    "All content is stored in the repository \u2014 no external CMS or API dependencies",
     "All GSAP scroll animations, Lottie animations, and transitions work correctly",
     "Responsive design works across all breakpoints (mobile, tablet, laptop, desktop, ultrawide)",
     "Navigation mega-menu works with correct dropdowns and mobile hamburger menu",
@@ -701,7 +728,7 @@
       "id": "S01",
       "title": "Project Scaffolding & Static Assets",
       "description": "Initialize Next.js 15 project with App Router, TypeScript, SASS, pnpm. Configure tsconfig.json with path aliases (baseUrl: './src'). Copy all static assets (fonts, images, Lottie files, media, documents, favicon) from the source repo at /Users/gustavo/taiko/website-v3. Copy and adapt SCSS files (vars, mixins, reset, fonts, custom, style) from the source repo. Configure next.config.ts for SASS, image optimization, and Vercel deployment. Set up ESLint and Prettier configuration. Install all required dependencies: gsap, @gsap/react, @lottiefiles/react-lottie-player, react-transition-group, clsx, dayjs, swiper, use-debounce, yup.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [],
       "acceptanceCriteria": [
         "Next.js 15 app with App Router initializes and runs with pnpm dev",
@@ -709,14 +736,19 @@
         "SCSS variables, mixins, reset, fonts, custom, and global styles are adapted and compile without errors",
         "tsconfig.json has baseUrl './src' with appropriate path aliases",
         "pnpm run build succeeds with no errors"
-      ]
+      ],
+      "startedAt": "2026-03-11T19:11:58.176522+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T19:11:58.176718+00:00"
     },
     {
       "id": "S02",
       "title": "Content Extraction & Static Data Files",
       "description": "Extract all content from the source repo (/Users/gustavo/taiko/website-v3). Extract translation JSON from /public/locales/en/ into static TypeScript data files. Create content files for page data (home, alethia, gwyneth, gwyneth-apps, dao) in src/content/pages/. Create navigation data file (header + footer nav structure) in src/content/data/navigation.ts. Create static data files for events, ecosystem projects, project categories, blog categories in src/content/data/. Create blog posts as MDX files with frontmatter in src/content/blog/. Create career positions as MDX files with frontmatter in src/content/careers/. Create content utility functions (getBlogs, getBlog, getCareers, getCareer, getEvents, getProjects, etc.) that read from static files.",
       "status": "open",
-      "dependsOn": ["S01"],
+      "dependsOn": [
+        "S01"
+      ],
       "acceptanceCriteria": [
         "All page content from source repo translation files is extracted into TypeScript data files",
         "Navigation structure (header mega-menu groups + footer columns + social links) is in src/content/data/navigation.ts",
@@ -730,9 +762,11 @@
     {
       "id": "S03",
       "title": "Shared UI Components",
-      "description": "Port all shared UI components from the source repo (/Users/gustavo/taiko/website-v3). Components to port: Button, ArrowButton, BackLink, Accordion, Input, Select, Select-2, MultiSelect, Modal (with provider), FileInput, DragFile, Image (Next.js Image wrapper), NextLink (Next Link wrapper), ShareButton, MediaQuery (responsive conditional rendering), MediaLoader (lazy loading), Sprite (SVG sprite renderer), SubscribeSection (newsletter form), Socials (social media icons), Label, TextSplitter, LinkDropdown, RangeCalendar, RichText (replaces Strapi Blocks renderer — render MDX/markdown content), AlertCard, Banner, Grants. Use SCSS Modules for styling. Adapt from Pages Router patterns to App Router (remove withTranslation HOCs, use 'use client' where needed).",
+      "description": "Port all shared UI components from the source repo (/Users/gustavo/taiko/website-v3). Components to port: Button, ArrowButton, BackLink, Accordion, Input, Select, Select-2, MultiSelect, Modal (with provider), FileInput, DragFile, Image (Next.js Image wrapper), NextLink (Next Link wrapper), ShareButton, MediaQuery (responsive conditional rendering), MediaLoader (lazy loading), Sprite (SVG sprite renderer), SubscribeSection (newsletter form), Socials (social media icons), Label, TextSplitter, LinkDropdown, RangeCalendar, RichText (replaces Strapi Blocks renderer \u2014 render MDX/markdown content), AlertCard, Banner, Grants. Use SCSS Modules for styling. Adapt from Pages Router patterns to App Router (remove withTranslation HOCs, use 'use client' where needed).",
       "status": "open",
-      "dependsOn": ["S01"],
+      "dependsOn": [
+        "S01"
+      ],
       "acceptanceCriteria": [
         "All listed UI components are ported with SCSS Module styling",
         "Components use 'use client' directive where needed for interactivity",
@@ -744,9 +778,11 @@
     {
       "id": "S04",
       "title": "Utilities, Hooks & Animation Setup",
-      "description": "Port utility functions and custom hooks from the source repo (/Users/gustavo/taiko/website-v3). Utilities: animate helpers, AOS (Animate On Scroll — adds '--animate' class when elements enter viewport), formatters, file helpers, sticky scroll. Custom hooks: useMediaQuery, useSearchParams, useScrollProgress, useForm. Animation setup: Register GSAP ScrollTrigger globally (client-side only), port SequentialDots animation component, set up Lottie player integration. Port SVG sprite system. All GSAP-dependent code must use 'use client' directive and dynamic imports where needed.",
+      "description": "Port utility functions and custom hooks from the source repo (/Users/gustavo/taiko/website-v3). Utilities: animate helpers, AOS (Animate On Scroll \u2014 adds '--animate' class when elements enter viewport), formatters, file helpers, sticky scroll. Custom hooks: useMediaQuery, useSearchParams, useScrollProgress, useForm. Animation setup: Register GSAP ScrollTrigger globally (client-side only), port SequentialDots animation component, set up Lottie player integration. Port SVG sprite system. All GSAP-dependent code must use 'use client' directive and dynamic imports where needed.",
       "status": "open",
-      "dependsOn": ["S01"],
+      "dependsOn": [
+        "S01"
+      ],
       "acceptanceCriteria": [
         "All utility functions are ported and importable",
         "Custom hooks (useMediaQuery, useSearchParams, useScrollProgress, useForm) work correctly",
@@ -762,7 +798,11 @@
       "title": "Root Layout, Header & Footer",
       "description": "Create the root layout (app/layout.tsx) with font preloading for all 10 woff2 fonts, global SCSS styles import, and Next.js Metadata API for default SEO. Port the Header component with mega-menu navigation (5 groups: Alethia, Gwyneth, Governance, Learn, Engage) including responsive mega-menu with icons/descriptions, social links, mobile hamburger menu, and sticky/scroll behavior. Port the Footer with navigation columns, social links, newsletter subscribe form, and copyright. Port the mobile Menu component. Set up React Context providers (Modal, App context) as client component wrappers. Create DefaultLayout and SideLayout variants. Use navigation data from src/content/data/navigation.ts.",
       "status": "open",
-      "dependsOn": ["S02", "S03", "S04"],
+      "dependsOn": [
+        "S02",
+        "S03",
+        "S04"
+      ],
       "acceptanceCriteria": [
         "Root layout renders with proper font preloading and global styles",
         "Header mega-menu shows all 5 navigation groups with proper dropdowns",
@@ -778,7 +818,9 @@
       "title": "Homepage",
       "description": "Implement the Homepage (/) with all sections from the source repo. Sections: Hero with animated title and CTA buttons and scroll-to-explore indicator. Solutions/Scaling showcase with 4 solution screens (titles, buttons, Lottie animations). About/Getting Started section (suptitle, title, text, 3-step cards with icons). Governance section (suptitle, title, text). Explore screens (array of cards with title, text, suptitle, link). Ecosystem preview (title, text, dapp count, explore button). Trailblazer banner CTA. Grant Factory banner CTA. Subscribe section (newsletter signup). Use page data from src/content/pages/home.ts. Include GSAP ScrollTrigger animations and Lottie animations.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "All homepage sections render with correct content",
         "Hero animation plays on load",
@@ -793,7 +835,9 @@
       "title": "About Page",
       "description": "Implement the About page (/about) with all sections. Hero with title. Community section (suptitle, title, text). Mission section (suptitle, title, text, fact sub-section). Brand link section (our brand, view brand CTA linking to /brand-assets). Careers section (suptitle, title with HTML, text, view button linking to /careers). Use content from source repo translation files.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "All about page sections render with correct content",
         "Links to /brand-assets and /careers work",
@@ -806,7 +850,9 @@
       "title": "Blog Listing & Article Pages",
       "description": "Implement the Blog listing page (/blog) with paginated grid of blog cards (image, title, date, timeToRead, category), category filter sidebar, date filter dropdown, and pagination. Implement the Blog article page (/blog/[slug]) with article header (title, date, timeToRead, category, image), MDX article body rendering, optional How to Apply section, latest articles sidebar, and previous/next navigation. Use blog data from src/content/blog/ MDX files and src/content/data/blog-categories.ts. Content utility functions should handle pagination and filtering.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Blog listing shows paginated grid of blog posts",
         "Category filter works to narrow displayed posts",
@@ -823,7 +869,9 @@
       "title": "Careers Listing & Detail Pages",
       "description": "Implement the Careers listing page (/careers) with hero (title with HTML, about button), about section (suptitle, title, text), positions table (title, location, type), and contact banner (title, contact us CTA). Implement the Career position detail page (/careers/[slug]) with position header (title, location, type), MDX content for about position and how to apply sections, and Apply Now CTA. Use career data from src/content/careers/ MDX files.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Careers listing shows all positions in a table",
         "Individual career pages render MDX content",
@@ -836,9 +884,11 @@
     {
       "id": "S10",
       "title": "Solutions Page",
-      "description": "Implement the Solutions page (/solutions) with hero (ourSolutions label, title with HTML, text), platform section (suptitle, title — Bridge & Explorer items with icon, title, text, image, URL), and infrastructure section (suptitle — BCR & BBR items with title, icon, Lottie animation, text, URL). Include Lottie animations for infrastructure items. Use content from source repo translation files.",
+      "description": "Implement the Solutions page (/solutions) with hero (ourSolutions label, title with HTML, text), platform section (suptitle, title \u2014 Bridge & Explorer items with icon, title, text, image, URL), and infrastructure section (suptitle \u2014 BCR & BBR items with title, icon, Lottie animation, text, URL). Include Lottie animations for infrastructure items. Use content from source repo translation files.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "All solutions page sections render with correct content",
         "Platform items (Bridge, Explorer) display with icons and images",
@@ -853,7 +903,9 @@
       "title": "Ecosystem Page",
       "description": "Implement the Ecosystem page (/ecosystem) with hero (suptitle, title, text), search bar, type filter (Testnet, Coming Soon, Mainnet), category filter, project grid (icon, name, description, link, type, categories), last updated indicator, view more/pagination, grant section (suptitle, text, apply CTA, contact us), and disclaimer. Use data from src/content/data/ecosystem-projects.ts and src/content/data/project-categories.ts. Client-side filtering and search.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Ecosystem projects display in a grid with icons",
         "Search bar filters projects by name/description",
@@ -870,7 +922,9 @@
       "title": "Events Page",
       "description": "Implement the Events page (/events) with hero (suptitle, title, text), event schedule table (title, location, date, image), location filter, month filter, and learn more links. Use data from src/content/data/events.ts. Client-side filtering.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Events display in a schedule table",
         "Location filter works",
@@ -883,9 +937,11 @@
     {
       "id": "S13",
       "title": "Grant Program Page",
-      "description": "Implement the Grant Program page (/grant-program) with hero (title, text), key dates section (title, date/description table), mission section (title with HTML, 4 mission items with icon/title/text), community approach section (suptitle, title, text, learn more), grant tracks — 3 tracks: Community, Partner, RFP (icon, title, track label, link, text, timeline, active status), support/FAQs section (title, text, FAQ accordion with Q&A pairs), and learn more banner. Use the Accordion component for FAQs.",
+      "description": "Implement the Grant Program page (/grant-program) with hero (title, text), key dates section (title, date/description table), mission section (title with HTML, 4 mission items with icon/title/text), community approach section (suptitle, title, text, learn more), grant tracks \u2014 3 tracks: Community, Partner, RFP (icon, title, track label, link, text, timeline, active status), support/FAQs section (title, text, FAQ accordion with Q&A pairs), and learn more banner. Use the Accordion component for FAQs.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "All grant program sections render with correct content",
         "FAQ accordion expands/collapses Q&A pairs",
@@ -900,7 +956,9 @@
       "title": "Brand Assets Page",
       "description": "Implement the Brand Assets page (/brand-assets) with hero (title, text), logo section (suptitle, download button, logo variants with different backgrounds), color palette section (suptitle, color groups with name and hex values), typography section (suptitle, title, font families with variants and download links), and brand book section (title, download button). Download links should point to files in public/files/.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Logo variants display on different backgrounds",
         "Color palette shows color groups with hex values",
@@ -913,9 +971,11 @@
     {
       "id": "S15",
       "title": "Alethia & Gwyneth Pages",
-      "description": "Implement the Alethia page (/alethia) with hero (title, text, logo image), about (title, text, subtext), features list (suptitle, array of features with title/text/disabled), explore section (suptitle, title, text), cards list (title, text, href, disabled, icon), and FAQ (title, text, accordion with question/answer pairs — answers are rich text). Implement the Gwyneth page (/gwyneth) with the same structure. Use page data from src/content/pages/alethia.ts and src/content/pages/gwyneth.ts. Both pages share the same component structure — create a reusable ProductPage component.",
+      "description": "Implement the Alethia page (/alethia) with hero (title, text, logo image), about (title, text, subtext), features list (suptitle, array of features with title/text/disabled), explore section (suptitle, title, text), cards list (title, text, href, disabled, icon), and FAQ (title, text, accordion with question/answer pairs \u2014 answers are rich text). Implement the Gwyneth page (/gwyneth) with the same structure. Use page data from src/content/pages/alethia.ts and src/content/pages/gwyneth.ts. Both pages share the same component structure \u2014 create a reusable ProductPage component.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Alethia page renders all sections with correct content",
         "Gwyneth page renders all sections with correct content",
@@ -930,7 +990,9 @@
       "title": "Gwyneth Apps & DAO Pages",
       "description": "Implement the Gwyneth Apps page (/gwyneth/apps) with hero (title), about section (suptitle, text, CTA button), dapps stat (name, value, icon array), apps list (name, text, type, active, icon, categories, URL), and disclaimer (title, text, active toggle). Implement the DAO page (/dao) with welcome (suptitle, title, text, CTA button), about (suptitle, title, text, features list), join section (suptitle, title, CTA button), and FAQ (title, text, accordion with question/answer pairs). Use page data from src/content/pages/gwyneth-apps.ts and src/content/pages/dao.ts.",
       "status": "open",
-      "dependsOn": ["S05"],
+      "dependsOn": [
+        "S05"
+      ],
       "acceptanceCriteria": [
         "Gwyneth Apps page renders apps list with icons and categories",
         "Gwyneth Apps disclaimer toggle works",
@@ -945,7 +1007,19 @@
       "title": "SEO, Sitemap & Final Polish",
       "description": "Add proper SEO meta tags to all pages using Next.js Metadata API (title, description, OG tags, Twitter cards, canonical URL). Generate sitemap.xml and robots.txt. Verify font preloading works for all 10 woff2 fonts. Run pnpm run build and fix any remaining errors. Verify no console errors in production mode. Run basic performance check.",
       "status": "open",
-      "dependsOn": ["S06", "S07", "S08", "S09", "S10", "S11", "S12", "S13", "S14", "S15", "S16"],
+      "dependsOn": [
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16"
+      ],
       "acceptanceCriteria": [
         "All pages have proper title, description, OG, and Twitter card meta tags",
         "sitemap.xml is generated with all routes",
