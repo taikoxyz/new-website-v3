@@ -806,7 +806,7 @@
       "id": "S05",
       "title": "Root Layout, Header & Footer",
       "description": "Create the root layout (app/layout.tsx) with font preloading for all 10 woff2 fonts, global SCSS styles import, and Next.js Metadata API for default SEO. Port the Header component with mega-menu navigation (5 groups: Alethia, Gwyneth, Governance, Learn, Engage) including responsive mega-menu with icons/descriptions, social links, mobile hamburger menu, and sticky/scroll behavior. Port the Footer with navigation columns, social links, newsletter subscribe form, and copyright. Port the mobile Menu component. Set up React Context providers (Modal, App context) as client component wrappers. Create DefaultLayout and SideLayout variants. Use navigation data from src/content/data/navigation.ts.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S02",
         "S03",
@@ -822,14 +822,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-11T20:09:45.144999+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T20:09:45.145144+00:00"
+      "completedAt": "2026-03-11T20:29:37.513091+00:00",
+      "updatedAt": "2026-03-11T20:29:37.512976+00:00"
     },
     {
       "id": "S06",
       "title": "Homepage",
       "description": "Implement the Homepage (/) with all sections from the source repo. Sections: Hero with animated title and CTA buttons and scroll-to-explore indicator. Solutions/Scaling showcase with 4 solution screens (titles, buttons, Lottie animations). About/Getting Started section (suptitle, title, text, 3-step cards with icons). Governance section (suptitle, title, text). Explore screens (array of cards with title, text, suptitle, link). Ecosystem preview (title, text, dapp count, explore button). Trailblazer banner CTA. Grant Factory banner CTA. Subscribe section (newsletter signup). Use page data from src/content/pages/home.ts. Include GSAP ScrollTrigger animations and Lottie animations.",
-      "status": "open",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -840,13 +840,16 @@
         "GSAP scroll animations trigger correctly",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T20:29:39.591270+00:00",
+      "completedAt": "2026-03-11T20:56:31.959561+00:00",
+      "updatedAt": "2026-03-11T20:56:31.959427+00:00"
     },
     {
       "id": "S07",
       "title": "About Page",
       "description": "Implement the About page (/about) with all sections. Hero with title. Community section (suptitle, title, text). Mission section (suptitle, title, text, fact sub-section). Brand link section (our brand, view brand CTA linking to /brand-assets). Careers section (suptitle, title with HTML, text, view button linking to /careers). Use content from source repo translation files.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -855,7 +858,10 @@
         "Links to /brand-assets and /careers work",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T20:56:34.019853+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T20:56:34.020009+00:00"
     },
     {
       "id": "S08",
