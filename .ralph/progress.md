@@ -308,3 +308,71 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Widgets directory (src/widgets/) follows source repo's FSD (Feature-Sliced Design) structure for page-level components
   - Features directory (src/features/) used for cross-cutting features like footer-subscribe
 ---
+
+## [2026-03-11] - S06: Homepage
+Thread:
+Run: 20260311-151158-48493 (iteration 6)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-6.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-6.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 7c4a9f7 feat(homepage): port all homepage sections with GSAP scroll animations
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (compiled successfully, 81.4 kB page size)
+  - Command: Browser screenshot Hero -> PASS (title, CTA buttons, Taiko logo, grid)
+  - Command: Browser screenshot Scaling -> PASS (Rays SVG, horizontal scroll content)
+  - Command: Browser screenshot About -> PASS (label, title, text, AboutGrid SVG)
+  - Command: Browser screenshot Governance -> PASS (title, description, video/image)
+  - Command: Browser screenshot Ecosystem -> PASS (Grant Factory banners visible)
+  - Command: Browser screenshot Footer -> PASS (Subscribe, social links, nav columns)
+- Files changed:
+  - src/content/types/index.ts (added ExploreScreen, RoadmapListItem, RoadmapList interfaces; extended HomePageData with flat CMS-style fields)
+  - src/content/pages/home.ts (added hero_buttons, solution_screen_* titles/buttons, about_*, governance_*, explore_screens, roadmap_*)
+  - src/app/page.tsx (full homepage with dynamic HomePagination, all Screens.*, WrapSVG, MediaQuery)
+  - src/app/home.module.scss (root background white)
+  - src/widgets/layouts/default-layout/index.tsx (added className prop, Fragment -> div wrapper)
+  - src/widgets/home-screens/index.ts (barrel export)
+  - src/widgets/home-screens/lib/index.ts (HOME_PAG section ID constants)
+  - src/widgets/home-screens/lib/taiko-icon-animation.ts (GSAP timeline for Taiko/Ethereum icon alternation)
+  - src/widgets/home-screens/components/Taiko/index.tsx (TaikoIcon SVG with animated gradient rotation)
+  - src/widgets/home-screens/components/Ethereum.tsx (Ethereum wireframe SVG)
+  - src/widgets/home-screens/components/Rays.tsx (3 curved SVG paths with gradient strokes)
+  - src/widgets/home-screens/components/AboutGrid.tsx (grid SVG for About section)
+  - src/widgets/home-screens/components/JourneyPath.tsx (masked SVG path for roadmap)
+  - src/widgets/home-screens/components/HomePagination/ (sidebar navigation dots + SCSS)
+  - src/widgets/home-screens/components/WrapSVG/ (parallax shape reveal wrapper + SCSS)
+  - src/widgets/home-screens/ui/hero/ (hero section with animated title + SCSS)
+  - src/widgets/home-screens/ui/scaling/ (horizontal scroll with 4 screens, GSAP pinning + SCSS)
+  - src/widgets/home-screens/ui/explore/ (Alethia/Gwyneth split screen with hover toggle + SCSS)
+  - src/widgets/home-screens/ui/about/ (AboutGrid SVG reveal, TextSplitter text animation + SCSS)
+  - src/widgets/home-screens/ui/journey/ (JourneyPath SVG stroke reveal + 6 JourneyItems + SCSS)
+  - src/widgets/home-screens/ui/journey-item/ (expandable roadmap items with color variants + SCSS)
+  - src/widgets/home-screens/ui/governance/ (dot pattern background, video with blend mode + SCSS)
+  - src/widgets/home-screens/ui/ecosystem/ (Banner + GrantsBanner wrappers + SCSS)
+  - src/widgets/home-screens/ui/subscribe/ (FooterSubscribe wrapper + SCSS)
+  - src/widgets/home-screens/ui/index.ts (barrel export for all 8 sections)
+- What was implemented:
+  - Ported all 8 homepage sections from source repo with GSAP ScrollTrigger animations
+  - Hero: full viewport with animated title, WrapperButtonList CTA buttons, TaikoIcon with GSAP scroll parallax
+  - Scaling: horizontal scroll with 4 pinned 100vw screens, SequentialDots canvas, Rays SVG stroke animation, taikoIconAnimation
+  - Explore: split-screen Alethia/Gwyneth with hover state toggle, ScrollTrigger pin, rotating Taiko logo
+  - About: AboutGrid SVG stroke reveal, TextSplitter word-by-word opacity animation
+  - Journey: JourneyPath SVG stroke animation, 6 absolutely-positioned JourneyItem components with skewY transforms
+  - Governance: dot pattern background, governance video with mix-blend-mode darken
+  - Ecosystem: Reuses existing Banner and GrantsBanner components for Trailblazer/Grant Factory CTAs
+  - Subscribe: Wraps existing FooterSubscribe component
+  - HomePagination: fixed sidebar dots tracking scroll progress across sections
+  - WrapSVG: parallax shape reveal/hide wrapper using wrap-shapes.webp images
+  - Extended HomePageData with flat CMS-style fields for hero_buttons, solution screens, about, governance, explore, roadmap
+  - Fixed about_title raw HTML tag rendering (removed <strong> tags incompatible with TextSplitter character splitting)
+- **Learnings for future iterations:**
+  - TextSplitter splits by character (empty string) — HTML tags like <strong> get broken into individual characters and render as literal text
+  - Source repo's flat CMS fields (hero_title, solution_screen_1_title) coexist with structured fields (hero.title) — both needed for different components
+  - taikoIconAnimation uses GSAP timeline with play/finish callbacks for alternating icon animations
+  - HomePagination must be dynamically imported with ssr: false (uses window/document)
+  - WrapSVG uses wrap-shapes.webp images positioned absolutely with parallax transforms
+  - JourneyItem uses border-image for gradient borders and backdrop-filter for blur effect
+  - Scaling section uses gsap.to with xPercent for horizontal scroll pinning
+---
