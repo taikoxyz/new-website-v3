@@ -194,3 +194,57 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - SCSS variables ($kColorPink, $kFontPublicSans, $kFontClashGrotesk, $kDefaultFont, $kColorBlack, etc.) are auto-injected
   - Components live in src/components/, hooks in src/lib/hooks/, utilities in src/lib/utils/
 ---
+
+## [2026-03-11] - S04: Utilities, Hooks & Animation Setup
+Thread:
+Run: 20260311-151158-48493 (iteration 4)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-4.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-4.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 07c7f4e feat(lib): port utilities, hooks, animations, and GSAP/Lottie setup
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (compiled successfully, warnings only from existing code)
+- Files changed:
+  - src/lib/utils/animate.ts (requestAnimationFrame animation with timing/easing)
+  - src/lib/utils/browser.ts (css helper, executeOnReadyPage)
+  - src/lib/utils/sticky-scroll.ts (scroll progress within sticky containers)
+  - src/lib/utils/format.ts (formatNumberWithZero, formatNumberWithSeparator, formatDate with dayjs)
+  - src/lib/utils/formatter.ts (startFromZero number padding)
+  - src/lib/utils/numbers.ts (getRandomBetween)
+  - src/lib/utils/loadImage.ts (promise-based image loader with cache)
+  - src/lib/utils/loadVideo.ts (promise-based video loader with cache)
+  - src/lib/utils/typescript.ts (GetComponentProps, Optional, IEmptyFunction, PromiseReturnType)
+  - src/lib/utils/create-provider.tsx (Context API provider factory)
+  - src/lib/utils/features-height-calc.ts (equal-height grid calculation)
+  - src/lib/utils/index.ts (barrel export for all utilities)
+  - src/lib/hooks/use-object-state/ (useObjectState hook with types)
+  - src/lib/hooks/use-media-query.ts (window resize tracking)
+  - src/lib/hooks/use-input.ts (input state with typing debounce)
+  - src/lib/hooks/use-search-params-setter.ts (URL search params management)
+  - src/lib/hooks/use-scroll-progress.ts (element scroll progress 0-1)
+  - src/lib/hooks/use-form/ (complete form management with Yup validation)
+  - src/lib/hooks/index.ts (barrel export for all hooks)
+  - src/lib/gsap/index.ts (GSAP + ScrollTrigger client-side registration)
+  - src/animations/SequentialDots/ (canvas-based dot animation: SequentialDots, SequentialDotsGroup, types)
+  - src/components/lottie-player/index.tsx (SSR-safe Lottie player via dynamic import)
+- What was implemented:
+  - Ported 12 utility functions from source repo's shared/lib/utils/
+  - Ported 8 custom hooks (useForm, useMediaQuery, useSearchParams, useScrollProgress, useObjectState, useInput + existing useAos, useClickOutside)
+  - Set up GSAP ScrollTrigger global registration in client-only module (src/lib/gsap/index.ts)
+  - Ported SequentialDots canvas animation (SequentialDots class + SequentialDotsGroup)
+  - Created Lottie player wrapper with next/dynamic SSR-safe import
+  - SVG sprite system was already ported in S03 (src/components/sprite/)
+  - All code uses 'use client' directive where needed for client-side APIs
+- **Learnings for future iterations:**
+  - dayjs isToday plugin needs explicit import and extend call
+  - GSAP ScrollTrigger must be registered client-side only — use 'use client' directive
+  - Lottie player must use dynamic import with ssr: false to avoid SSR errors
+  - SequentialDots uses @/ path alias to import from lib/utils
+  - useObjectState is a dependency for useMediaQuery and useInput — must be ported first
+  - useForm depends on yup for validation schema — already installed in S01
+  - Source repo had an axios instance utility — skipped as this project has no external API
+  - Source repo had file-server-path utility for Strapi URLs — skipped as content is static
+---
