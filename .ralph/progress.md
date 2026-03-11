@@ -420,3 +420,78 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Careers section splits text by \n to render multiple paragraphs
   - Mission info card uses box-shadow trick for the clock icon cutout (rounded corner illusion)
 ---
+
+## [2026-03-11] - S08: Blog Listing & Article Pages
+Thread:
+Run: 20260311-151158-48493 (iteration 8)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-8.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-8.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 97954f2 feat(blog): add blog listing and article pages with filtering
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (compiled successfully, blog 7.34 kB, blog/[slug] 4.09 kB)
+  - Command: Browser screenshot blog listing -> PASS (3-column grid, filters sidebar, pagination)
+  - Command: Browser screenshot blog article -> PASS (hero, preview, content, NEXT nav, latest carousel)
+  - Command: Browser screenshot mobile -> PASS (single column responsive layout)
+- Files changed:
+  - src/entities/article/index.ts (barrel export for BlogItem and BlogSliderLayout)
+  - src/entities/article/ui/blog-item/index.tsx (blog card with image, title, category tag, date, read time)
+  - src/entities/article/ui/blog-item/blog-item.module.scss (card styling)
+  - src/entities/article/ui/blog-slider-layout/index.tsx (Swiper carousel with custom SwiperInstance interface)
+  - src/entities/article/ui/blog-slider-layout/blog-slider-layout.module.scss (carousel styling)
+  - src/widgets/blog-screens/index.ts (barrel export)
+  - src/widgets/blog-screens/lib/transform-filters.ts (date transform + category options builder)
+  - src/widgets/blog-screens/provider/context.tsx (WithBlogFilter provider + useBlogFilter hook)
+  - src/widgets/blog-screens/provider/types.ts (IBlogFilter, IBlogFilterContext)
+  - src/widgets/blog-screens/ui/blog-filter/index.tsx (reusable filter dropdown)
+  - src/widgets/blog-screens/ui/filter-date/index.tsx (date range filter with RangeCalendar)
+  - src/widgets/blog-screens/ui/filter-category/index.tsx (category filter)
+  - src/widgets/blog-screens/ui/side-filters/index.tsx (sidebar with date + category + reset)
+  - src/widgets/blog-screens/ui/head/index.tsx ("Blog" title + mobile filter toggle)
+  - src/widgets/blog-screens/ui/blogs/index.tsx (blog grid with filtering + pagination, 9 per page)
+  - src/widgets/article-screens/index.ts (barrel export)
+  - src/widgets/article-screens/lib/content.ts (getArticleAnchor, getArticleLinks for TOC)
+  - src/widgets/article-screens/lib/types.ts (ArticleScreensEnum)
+  - src/widgets/article-screens/ui/hero/index.tsx (article header with category, title, date, read time)
+  - src/widgets/article-screens/ui/preview/index.tsx (featured image)
+  - src/widgets/article-screens/ui/content/index.tsx (content wrapper with mobile SideNav)
+  - src/widgets/article-screens/ui/content/article-content.tsx (markdownToHtml with XSS protection)
+  - src/widgets/article-screens/ui/apply/index.tsx (How to Apply section)
+  - src/widgets/article-screens/ui/links/index.tsx (prev/next navigation)
+  - src/widgets/article-screens/ui/side-nav/index.tsx (table of contents)
+  - src/widgets/article-screens/ui/share/index.tsx (Twitter + LinkedIn share)
+  - src/widgets/article-screens/ui/side/index.tsx (desktop sidebar with back link, TOC, share)
+  - src/widgets/article-screens/ui/latest-articles/index.tsx (BlogSliderLayout carousel)
+  - src/app/blog/page.tsx (server component, calls getBlogs)
+  - src/app/blog/blog-page-client.tsx (client component with filter provider)
+  - src/app/blog/blog.module.scss (page padding)
+  - src/app/blog/[slug]/page.tsx (dynamic article with generateStaticParams, generateMetadata)
+  - src/app/blog/[slug]/article.module.scss (article layout spacing)
+- What was implemented:
+  - Blog listing page with 3-column responsive grid of blog cards
+  - Client-side category filter (All topics + 5 categories from blogCategories)
+  - Client-side date filter with predefined periods (Last week, Last month, etc.) + custom RangeCalendar
+  - Pagination with 9 posts per page, "Showing X of Y articles" count
+  - Blog article page with hero header (category tag, title, date, read time)
+  - Custom markdownToHtml renderer with XSS protection (escapeHtml, sanitizeUrl)
+  - Table of contents sidebar extracted from ## headings
+  - Twitter + LinkedIn share buttons
+  - Previous/Next article navigation using getBlogNear
+  - Latest articles carousel using Swiper with BlogSliderLayout
+  - Optional "How to Apply" section for career-type posts
+  - SSG with generateStaticParams for all 5 blog posts
+  - SEO metadata with markdown-stripped descriptions
+  - Responsive layout: 3-col -> 2-col -> 1-col grid, sidebar collapses on mobile
+- **Learnings for future iterations:**
+  - Swiper v8 TypeScript types don't resolve cleanly with moduleResolution: bundler — define custom SwiperInstance interface
+  - Use `'auto' as const` for Swiper slidesPerView to satisfy TypeScript
+  - Next.js Link component requires href to always be defined — use separate render paths for Link vs div instead of conditional Tag pattern
+  - markdownToHtml needs escapeHtml for heading IDs and sanitizeUrl for link hrefs to prevent XSS
+  - SEO description from markdown content should strip syntax chars: replace(/[#*`\[\]_>]/g, '')
+  - useMemo should not have side effects — use useEffect for resetting pagination on filter change
+  - Source repo used React Query infinite scroll — replaced with simple client-side pagination (POSTS_PER_PAGE = 9)
+  - Source repo used Strapi BlocksRenderer — replaced with custom markdownToHtml for static MDX content
+---
