@@ -929,7 +929,7 @@
       "id": "S11",
       "title": "Ecosystem Page",
       "description": "Implement the Ecosystem page (/ecosystem) with hero (suptitle, title, text), search bar, type filter (Testnet, Coming Soon, Mainnet), category filter, project grid (icon, name, description, link, type, categories), last updated indicator, view more/pagination, grant section (suptitle, text, apply CTA, contact us), and disclaimer. Use data from src/content/data/ecosystem-projects.ts and src/content/data/project-categories.ts. Client-side filtering and search.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -944,14 +944,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-11T21:40:05.106645+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T21:40:05.106835+00:00"
+      "completedAt": "2026-03-11T21:50:33.648809+00:00",
+      "updatedAt": "2026-03-11T21:50:33.648673+00:00"
     },
     {
       "id": "S12",
       "title": "Events Page",
       "description": "Implement the Events page (/events) with hero (suptitle, title, text), event schedule table (title, location, date, image), location filter, month filter, and learn more links. Use data from src/content/data/events.ts. Client-side filtering.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -962,7 +962,10 @@
         "Learn more links work",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T21:50:35.771717+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T21:50:35.771862+00:00"
     },
     {
       "id": "S13",

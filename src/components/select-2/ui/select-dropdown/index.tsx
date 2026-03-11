@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
 import { ISelectDefaultItem, ISelectProps } from "../../types";
 import { useSelect } from "../../provider";
@@ -17,6 +17,7 @@ export const SelectDropdown = <T extends ISelectDefaultItem | object>({
     onChange
 }: ISelectProps<T>) => {
     const { state } = useSelect();
+    const nodeRef = useRef<HTMLDivElement>(null);
 
     const valueValue = useMemo(
         () => (value as any)?.[renderKey!],
@@ -46,8 +47,10 @@ export const SelectDropdown = <T extends ISelectDefaultItem | object>({
             in={state.active}
             mountOnEnter
             unmountOnExit
+            nodeRef={nodeRef}
         >
             <div
+                ref={nodeRef}
                 className={clsx(
                     css.dropdown,
                     classNames?.dropdown || css.dropdown_default
