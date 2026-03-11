@@ -545,3 +545,46 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Positions table uses CSS grid for desktop (1fr 200px 200px) and flex-direction column for mobile
   - Contact banner uses same pink gradient as the article Apply section (linear-gradient 90deg #EA36A4 to #F997D0)
 ---
+
+## [2026-03-11] - S10: Solutions Page
+Thread:
+Run: 20260311-151158-48493 (iteration 10)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-10.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-10.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: b929029 feat(solutions): add solutions page with hero, platform, and infrastructure sections
+- Post-commit status: clean (only PRD JSON modified, which is not committed per rules)
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (solutions page 3.88 kB, 16 static pages)
+  - Command: Browser screenshot desktop (1440px) -> PASS (hero, platform, infrastructure all render correctly)
+  - Command: Browser screenshot mobile (375px) -> PASS (responsive layout works across breakpoints)
+- Files changed:
+  - src/app/solutions/page.tsx (solutions page route with DefaultLayout and SolutionsLayout wrapper)
+  - src/widgets/solutions-screens/index.ts (barrel export)
+  - src/widgets/solutions-screens/ui/index.ts (barrel export for Hero, Platform, Infrastructure, SolutionsLayout)
+  - src/widgets/solutions-screens/ui/solutions-layout/index.tsx (max-width 1512px layout with left padding)
+  - src/widgets/solutions-screens/ui/solutions-layout/solutions-layout.module.scss (layout and responsive padding)
+  - src/widgets/solutions-screens/ui/hero/index.tsx (hero with suptitle, HTML title, gradient image, scroll-down button)
+  - src/widgets/solutions-screens/ui/hero/hero.module.scss (flexbox layout, gradient image, scroll button with ring)
+  - src/widgets/solutions-screens/ui/platform/index.tsx (platform section with Bridge and Explorer items)
+  - src/widgets/solutions-screens/ui/platform/platform.module.scss (card layout with images, responsive stacking)
+  - src/widgets/solutions-screens/ui/infrastructure/index.tsx (infrastructure with Lottie animations via MediaQuery)
+  - src/widgets/solutions-screens/ui/infrastructure/infrastructure.module.scss (2-column grid, curved corner button)
+- What was implemented:
+  - Solutions page (/solutions) with 3 sections: Hero, Platform, Infrastructure
+  - Hero: "OUR SOLUTIONS" pink suptitle, title with pink "secure" span, gradient hero image (desktop/mobile variants), scroll-down button with ring animation that smooth-scrolls to infrastructure
+  - Platform: "OUR PLATFORM" suptitle with "Learn more about Taiko" button, Bridge and Explorer cards with icons (80x80), titles, descriptions, "Go to" buttons (target _blank), and product screenshots
+  - Infrastructure: "OUR INFRASTRUCTURE" pink suptitle, 2-column grid with BCR (01) and BBR (02) items, Lottie animations via LottiePlayer (laptop.json, rocket.json), responsive placement (mobile: in header, desktop: after spacer), "Learn more" buttons with curved corner cutout effect (box-shadow trick)
+  - SolutionsLayout wrapper with max-width 1512px, left padding 155px (collapses at tablet)
+  - All content from static solutionsPageData in src/content/pages/solutions.ts
+  - External links: Bridge (bridge.taiko.xyz), Explorer (taikoscan.io), BCR mirror post, BBR mirror post
+  - Responsive: hero stacks vertically at tablet, platform items stack at tablet, infrastructure goes 1-col at tablet, all font sizes scale down at mobile
+- **Learnings for future iterations:**
+  - LottiePlayer (dynamic import with ssr: false) works well with MediaQuery for responsive Lottie placement
+  - Infrastructure button cutout uses position: absolute + box-shadow pseudo-elements for the curved corner illusion — collapses to relative positioning at laptop-sm breakpoint
+  - SolutionsLayout uses left padding (155px) to offset content from page edge, matching source repo's sidebar-aligned design
+  - All solution page content was already extracted in S02 (solutionsPageData) — just needed widget components
+  - MediaQuery children pattern works with JSX children (not children prop) per S05 learnings
+---
