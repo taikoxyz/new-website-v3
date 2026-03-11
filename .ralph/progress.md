@@ -121,3 +121,76 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - The header navigation in source repo has a hardcoded fallback in widgets/header/lib/navigation.ts — this was directly ported
   - Priority project IDs from source: ["1200", "1198"] — preserved for future ecosystem page filtering
 ---
+
+## [2026-03-11] - S03: Shared UI Components
+Thread:
+Run: 20260311-151158-48493 (iteration 3)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-3.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-3.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: dbda346 feat(components): port all shared UI components from source repo
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (compiled successfully, warnings only)
+  - Command: Browser screenshot -> PASS (components render correctly at localhost:3000)
+- Files changed:
+  - src/lib/hooks/use-click-outside.ts (click outside detection hook)
+  - src/lib/hooks/use-aos.ts (animate on scroll hook)
+  - src/lib/hooks/index.ts (barrel export)
+  - src/lib/utils/aos.ts (scroll animation utility)
+  - src/lib/utils/index.ts (barrel export)
+  - src/components/sprite/index.tsx (SVG sprite renderer)
+  - src/components/image/index.tsx (Next.js Image wrapper)
+  - src/components/next-link/index.tsx (Next Link wrapper)
+  - src/components/text-splitter/index.tsx (text animation splitter)
+  - src/components/label/ (label badge component + SCSS)
+  - src/components/media-query/index.tsx (responsive conditional rendering)
+  - src/components/media-loader/index.ts (priority-based media loader)
+  - src/components/icon/ (icon wrapper + SCSS with pulse animation)
+  - src/components/buttons/button/ (polymorphic button + SCSS with animated width)
+  - src/components/buttons/arrow-button/ (directional nav button + SCSS)
+  - src/components/buttons/back-link/ (back navigation link + SCSS)
+  - src/components/input/ (flexible input/textarea + types + lib + SCSS)
+  - src/components/select/ (searchable select dropdown + SCSS)
+  - src/components/select-2/ (advanced select with context provider: 4 sub-components + types + lib)
+  - src/components/multi-select/ (checkbox multi-select + SCSS)
+  - src/components/file-input/ (file input wrapper + SCSS)
+  - src/components/drag-file/index.tsx (drag-and-drop file handler)
+  - src/components/accordion/ (compound accordion with Button/Content subcomponents + SCSS)
+  - src/components/accordeon/ (FAQ-style accordion with plus icon + SCSS)
+  - src/components/modal/ (full modal system: Modal component + ModalProvider + useModal/useModalActive hooks + types + SCSS)
+  - src/components/share-button/ (social share: Facebook/Twitter/LinkedIn + SCSS)
+  - src/components/link-dropdown/ (dropdown menu with CSSTransition + SCSS)
+  - src/components/alert-card/ (notification bell dropdown with CardContent + SCSS)
+  - src/components/rich-text/ (HTML content renderer replacing Strapi BlocksRenderer + SCSS)
+  - src/components/subscribe-section/ (newsletter section wrapper + SCSS)
+  - src/components/socials/ (social media icons with socialsNav data + SCSS)
+  - src/components/banner/ (info banner with Icon + SCSS with gradient stroke)
+  - src/components/grants/ (grants factory banner + responsive SCSS)
+  - src/components/range-calendar/ (date range picker: 5 sub-components + context provider + utils + types + SCSS)
+- What was implemented:
+  - Ported all 28 listed UI components from source repo with SCSS Module styling
+  - Created shared hooks: useClickOutside (mousedown outside detection), useAos (IntersectionObserver-like scroll detection)
+  - Created animateOnScroll utility for scroll-triggered animations
+  - Adapted all components from Pages Router patterns to App Router (added 'use client' where needed)
+  - Removed all withTranslation/i18n HOC dependencies
+  - Replaced Strapi BlocksRenderer with HTML dangerouslySetInnerHTML renderer for RichText
+  - Adapted SubscribeSection to accept children prop instead of importing FooterSubscribe feature
+  - Replaced SVG asset imports (arrow-down.svg, arrow-left.svg) with inline SVGs for RangeCalendar and Select-2
+  - Modal provider adapted from withModal HOC (_app pattern) to ModalProvider component (App Router pattern)
+  - Fixed JSX.Element references to React.ReactNode for React 19 compatibility
+  - All 111 files committed, TypeScript clean, build passes
+- **Learnings for future iterations:**
+  - React 19 removes global JSX namespace — use React.ReactNode instead of JSX.Element
+  - @typescript-eslint rules are NOT configured in this project's ESLint — don't use eslint-disable comments for those rules
+  - Source repo's Select-2 used an imported arrow-down.svg asset — replaced with inline SVG to avoid asset dependencies
+  - Source repo's RangeCalendar imported arrow-left.svg — replaced with inline SVG
+  - Source repo's Modal used withModal HOC wrapping _app.tsx — adapted to ModalProvider component for App Router
+  - Source repo's RichText used @strapi/blocks-react-renderer — replaced with dangerouslySetInnerHTML for static HTML content
+  - Source repo's SubscribeSection imported FooterSubscribe feature — adapted to accept children prop
+  - Source repo has two accordion variants: Accordion (compound pattern with displayNames) and Accordeon (simple Q&A with Sprite)
+  - SCSS variables ($kColorPink, $kFontPublicSans, $kFontClashGrotesk, $kDefaultFont, $kColorBlack, etc.) are auto-injected
+  - Components live in src/components/, hooks in src/lib/hooks/, utilities in src/lib/utils/
+---
