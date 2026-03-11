@@ -640,3 +640,43 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - setGrid mixin uses flex with calc-based widths for responsive grid — matches source repo's grid pattern
   - LottiePlayer needs 'use client' wrapper component for SSR safety (already available from S04)
 ---
+
+## [2026-03-11] - S12: Events Page
+Thread:
+Run: 20260311-151158-48493 (iteration 12)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-12.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-12.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 86a826b feat(events): add events page with hero, schedule table, and client-side filtering
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS
+  - Command: pnpm run build -> PASS
+  - Command: Browser desktop (1440px) -> PASS (hero, event list, filters render correctly)
+  - Command: Browser mobile (375px) -> PASS (responsive layout, stacked event cards)
+  - Command: Location filter test -> PASS (selecting "Tokyo, Japan" shows only ETH Tokyo 2024)
+  - Command: Month filter dropdown -> PASS (opens with all 12 months)
+- Files changed:
+  - src/app/events/page.tsx
+  - src/widgets/events-screens/index.ts
+  - src/widgets/events-screens/ui/index.ts
+  - src/widgets/events-screens/ui/hero/index.tsx
+  - src/widgets/events-screens/ui/hero/hero.module.scss
+  - src/widgets/events-screens/ui/events/index.tsx
+  - src/widgets/events-screens/ui/events/events.module.scss
+  - src/widgets/events-screens/ui/event-item/index.tsx
+  - src/widgets/events-screens/ui/event-item/event-item.module.scss
+  - src/components/select-2/ui/select-dropdown/index.tsx (fix: added nodeRef for React 19 compat)
+- Implemented events page at /events with:
+  - Hero section with background image, suptitle, title, description card, and "Learn more" link
+  - Event schedule table with title, location, date, image, and "More" links
+  - Client-side location filter using Select2 component
+  - Client-side month filter using Select2 component
+  - Responsive layout matching original source design across all breakpoints
+  - Fixed pre-existing Select2 CSSTransition React 19 compatibility issue (findDOMNode removed)
+- **Learnings for future iterations:**
+  - CSSTransition from react-transition-group requires nodeRef prop for React 19 (findDOMNode removed)
+  - Dev browser pages retain error state after JS crashes; restart dev server for clean testing
+  - Event images are placeholders (referenced from old Strapi CMS, not in public/img/events/)
+---
