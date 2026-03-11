@@ -1,0 +1,21 @@
+.root {
+    &_disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &_item {
+        cursor: pointer;
+    }
+
+    &_itemDeactivate {
+        opacity: 0.4;
+        cursor: default;
+    }
+}

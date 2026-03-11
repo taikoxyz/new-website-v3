@@ -745,7 +745,7 @@
       "id": "S02",
       "title": "Content Extraction & Static Data Files",
       "description": "Extract all content from the source repo (/Users/gustavo/taiko/website-v3). Extract translation JSON from /public/locales/en/ into static TypeScript data files. Create content files for page data (home, alethia, gwyneth, gwyneth-apps, dao) in src/content/pages/. Create navigation data file (header + footer nav structure) in src/content/data/navigation.ts. Create static data files for events, ecosystem projects, project categories, blog categories in src/content/data/. Create blog posts as MDX files with frontmatter in src/content/blog/. Create career positions as MDX files with frontmatter in src/content/careers/. Create content utility functions (getBlogs, getBlog, getCareers, getCareer, getEvents, getProjects, etc.) that read from static files.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S01"
       ],
@@ -759,14 +759,14 @@
         "TypeScript compiles with no errors"
       ],
       "startedAt": "2026-03-11T19:25:38.148303+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T19:25:38.148444+00:00"
+      "completedAt": "2026-03-11T19:39:40.480556+00:00",
+      "updatedAt": "2026-03-11T19:39:40.480438+00:00"
     },
     {
       "id": "S03",
       "title": "Shared UI Components",
       "description": "Port all shared UI components from the source repo (/Users/gustavo/taiko/website-v3). Components to port: Button, ArrowButton, BackLink, Accordion, Input, Select, Select-2, MultiSelect, Modal (with provider), FileInput, DragFile, Image (Next.js Image wrapper), NextLink (Next Link wrapper), ShareButton, MediaQuery (responsive conditional rendering), MediaLoader (lazy loading), Sprite (SVG sprite renderer), SubscribeSection (newsletter form), Socials (social media icons), Label, TextSplitter, LinkDropdown, RangeCalendar, RichText (replaces Strapi Blocks renderer \u2014 render MDX/markdown content), AlertCard, Banner, Grants. Use SCSS Modules for styling. Adapt from Pages Router patterns to App Router (remove withTranslation HOCs, use 'use client' where needed).",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S01"
       ],
@@ -776,7 +776,10 @@
         "No withTranslation or i18n HOC dependencies remain",
         "RichText component can render markdown/MDX content",
         "TypeScript compiles with no errors"
-      ]
+      ],
+      "startedAt": "2026-03-11T19:39:42.546048+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T19:39:42.546181+00:00"
     },
     {
       "id": "S04",

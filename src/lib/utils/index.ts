@@ -1,0 +1,1 @@
+export { animateOnScroll } from './aos';
