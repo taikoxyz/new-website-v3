@@ -495,3 +495,53 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Source repo used React Query infinite scroll — replaced with simple client-side pagination (POSTS_PER_PAGE = 9)
   - Source repo used Strapi BlocksRenderer — replaced with custom markdownToHtml for static MDX content
 ---
+
+## [2026-03-11] - S09: Careers Listing & Detail Pages
+Thread:
+Run: 20260311-151158-48493 (iteration 9)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-9.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-9.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 67c908d feat(careers): add careers listing and detail pages with positions table
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (careers 1.97 kB, careers/[slug] 1.89 kB, 15 pages total)
+  - Command: Browser screenshot careers listing (1440px) -> PASS (hero, about, positions table, contact banner)
+  - Command: Browser screenshot career detail (1440px) -> PASS (sidebar TOC, MDX content, Apply Now CTA)
+  - Command: Browser screenshot mobile (375px) -> PASS (responsive layout, stacked positions, stacked banner)
+- Files changed:
+  - src/app/careers/page.tsx (careers listing route with server-side getCareers)
+  - src/app/careers/[slug]/page.tsx (career detail with generateStaticParams, generateMetadata, SideLayout)
+  - src/app/careers/[slug]/career.module.scss (detail page styling)
+  - src/widgets/careers-screens/index.ts (barrel export)
+  - src/widgets/careers-screens/ui/hero/index.tsx (hero with HTML title, About Taiko button)
+  - src/widgets/careers-screens/ui/hero/hero.module.scss (centered title, pink span, responsive)
+  - src/widgets/careers-screens/ui/about/index.tsx (about section with suptitle pill, rich title, text)
+  - src/widgets/careers-screens/ui/about/about.module.scss (responsive about styling)
+  - src/widgets/careers-screens/ui/positions/index.tsx (positions table with 3-column grid, linked rows)
+  - src/widgets/careers-screens/ui/positions/positions.module.scss (table layout, mobile stacked cards)
+  - src/widgets/careers-screens/ui/banner/index.tsx (contact banner with mailto CTA)
+  - src/widgets/careers-screens/ui/banner/banner.module.scss (pink gradient, responsive stacking)
+  - src/widgets/article-screens/index.ts (added SideNav export for career detail reuse)
+- What was implemented:
+  - Careers listing page (/careers) with 4 sections: Hero, About, Positions, ContactBanner
+  - Hero: centered title with pink "Taiko's" span, "About Taiko" button linking to /about
+  - About: suptitle pill, rich HTML title with pink "unlock Ethereum" span and external link, descriptive text
+  - Positions: 3-column table (Position with arrow, Location, Type) with hover effect, links to /careers/[slug]
+  - ContactBanner: pink gradient with "Don't see what you're looking for?" and "Contact us" mailto CTA
+  - Career detail page (/careers/[slug]) using SideLayout with sidebar back link to /careers, TOC from headings, and main content
+  - Position header with title, type (bag icon), location (square-aim icon) meta info
+  - MDX content rendered via reused ArticleScreens.Content component (markdown to HTML)
+  - "Apply now" CTA button with mailto link
+  - SSG with generateStaticParams for all 3 career positions
+  - SEO metadata with position title and description
+  - Responsive: table collapses to stacked cards on mobile, banner stacks vertically
+- **Learnings for future iterations:**
+  - Career MDX files have "## How to Apply" in content body, not as separate howToApply frontmatter field — content renders inline via ArticleScreens.Content
+  - Reusing article-screens SideNav required adding export to barrel file — career detail shares TOC pattern with blog articles
+  - No "location" icon in sprite.svg — used "bag" for job type and "square-aim" for location
+  - Positions table uses CSS grid for desktop (1fr 200px 200px) and flex-direction column for mobile
+  - Contact banner uses same pink gradient as the article Apply section (linear-gradient 90deg #EA36A4 to #F997D0)
+---
