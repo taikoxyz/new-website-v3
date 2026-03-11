@@ -106,6 +106,26 @@ export interface SocialLink {
 }
 
 // Page content types
+
+export interface ExploreScreen {
+  id: number;
+  title: string;
+  text: string;
+  suptitle: string;
+  link: ButtonData;
+}
+
+export interface RoadmapListItem {
+  id: number;
+  text: string;
+}
+
+export interface RoadmapList {
+  id: number;
+  title: string;
+  data: RoadmapListItem[];
+}
+
 export interface HomePageData {
   hero: {
     title: string;
@@ -119,6 +139,8 @@ export interface HomePageData {
     bridgeToTaiko: string;
     scrollToExplore: string;
   };
+  hero_title: string;
+  hero_buttons: ButtonData[];
   blog: {
     title: string;
   };
@@ -144,6 +166,9 @@ export interface HomePageData {
       text: string;
     }[];
   };
+  about_suptitle: string;
+  about_title: string;
+  about_text: string;
   solutions: {
     solutions: string;
     list: {
@@ -155,12 +180,27 @@ export interface HomePageData {
       iconLottie: string;
     }[];
   };
+  solution_screen_1_suptitle: string;
+  solution_screen_1_title: string;
+  solution_screen_2_title: string;
+  solution_screen_3_title: string;
+  solution_screen_4_title: string;
+  solution_screen_2_btn: ButtonData;
+  solution_screen_3_btn: ButtonData;
+  solution_screen_4_btn: ButtonData;
   ecosystem: {
     title: string;
     text: string;
     exploreButton: string;
     dapps: string;
   };
+  governance_suptitle: string;
+  governance_title: string;
+  governance_text: string;
+  explore_screens: ExploreScreen[];
+  roadmap_suptitle: string;
+  roadmap_title: string;
+  roadmap_list: RoadmapList[];
   trailblazerBanner: {
     button: string;
     text: string;

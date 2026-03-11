@@ -12,15 +12,16 @@ const Menu = dynamic(
 
 interface Props {
     children: React.ReactNode;
+    className?: string;
 }
 
-export const DefaultLayout: React.FC<Props> = ({ children }) => {
+export const DefaultLayout: React.FC<Props> = ({ children, className }) => {
     return (
-        <>
+        <div className={className}>
             <Header />
             <Menu />
             {children}
             <Footer />
-        </>
+        </div>
     );
 };
