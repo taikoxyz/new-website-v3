@@ -889,7 +889,7 @@
       "id": "S09",
       "title": "Careers Listing & Detail Pages",
       "description": "Implement the Careers listing page (/careers) with hero (title with HTML, about button), about section (suptitle, title, text), positions table (title, location, type), and contact banner (title, contact us CTA). Implement the Career position detail page (/careers/[slug]) with position header (title, location, type), MDX content for about position and how to apply sections, and Apply Now CTA. Use career data from src/content/careers/ MDX files.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -902,14 +902,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-11T21:24:37.232579+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T21:24:37.232873+00:00"
+      "completedAt": "2026-03-11T21:33:27.808024+00:00",
+      "updatedAt": "2026-03-11T21:33:27.807902+00:00"
     },
     {
       "id": "S10",
       "title": "Solutions Page",
       "description": "Implement the Solutions page (/solutions) with hero (ourSolutions label, title with HTML, text), platform section (suptitle, title \u2014 Bridge & Explorer items with icon, title, text, image, URL), and infrastructure section (suptitle \u2014 BCR & BBR items with title, icon, Lottie animation, text, URL). Include Lottie animations for infrastructure items. Use content from source repo translation files.",
-      "status": "open",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -920,13 +920,16 @@
         "All external links work correctly",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T21:33:29.872708+00:00",
+      "completedAt": "2026-03-11T21:40:03.020250+00:00",
+      "updatedAt": "2026-03-11T21:40:03.020151+00:00"
     },
     {
       "id": "S11",
       "title": "Ecosystem Page",
       "description": "Implement the Ecosystem page (/ecosystem) with hero (suptitle, title, text), search bar, type filter (Testnet, Coming Soon, Mainnet), category filter, project grid (icon, name, description, link, type, categories), last updated indicator, view more/pagination, grant section (suptitle, text, apply CTA, contact us), and disclaimer. Use data from src/content/data/ecosystem-projects.ts and src/content/data/project-categories.ts. Client-side filtering and search.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -939,7 +942,10 @@
         "Grant section renders with CTAs",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T21:40:05.106645+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T21:40:05.106835+00:00"
     },
     {
       "id": "S12",

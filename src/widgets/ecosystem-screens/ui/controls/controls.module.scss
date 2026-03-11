@@ -1,0 +1,95 @@
+.controls {
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.search {
+    max-width: 620px;
+    width: 100%;
+}
+
+.search_field {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background: #efefef;
+    border: none;
+    padding: 0;
+}
+
+.search_input {
+    min-height: 69px;
+    padding: 0 24px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font: 400 16px/1.2 $kFontPublicSans;
+    color: $kColorBlack;
+    border-radius: inherit;
+
+    &::placeholder {
+        color: rgba($kColorBlack, 0.4);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.search_icon {
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    stroke: #292d32;
+}
+
+.selects {
+    display: flex;
+    gap: 14px;
+
+    [data-select]:first-child {
+        min-width: 166px;
+    }
+
+    [data-select]:last-child {
+        min-width: 186px;
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .wrapper {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .search {
+        max-width: 100%;
+    }
+
+    .selects {
+        max-width: 100%;
+        width: 100%;
+
+        [data-select] {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: $kMobileSM) {
+    .selects {
+        flex-direction: column;
+
+        [data-select] {
+            width: 100%;
+        }
+    }
+}
