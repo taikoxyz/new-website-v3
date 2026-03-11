@@ -376,3 +376,47 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - JourneyItem uses border-image for gradient borders and backdrop-filter for blur effect
   - Scaling section uses gsap.to with xPercent for horizontal scroll pinning
 ---
+
+## [2026-03-11] - S07: About Page
+Thread:
+Run: 20260311-151158-48493 (iteration 7)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-7.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-7.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 039bd73 feat(about): port about page with all sections and responsive layout
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (compiled successfully, 2.68 kB page size)
+  - Command: Browser screenshot desktop (1440px) -> PASS (all 5 sections render correctly)
+  - Command: Browser screenshot mobile (375px) -> PASS (responsive layout works across breakpoints)
+- Files changed:
+  - src/app/about/page.tsx (About page route with DefaultLayout wrapper)
+  - src/app/about/about.module.scss (page gap spacing: 90px top padding, 60px section gap)
+  - src/widgets/about-screens/index.ts (barrel export for all 5 sections)
+  - src/widgets/about-screens/ui/hero/index.tsx (Hero section with dangerouslySetInnerHTML for styled title)
+  - src/widgets/about-screens/ui/hero/hero.module.scss (centered title, pink accent, responsive font sizes)
+  - src/widgets/about-screens/ui/community/index.tsx (Community section with GSAP animated counter 35->90+)
+  - src/widgets/about-screens/ui/community/community.module.scss (two-column layout, circle image, responsive stacking)
+  - src/widgets/about-screens/ui/mission/index.tsx (Mission section with image card, fact card with 96% stat)
+  - src/widgets/about-screens/ui/mission/mission.module.scss (flex layout, info card with clock icon cutout)
+  - src/widgets/about-screens/ui/brand/index.tsx (Brand section using shared Banner component)
+  - src/widgets/about-screens/ui/careers/index.tsx (Careers section with background image, two-column content)
+  - src/widgets/about-screens/ui/careers/careers.module.scss (absolute image, white box overlay, responsive)
+- What was implemented:
+  - Created /about route with 5 sections: Hero, Community, Mission, Brand, Careers
+  - Hero: centered title with pink "economically" accent span, responsive font scaling (60px -> 32px)
+  - Community: two-column with suptitle pill, title, text left; circle SVG with GSAP animated counter (35 -> 90+) right; responsive stacking at 900px
+  - Mission: 43.5%/56.5% split with mission-card image left, content cards right; info card with clock icon cutout, 96% stat with divider, fact text
+  - Brand: uses shared Banner component with book icon and "View brand assets" button linking to /brand-assets
+  - Careers: absolute background image (desktop/mobile variants via MediaQuery), white overlay box with pink suptitle, two-column title + text/button, link to /careers
+  - All content sourced from static aboutPageData in src/content/pages/about.ts
+  - Responsive layout verified at desktop (1440px) and mobile (375px) breakpoints
+- **Learnings for future iterations:**
+  - About page content was already extracted in S02 (aboutPageData) — just needed to build the components
+  - Source repo's Brand section had an empty SCSS file — no custom styles needed beyond the shared Banner
+  - Community section uses useAos for scroll-triggered counter animation with GSAP gsap.to()
+  - Careers section splits text by \n to render multiple paragraphs
+  - Mission info card uses box-shadow trick for the clock icon cutout (rounded corner illusion)
+---
