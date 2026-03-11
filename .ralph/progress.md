@@ -248,3 +248,63 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Source repo had an axios instance utility — skipped as this project has no external API
   - Source repo had file-server-path utility for Strapi URLs — skipped as content is static
 ---
+
+## [2026-03-11] - S05: Root Layout, Header & Footer
+Thread:
+Run: 20260311-151158-48493 (iteration 5)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-5.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-5.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: da2eab6 feat(layout): port root layout, header, footer, and mobile menu
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: pnpm run build -> PASS (compiled successfully, warnings only from pre-existing code)
+  - Command: Browser screenshot desktop -> PASS (header, footer, mega-menu all render correctly)
+  - Command: Browser mega-menu hover -> PASS (Alethia dropdown shows links, icons, video)
+- Files changed:
+  - src/app/layout.tsx (font preloading, SEO metadata, Providers wrapper, viewport export)
+  - src/app/page.tsx (updated to use DefaultLayout with SubscribeSection)
+  - src/app/providers.tsx (client component: AppProvider + ModalProvider + AOS setup)
+  - src/app/providers/app-context.tsx (AppContext with menuActive state via useObjectState)
+  - src/components/icons/arrow-down.tsx (ArrowDown SVG icon component)
+  - src/components/icons/arrow-link.tsx (ArrowLink SVG icon component)
+  - src/widgets/header/index.tsx (Header with logo, mega-menu, socials, alert, hamburger)
+  - src/widgets/header/header.module.scss (fixed header, burger animation, responsive)
+  - src/widgets/header/ui/header-navigation/index.tsx (mega-menu with 5 nav groups, media, accordions)
+  - src/widgets/header/ui/header-navigation/header-navigation.module.scss (mega-menu dropdown styles)
+  - src/widgets/footer/index.tsx (Footer with nav columns from getOneLevelLinks)
+  - src/widgets/footer/footer.module.scss (footer layout, responsive)
+  - src/widgets/footer-socials/index.tsx (FooterSocials grid with 5 social links)
+  - src/widgets/footer-socials/footer-socials.module.scss (social grid, hover colors)
+  - src/features/footer-subscribe/index.tsx (FooterSubscribe newsletter form)
+  - src/features/footer-subscribe/footer-subscribe.module.scss (gradient subscribe bar, responsive)
+  - src/widgets/menu/index.tsx (mobile menu overlay with CSSTransition)
+  - src/widgets/menu/menu.module.scss (fullscreen menu, social grid, transitions)
+  - src/widgets/menu/ui/menu-link-group/index.tsx (collapsible nav group for mobile)
+  - src/widgets/menu/ui/menu-link-group/menu-link-group.module.scss (group styles, accordions)
+  - src/widgets/menu/ui/menu-link-group/alert-menu.tsx (AlertMenuItem for mobile menu)
+  - src/widgets/layouts/default-layout/index.tsx (Header + Menu + children + Footer)
+  - src/widgets/layouts/side-layout/index.tsx (sidebar + main content layout)
+  - src/widgets/layouts/side-layout/side-layout.module.scss (responsive sidebar widths)
+- What was implemented:
+  - Root layout updated with font preloading for all 10 woff2 fonts, SEO metadata via Next.js Metadata API, viewport export, and client-side Providers wrapper (AppProvider + ModalProvider + AOS)
+  - Header component with sticky positioning, Taiko logo, mega-menu navigation (5 groups: Alethia, Gwyneth, Governance, Learn, Engage), header socials, AlertCard, and mobile hamburger toggle
+  - HeaderNavigation with CSSTransition dropdowns, nav link icons, video/image media panels, nested accordions for sub-links (e.g., Block Explorers), "Coming soon" badges, and asset preloading
+  - Footer with "Join the taiko community" title, FooterSocials grid (discord, twitter, paragraph, forum, youtube), navigation columns from getOneLevelLinks, Taiko Labs description, copyright
+  - FooterSubscribe newsletter form with gradient background, animated expand, Icon pulse, responsive layout
+  - Mobile Menu with CSSTransition overlay, MenuLinkGroup collapsible nav groups, AlertMenuItem, social links grid
+  - DefaultLayout (Header + dynamic Menu + children + Footer) and SideLayout (responsive sidebar + main)
+  - AppContext with menuActive state using useObjectState hook, exposed via useApp hook
+  - ArrowDown and ArrowLink SVG icon components for nav indicators
+- **Learnings for future iterations:**
+  - React 19 removed findDOMNode — CSSTransition requires nodeRef prop to work without errors
+  - react/no-children-prop lint rule — use nested JSX children instead of children prop for MediaQuery
+  - Next.js 15 separates viewport from metadata — use `export const viewport: Viewport` for viewport config
+  - Source repo's navigation data was fetched via react-query — replaced with static import from navigation.ts
+  - Source repo's footer socials and menu socials used useTranslationObject hook — replaced with direct static data imports
+  - Source repo's fileServerPath utility (for Strapi media URLs) is unnecessary — static assets use direct paths
+  - Widgets directory (src/widgets/) follows source repo's FSD (Feature-Sliced Design) structure for page-level components
+  - Features directory (src/features/) used for cross-cutting features like footer-subscribe
+---
