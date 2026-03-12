@@ -46,11 +46,11 @@ export const Projects: React.FC = () => {
             );
         }
 
-        // Sort priority projects first
-        const prioritySet = new Set(PRIORITY_PROJECT_IDS);
+        // Sort priority projects first, preserving their order in the array
+        const priorityOrder = new Map(PRIORITY_PROJECT_IDS.map((id, i) => [id, i]));
         result = [...result].sort((a, b) => {
-            const aPriority = prioritySet.has(a.id) ? 0 : 1;
-            const bPriority = prioritySet.has(b.id) ? 0 : 1;
+            const aPriority = priorityOrder.get(a.id) ?? PRIORITY_PROJECT_IDS.length;
+            const bPriority = priorityOrder.get(b.id) ?? PRIORITY_PROJECT_IDS.length;
             return aPriority - bPriority;
         });
 

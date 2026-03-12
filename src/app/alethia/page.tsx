@@ -16,6 +16,9 @@ export default function AlethiaPage() {
                     title={data.hero_title}
                     text={data.hero_text}
                     logo={data.hero_logo}
+                    background="/img/alethia/hero-bg.webp"
+                    gridLines="/img/alethia/grid-lines.svg"
+                    heroIcon="/img/alethia/hero-icon.svg"
                 />
                 <ProductScreens.About
                     title={data.about_title}
