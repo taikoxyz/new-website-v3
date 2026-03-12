@@ -680,3 +680,52 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Dev browser pages retain error state after JS crashes; restart dev server for clean testing
   - Event images are placeholders (referenced from old Strapi CMS, not in public/img/events/)
 ---
+
+## [2026-03-11] - S13: Grant Program Page
+Thread:
+Run: 20260311-151158-48493 (iteration 13)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-13.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-13.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 295b478 feat(grant-program): add grant program page with hero, key dates, mission, tracks, FAQs, and banner
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm run build -> PASS
+  - Command: pnpm tsc --noEmit -> PASS
+  - Command: Browser test (dev-browser) -> PASS (all sections render correctly)
+- Files changed:
+  - src/app/grant-program/page.tsx
+  - src/app/grant-program/grant-program.module.scss
+  - src/widgets/grant-program-screens/index.ts
+  - src/widgets/grant-program-screens/ui/index.ts
+  - src/widgets/grant-program-screens/ui/hero/index.tsx
+  - src/widgets/grant-program-screens/ui/hero/hero.module.scss
+  - src/widgets/grant-program-screens/ui/key-dates/index.tsx
+  - src/widgets/grant-program-screens/ui/key-dates/key-dates.module.scss
+  - src/widgets/grant-program-screens/ui/mission/index.tsx
+  - src/widgets/grant-program-screens/ui/mission/mission.module.scss
+  - src/widgets/grant-program-screens/ui/community/index.tsx
+  - src/widgets/grant-program-screens/ui/community/community.module.scss
+  - src/widgets/grant-program-screens/ui/tracks/index.tsx
+  - src/widgets/grant-program-screens/ui/tracks/tracks.module.scss
+  - src/widgets/grant-program-screens/ui/support/index.tsx
+  - src/widgets/grant-program-screens/ui/support/support.module.scss
+  - src/widgets/grant-program-screens/ui/process/index.tsx
+  - src/widgets/grant-program-screens/ui/process/process.module.scss
+- Implemented:
+  - Grant Program page at /grant-program with all 7 sections
+  - Hero section with banner image, HTML title with pink highlight, and description text
+  - Key Dates section with two-column layout (title+arrow left, date/description table right)
+  - Mission section with 4 mission items in responsive grid (4→2→1 columns), each with icon/title/text
+  - Community section with suptitle, HTML title with pink highlights, multi-paragraph text, and "Learn more" button
+  - Grant Tracks section with 3 track cards (Community/Partner/RFP), each showing icon, title, track label, description, timeline with open/closed status, and apply button; inactive tracks have reduced opacity
+  - Support and FAQs section using existing Accordeon component for expandable Q&A pairs (4 FAQs)
+  - Learn more banner using existing Banner component with star icon
+  - All sections fully responsive with breakpoints matching existing site patterns
+- **Learnings for future iterations:**
+  - The about-screens widget uses a different barrel export pattern (direct exports from index.ts) vs events-screens (ui/ subfolder barrel)
+  - The setGrid mixin targets `> li` selector by default — adding explicit list-style: none ensures no bullet artifacts in CSS modules
+  - Content data in grant-program.ts uses HTML strings (e.g., `<span>`, `<b>`, `<u>`) that need dangerouslySetInnerHTML — safe since it's static repo data
+  - The Accordeon component handles FAQ expand/collapse with height animation and click-outside-to-close
+---
