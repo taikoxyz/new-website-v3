@@ -814,3 +814,29 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Image assets referenced in content data may not all exist (e.g. card icons) but this doesn't break the build
   - Both pages use 'use client' directive since they use interactive components (accordion)
 ---
+
+## [2026-03-11] - S15: Alethia & Gwyneth Pages (Verification)
+Thread:
+Run: 20260311-151158-48493 (iteration 16)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-16.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-16.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 3d160d9 docs: add progress log and run summary for S15
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm run build -> PASS (alethia 3.19 kB, gwyneth 3.12 kB)
+  - Command: pnpm tsc --noEmit -> PASS (no errors)
+  - Command: Browser test /alethia desktop (1440px) -> PASS (all 6 sections render with correct content)
+  - Command: Browser test /gwyneth desktop (1440px) -> PASS (all 6 sections render, disabled cards visible)
+  - Command: Browser test /alethia mobile (375px) -> PASS (responsive stacking, font scaling)
+  - Command: ARIA snapshot verification -> PASS (all headings, paragraphs, links, buttons present)
+  - Command: FAQ accordion click test -> PASS (toggle buttons respond to interaction)
+- Files changed:
+  - .ralph/progress.md (this verification entry)
+- Verification-only iteration; implementation was completed in iteration 15 (commit 9bcacc7)
+- All acceptance criteria confirmed met via browser testing and build verification
+- **Learnings for future iterations:**
+  - Headless Chromium may not render CSS transitions correctly in zoomed screenshots — full-page screenshots are more reliable for visual verification
+  - The dev server needs a few seconds to compile new routes before they return 200 (initial 404 is expected)
+---
