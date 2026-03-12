@@ -3,7 +3,7 @@
 import React from "react";
 import { JourneyItem } from "../journey-item";
 import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import JourneyPath from "@/widgets/home-screens/components/JourneyPath";
 import { HOME_PAG } from "@/widgets/home-screens/lib";
 import { homePageData } from "@/content/pages/home";
