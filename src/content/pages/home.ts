@@ -146,13 +146,13 @@ export const homePageData: HomePageData = {
   },
   solution_screen_1_suptitle: "ETHEREUM SCALING SOLUTION",
   solution_screen_1_title:
-    "Taiko\nis based",
+    "Taiko<br>is based",
   solution_screen_2_title:
-    "<span>1</span>DAO",
+    "<span>1</span> DAO",
   solution_screen_3_title:
-    "<span>1</span>Token",
+    "<span>1</span> Token",
   solution_screen_4_title:
-    "<span>1</span>Community",
+    "<span>1</span> Community",
   solution_screen_2_btn: {
     id: 10,
     name: "Learn More",
