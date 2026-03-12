@@ -16,8 +16,7 @@ export interface BlogPost extends BaseFields {
   timeToRead: string;
   category: BlogCategory;
   image: string;
-  content: string; // MDX content body
-  howToApply?: string;
+  content: string;
 }
 
 export interface BlogCategory {

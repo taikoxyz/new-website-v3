@@ -6,45 +6,19 @@ import { events as allEvents } from "./data/events";
 import { projects as allProjects } from "./data/projects";
 import { projectCategories as allProjectCategories } from "./data/project-categories";
 import { blogCategories as allBlogCategories } from "./data/blog-categories";
+import { blogPosts as allBlogPosts } from "./data/blogs";
 import { eventLocations as allEventLocations } from "./data/events";
 
 // ── Blog utilities ────────────────────────────────────────────────
 
-const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
-
-function parseBlogMdx(filePath: string): BlogPost {
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const { data, content } = matter(raw);
-  return {
-    id: data.id,
-    title: data.title,
-    slug: data.slug,
-    link: data.link || "",
-    date: data.date,
-    timeToRead: data.timeToRead,
-    category: { id: data.categoryId, name: data.categoryName },
-    image: data.image,
-    content,
-    howToApply: data.howToApply,
-    createdAt: data.date,
-    updatedAt: data.date,
-    publishedAt: data.date,
-  };
-}
-
 export function getBlogs(): BlogPost[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
-  const files = fs
-    .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith(".mdx"));
-  return files
-    .map((f) => parseBlogMdx(path.join(BLOG_DIR, f)))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return [...allBlogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export function getBlog(slug: string): BlogPost | undefined {
-  const blogs = getBlogs();
-  return blogs.find((b) => b.slug === slug);
+  return allBlogPosts.find((b) => b.slug === slug);
 }
 
 export function getBlogNear(id: number): BlogNear {
@@ -102,7 +76,7 @@ export function getCareer(slug: string): Career | undefined {
 // ── Event utilities ───────────────────────────────────────────────
 
 export function getEvents(): Event[] {
-  return allEvents.sort(
+  return [...allEvents].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }

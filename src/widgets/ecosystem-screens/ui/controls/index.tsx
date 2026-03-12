@@ -14,7 +14,7 @@ const typeOptions = [
     { name: 'All Types', value: ALL },
     { name: 'Mainnet', value: 'Mainnet' },
     { name: 'Testnet', value: 'Testnet' },
-    { name: 'Coming Soon', value: 'Coming soon' },
+    { name: 'Coming Soon', value: 'Coming Soon' },
 ];
 
 const categoryOptions = [

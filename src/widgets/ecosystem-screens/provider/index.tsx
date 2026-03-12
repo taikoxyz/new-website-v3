@@ -31,7 +31,7 @@ interface Props {
 export const EcosystemProvider: React.FC<Props> = ({ children }) => {
     const [state, setState] = useState<EcosystemFilters>({
         search: '',
-        type: null,
+        type: 'Mainnet',
         category: null,
     });
 

@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import dayjs from 'dayjs';
 import Sprite from '@/components/sprite';
 import { Button } from '@/components/buttons/button';
 import { ecosystemPageData } from '@/content/pages/ecosystem';
-import { projects } from '@/content/data/projects';
+import { projects, PRIORITY_PROJECT_IDS } from '@/content/data/projects';
 import { useEcosystemFilters } from '../../provider';
 import { ProjectsList } from '../projects-list';
 import css from './projects.module.scss';
@@ -15,6 +15,10 @@ const ITEMS_PER_PAGE = 12;
 export const Projects: React.FC = () => {
     const { filters } = useEcosystemFilters();
     const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
+
+    useEffect(() => {
+        setVisibleCount(ITEMS_PER_PAGE);
+    }, [filters]);
 
     const filteredProjects = useMemo(() => {
         let result = projects;
@@ -41,6 +45,14 @@ export const Projects: React.FC = () => {
                 ),
             );
         }
+
+        // Sort priority projects first
+        const prioritySet = new Set(PRIORITY_PROJECT_IDS);
+        result = [...result].sort((a, b) => {
+            const aPriority = prioritySet.has(a.id) ? 0 : 1;
+            const bPriority = prioritySet.has(b.id) ? 0 : 1;
+            return aPriority - bPriority;
+        });
 
         return result;
     }, [filters]);

@@ -26,7 +26,6 @@ export default function CareersPage() {
     return (
         <DefaultLayout>
             <CareersScreens.Hero />
-            <CareersScreens.About />
             <CareersScreens.Positions careers={careers} />
             <CareersScreens.ContactBanner />
         </DefaultLayout>
