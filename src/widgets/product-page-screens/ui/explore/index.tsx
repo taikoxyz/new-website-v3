@@ -1,5 +1,4 @@
 import React from 'react';
-import { Label } from '@/components/label';
 import css from './explore.module.scss';
 
 interface Props {
@@ -20,7 +19,15 @@ export const Explore: React.FC<Props> = ({ suptitle, title, text, background }) 
                         className={css.background}
                     />
                     <div className={css.content}>
-                        {suptitle && <Label text={suptitle} className={css.suptitle} />}
+                        {suptitle && (
+                            <>
+                                <p
+                                    className={css.suptitle}
+                                    dangerouslySetInnerHTML={{ __html: suptitle }}
+                                />
+                                <br />
+                            </>
+                        )}
                         <h2 className={css.title}>
                             {title.split('\n').map((line, i) => (
                                 <React.Fragment key={i}>
@@ -29,6 +36,7 @@ export const Explore: React.FC<Props> = ({ suptitle, title, text, background }) 
                                 </React.Fragment>
                             ))}
                         </h2>
+                        <br />
                         <p className={css.text}>{text}</p>
                     </div>
                 </div>

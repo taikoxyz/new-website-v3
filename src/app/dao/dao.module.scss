@@ -1,41 +1,80 @@
 .gap {
     display: flex;
     flex-direction: column;
-    gap: 70px;
-    padding-top: 90px;
     padding-bottom: 100px;
 }
 
 // Welcome
 .welcome {
-    //
+    padding-top: 96px;
 }
 
-.welcome_suptitle {
-    margin-bottom: 16px;
+.welcome_wrapper {
+    border-radius: 40px;
+    background: #fff;
+    background-image: radial-gradient(
+        circle at 2px 2px,
+        rgba($kColorBlack, .1) 0px,
+        rgba($kColorBlack, .1) 2px,
+        #fff 2px,
+        #fff
+    );
+    background-size: 48px 48px;
+    padding: 70px 36px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.welcome_label {
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $kColorPink;
+    text-align: center;
 }
 
 .welcome_title {
-    font: 500 75px/.9 $kFontClashGrotesk;
+    margin-top: 44px;
+    text-align: center;
+    max-width: 14.7em;
+    font: 500 60px/.9 $kFontClashGrotesk;
     letter-spacing: -.02em;
     color: $kColorBlack;
-    max-width: 800px;
 }
 
 .welcome_text {
-    margin-top: 24px;
-    font: 400 18px/1.5 $kFontPublicSans;
-    color: rgba($kColorBlack, .7);
-    max-width: 650px;
+    margin-top: 32px;
+    max-width: 570px;
+    font: 400 16px/1.255 $kFontPublicSans;
+    letter-spacing: -.01em;
+    color: $kColorBlack;
+    text-align: center;
 }
 
 .welcome_btn {
     margin-top: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome_video {
+    pointer-events: none;
+    margin-top: -32px;
+    min-width: 760px;
+    width: 100%;
+    max-width: 1055px;
+    clip-path: inset(2px 2px);
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+    object-position: center bottom;
+    mix-blend-mode: darken;
 }
 
 // About
 .about {
-    //
+    padding: 100px 0 70px;
 }
 
 .about_header {
@@ -43,33 +82,49 @@
 }
 
 .about_suptitle {
-    margin-bottom: 16px;
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $kColorPink;
+}
+
+.about_header {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .about_title {
-    font: 500 48px/1 $kFontClashGrotesk;
+    font: 500 85px/.9 $kFontClashGrotesk;
     letter-spacing: -.02em;
-    color: $kColorBlack;
+    color: #000;
 }
 
 .about_text {
-    margin-top: 20px;
-    font: 400 18px/1.5 $kFontPublicSans;
-    color: rgba($kColorBlack, .7);
-    max-width: 700px;
+    max-width: 468px;
+    font: 400 18px/1.255 $kFontPublicSans;
+    letter-spacing: -.01em;
+    color: $kColorBlack;
 }
 
 .about_features {
     list-style: none;
     display: grid;
+    align-items: flex-start;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
 
 .about_feature {
-    padding: 32px;
-    border-radius: 20px;
+    padding: 28px 28px 36px;
+    border-radius: 10px;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
     transition: opacity .2s ease;
 }
 
@@ -80,91 +135,156 @@
 
 .about_feature_number {
     display: block;
-    font: 500 18px/1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: rgba($kColorBlack, .3);
-    margin-bottom: 12px;
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: .04em;
+    color: $kColorPink;
+    margin-bottom: 24px;
 }
 
 .about_feature_title {
-    font: 500 24px/1.1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: $kColorBlack;
+    font: 500 50px/.9 $kFontClashGrotesk;
+    color: #191e28;
+    max-width: 300px;
 }
 
 .about_feature_text {
-    margin-top: 12px;
-    font: 400 16px/1.5 $kFontPublicSans;
-    color: rgba($kColorBlack, .6);
+    margin-top: 28px;
+    font: 400 18px/1.255 $kFontPublicSans;
+    letter-spacing: -.01em;
+    color: rgba($kColorBlack, .85);
 }
 
 // Join
 .join {
-    //
+    padding: 30px 0;
+}
+
+.join_item {
+    padding: 28px;
+    border-radius: 10px;
+    background: url("/img/dao/feature-bg.webp");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 420px;
 }
 
 .join_suptitle {
-    margin-bottom: 16px;
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .join_title {
-    font: 500 48px/1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: $kColorBlack;
-    max-width: 600px;
+    margin-top: 24px;
+    font: 500 50px/.9 $kFontClashGrotesk;
+    color: #fff;
+    max-width: 9.2em;
+    margin-bottom: 24px;
 }
 
 .join_btn {
-    margin-top: 32px;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 1720px) {
+    .about_feature_title,
+    .join_title {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: $kLaptopXXL) {
+    .about_title {
+        font-size: 68px;
+    }
+
+    .about_text {
+        font-size: 16px;
+        max-width: 420px;
+    }
+
+    .about_feature_title,
+    .join_title {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: $kLaptopM) {
-    .welcome_title {
-        font-size: 60px;
+    .about_header_content {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .about_title,
-    .join_title {
-        font-size: 40px;
+    .about_title {
+        font-size: 55px;
+    }
+
+    .about_features {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
     }
 }
 
 @media screen and (max-width: $kTabletXXL) {
+    .welcome {
+        padding-top: 60px;
+    }
+
+    .welcome_title {
+        font-size: 44px;
+    }
+
+    .welcome_text {
+        margin-top: 24px;
+    }
+
     .about_features {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (max-width: $kMobileXXL) {
+    .welcome_wrapper {
+        padding: 85px 16px 22px;
+    }
+
     .welcome_title {
-        font-size: 40px;
+        font-size: 36px;
     }
 
-    .welcome_text,
-    .about_text {
-        font-size: 16px;
+    .welcome_video {
+        margin-top: -20px;
     }
 
-    .about_title,
-    .join_title {
-        font-size: 28px;
+    .about_title {
+        font-size: 44px;
     }
 
     .about_feature {
-        padding: 24px;
+        padding: 21px 21px 24px;
+        border-radius: 20px;
     }
 
-    .about_feature_title {
-        font-size: 20px;
+    .about_feature_title,
+    .join_title {
+        font-size: 36px;
     }
 
     .about_feature_text {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: $kMobileSM) {
-    .welcome_title {
-        font-size: 32px;
+@media screen and (max-width: 359.98px) {
+    .about_title {
+        font-size: 36px;
+    }
+
+    .about_feature_title,
+    .join_title {
+        font-size: 28px;
     }
 }

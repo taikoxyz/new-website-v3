@@ -16,11 +16,15 @@ export default function GwynethPage() {
                     title={data.hero_title}
                     text={data.hero_text}
                     logo={data.hero_logo}
+                    background="/img/alethia/hero-bg.webp"
+                    gridLines="/img/alethia/grid-lines.svg"
+                    heroIcon="/img/alethia/hero-icon.svg"
                 />
                 <ProductScreens.About
                     title={data.about_title}
                     text={data.about_text}
                     subtext={data.about_subtext}
+                    label="About"
                 />
                 <ProductScreens.Features
                     suptitle={data.features_suptitle}
@@ -34,6 +38,7 @@ export default function GwynethPage() {
                 />
                 <ProductScreens.Cards
                     cards={data.cards_list}
+                    cols={4}
                 />
                 <ProductScreens.Faq
                     title={data.faq_title}

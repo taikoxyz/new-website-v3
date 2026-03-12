@@ -1,13 +1,17 @@
 .hero {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 96px 18px 48px;
 }
 
 .wrapper {
     position: relative;
     overflow: hidden;
     background-size: cover;
-    background-position: center top;
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding: 0 100px;
+    max-width: 1476px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .grid_lines {
@@ -26,9 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1476px;
-    margin: 0 auto;
-    padding: 56px 100px 46px;
+    padding: 56px 0 46px;
 }
 
 .content_centered {
@@ -39,44 +41,58 @@
     text-align: center;
     flex: 1;
     justify-content: center;
-    padding: 40px 0;
+    width: 100%;
+    padding: 80px 0;
 }
 
 .hero_icon {
     position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    padding: 34px 0;
+
+    img {
+        width: 32px;
+    }
 }
 
 .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border-radius: 100px;
-    background: rgba($kColorBlack, .04);
-    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .badge_logo {
-    height: 20px;
+    height: 25px;
     width: auto;
 }
 
 .title {
-    font: 500 72px/.95 $kFontClashGrotesk;
-    letter-spacing: -.03em;
-    color: $kColorBlack;
-    max-width: 800px;
+    font: 500 80px/1 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: #191e28;
+    max-width: 10.25em;
 }
 
 .text {
-    margin-top: 24px;
-    font: 400 18px/1.5 $kFontPublicSans;
+    margin-top: 32px;
+    font: 400 18px/1.255 $kFontPublicSans;
+    letter-spacing: -.01em;
     color: rgba($kColorBlack, .6);
-    max-width: 550px;
+    max-width: 530px;
+}
+
+@media screen and (max-width: $kLaptopXXL) {
+    .title {
+        font-size: 68px;
+    }
+
+    .text {
+        margin-top: 24px;
+    }
 }
 
 @media screen and (max-width: $kLaptopM) {
@@ -85,48 +101,56 @@
     }
 
     .container_centered {
-        padding: 48px 60px 40px;
+        padding: 48px 0 40px;
     }
 }
 
 @media screen and (max-width: $kTabletXXL) {
-    .title {
-        font-size: 48px;
+    .wrapper {
+        padding: 52px 0;
     }
 
     .container_centered {
-        padding: 40px 40px 32px;
-    }
-}
-
-@media screen and (max-width: $kMobileXXL) {
-    .hero {
-        padding-top: 24px;
+        padding: 30px 0;
     }
 
     .title {
-        font-size: 36px;
+        font-size: 55px;
     }
 
     .text {
         font-size: 16px;
     }
 
+    .content_centered {
+        padding: 54px 0;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .hero {
+        padding: 60px 0 24px;
+    }
+
+    .title {
+        font-size: 44px;
+    }
+
     .container_centered {
-        padding: 32px 20px 24px;
+        padding: 20px 0;
     }
 
     .content_centered {
-        padding: 24px 0;
+        padding: 40px 0;
     }
 
     .hero_icon {
-        height: 60px;
+        padding: 15px;
     }
 }
 
 @media screen and (max-width: $kMobileSM) {
     .title {
-        font-size: 28px;
+        font-size: 36px;
     }
 }

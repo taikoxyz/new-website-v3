@@ -19,11 +19,13 @@ export const About: React.FC<Props> = ({ title, text, subtext, label, logo }) =>
                         <h2 className={css.title}>{title}</h2>
                     </div>
                     <div className={css.center}>
-                        <img
-                            src={logo || '/img/logo.svg'}
-                            alt="Taiko"
-                            className={css.knot}
-                        />
+                        <div className={css.knot_inner}>
+                            <img
+                                src={logo || '/img/home-new/taiko.webp'}
+                                alt="Taiko"
+                                className={css.knot}
+                            />
+                        </div>
                     </div>
                     <div className={css.right}>
                         <p className={css.text}>{text}</p>

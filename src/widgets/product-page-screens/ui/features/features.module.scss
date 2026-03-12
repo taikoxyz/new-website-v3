@@ -1,11 +1,11 @@
 .features {
-    //
+    padding: 40px 0 30px;
 }
 
 .suptitle {
-    margin-bottom: 32px;
-    font: 500 14px/1.2 $kFontClashGrotesk;
-    letter-spacing: .1em;
+    margin-bottom: 36px;
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: .04em;
     text-transform: uppercase;
     color: $kColorBlack;
 }
@@ -13,14 +13,19 @@
 .list {
     list-style: none;
     display: grid;
+    align-items: flex-start;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 16px 20px;
 }
 
 .item {
-    padding: 32px;
-    border-radius: 20px;
+    padding: 28px 28px 36px;
+    border-radius: 10px;
     background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
     transition: opacity .2s ease;
 }
 
@@ -31,27 +36,41 @@
 
 .item_number {
     display: block;
-    font: 500 18px/1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: rgba($kColorBlack, .3);
-    margin-bottom: 12px;
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: .04em;
+    color: $kColorPink;
+    margin-bottom: 24px;
 }
 
 .item_title {
-    font: 500 24px/1.1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: $kColorBlack;
+    font: 500 50px/.9 $kFontClashGrotesk;
+    color: #191e28;
+    max-width: 300px;
 }
 
 .item_text {
-    margin-top: 12px;
-    font: 400 16px/1.5 $kFontPublicSans;
-    color: rgba($kColorBlack, .6);
+    margin-top: 28px;
+    font: 400 18px/1.255 $kFontPublicSans;
+    letter-spacing: -.01em;
+    color: rgba($kColorBlack, .85);
+}
+
+@media screen and (max-width: 1720px) {
+    .item_title {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: $kLaptopXXL) {
+    .item_title {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: $kLaptopM) {
     .list {
         grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
     }
 }
 
@@ -59,18 +78,29 @@
     .list {
         grid-template-columns: 1fr;
     }
+
+    .suptitle {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: $kMobileXXL) {
     .item {
-        padding: 24px;
+        padding: 21px 21px 24px;
+        border-radius: 20px;
     }
 
     .item_title {
-        font-size: 20px;
+        font-size: 36px;
     }
 
     .item_text {
-        font-size: 14px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 359.98px) {
+    .item_title {
+        font-size: 28px;
     }
 }

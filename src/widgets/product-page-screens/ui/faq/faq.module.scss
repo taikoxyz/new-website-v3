@@ -1,33 +1,35 @@
 .faq {
-    //
+    padding: 30px 0 45px;
 }
 
 .content {
     display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .content_left {
-    width: 365px;
+    width: 450px;
     flex-shrink: 0;
 }
 
 .content_right {
-    width: calc(100% - 365px);
-    padding-left: 30px;
+    width: calc(100% - 490px);
+    max-width: 820px;
 }
 
 .title {
-    font: 500 40px/1 $kFontClashGrotesk;
+    font: 500 60px/.95 $kFontClashGrotesk;
     letter-spacing: -.02em;
-    color: $kColorBlack;
-    max-width: 300px;
+    color: #22282b;
 }
 
 .text {
-    margin-top: 20px;
-    font: 400 16px/1.4 $kFontPublicSans;
+    max-width: 340px;
+    margin-top: 32px;
+    font: 400 18px/1.2 $kFontPublicSans;
+    letter-spacing: -.02em;
     color: rgba($kColorBlack, .6);
-    max-width: 270px;
 }
 
 .list {
@@ -37,25 +39,34 @@
     gap: 16px;
 }
 
+@media screen and (max-width: $kLaptopXXL) {
+    .title {
+        font-size: 52px;
+        max-width: 380px;
+    }
+}
+
 @media screen and (max-width: $kLaptopM) {
     .content_left {
-        width: 300px;
+        width: 350px;
     }
 
     .content_right {
-        width: calc(100% - 300px);
+        width: calc(100% - 390px);
     }
 }
 
 @media screen and (max-width: $kTabletXXL) {
     .content {
         flex-direction: column;
-        gap: 40px;
+        align-items: flex-start;
+        gap: 36px;
     }
 
     .content_left,
     .content_right {
         width: 100%;
+        max-width: 100%;
         padding-left: 0;
     }
 
@@ -65,11 +76,25 @@
 
     .text {
         max-width: 100%;
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .title {
+        font-size: 46px;
+        max-width: 7.2em;
     }
 }
 
 @media screen and (max-width: $kMobileXXL) {
     .title {
-        font-size: 28px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 359.98px) {
+    .title {
+        font-size: 36px;
     }
 }

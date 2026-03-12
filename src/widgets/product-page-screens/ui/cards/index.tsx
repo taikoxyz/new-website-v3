@@ -6,13 +6,14 @@ import css from './cards.module.scss';
 
 interface Props {
     cards: CardItem[];
+    cols?: number;
 }
 
-export const Cards: React.FC<Props> = ({ cards }) => {
+export const Cards: React.FC<Props> = ({ cards, cols = 3 }) => {
     return (
         <section className={css.cards}>
             <div className="container">
-                <ul className={css.list}>
+                <ul className={clsx(css.list, css[`_${cols}`])}>
                     {cards.map((card) => {
                         const Tag = card.disabled ? 'div' : 'a';
                         return (
