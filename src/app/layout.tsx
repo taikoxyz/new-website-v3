@@ -76,7 +76,7 @@ export default function RootLayout({
             href={href}
             as="font"
             type="font/woff2"
-            crossOrigin=""
+            crossOrigin="anonymous"
           />
         ))}
       </head>

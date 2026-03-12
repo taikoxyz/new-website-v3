@@ -127,59 +127,11 @@ export interface RoadmapList {
 }
 
 export interface HomePageData {
-  hero: {
-    title: string;
-    text: string;
-    taiko: {
-      is: string;
-      value: string;
-      labels: string[];
-    };
-    startBuilding: string;
-    bridgeToTaiko: string;
-    scrollToExplore: string;
-  };
   hero_title: string;
   hero_buttons: ButtonData[];
-  blog: {
-    title: string;
-  };
-  advantages: {
-    id: string;
-    icon: string;
-    title: string;
-    text: string;
-    colors: {
-      icon: string;
-      text: string;
-      background: string;
-    };
-  }[];
-  about: {
-    suptitle: string;
-    title: string;
-    text: string;
-    startBuilding: string;
-    list: {
-      icon: string;
-      title: string;
-      text: string;
-    }[];
-  };
   about_suptitle: string;
   about_title: string;
   about_text: string;
-  solutions: {
-    solutions: string;
-    list: {
-      title: string;
-      extraTitle: string;
-      title_short: string;
-      text: string;
-      icon: string;
-      iconLottie: string;
-    }[];
-  };
   solution_screen_1_suptitle: string;
   solution_screen_1_title: string;
   solution_screen_2_title: string;
@@ -188,12 +140,6 @@ export interface HomePageData {
   solution_screen_2_btn: ButtonData;
   solution_screen_3_btn: ButtonData;
   solution_screen_4_btn: ButtonData;
-  ecosystem: {
-    title: string;
-    text: string;
-    exploreButton: string;
-    dapps: string;
-  };
   governance_suptitle: string;
   governance_title: string;
   governance_text: string;
@@ -201,14 +147,6 @@ export interface HomePageData {
   roadmap_suptitle: string;
   roadmap_title: string;
   roadmap_list: RoadmapList[];
-  trailblazerBanner: {
-    button: string;
-    text: string;
-  };
-  grantFactoryBanner: {
-    button: string;
-    text: string;
-  };
 }
 
 export interface SolutionsPageData {
