@@ -914,3 +914,27 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - The setGrid mixin from mixins.scss is the project's standard for responsive card grids
   - Project uses both old ($kLaptopM etc.) and new ($lg etc.) breakpoint variables
 ---
+
+## [2026-03-11] - S16: Gwyneth Apps & DAO Pages (Browser Verification)
+Thread:
+Run: 20260311-151158-48493 (iteration 19)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-19.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-19.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: (verification only — code committed in iter 18 as 102ea5f)
+- Post-commit status: clean (after logging commit)
+- Verification:
+  - Command: pnpm run build -> PASS
+  - Command: pnpm tsc --noEmit -> PASS
+  - Command: Browser /gwyneth/apps -> PASS (hero, about, dapps stat, disclaimer toggle, apps list empty state)
+  - Command: Browser /dao -> PASS (welcome, about features, join, FAQ accordion)
+  - Command: Disclaimer toggle interaction -> PASS (collapses/expands)
+  - Command: FAQ accordion interaction -> PASS (opens/closes with answer text)
+- Files changed:
+  - (no code changes — verification iteration only)
+- Browser verified all S16 acceptance criteria are met
+- **Learnings for future iterations:**
+  - Iteration 18 completed the full implementation; this iteration confirmed browser correctness
+  - Both interactive components (disclaimer toggle, FAQ accordion) work as expected
+---
