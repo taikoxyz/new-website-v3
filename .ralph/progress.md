@@ -938,3 +938,48 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Iteration 18 completed the full implementation; this iteration confirmed browser correctness
   - Both interactive components (disclaimer toggle, FAQ accordion) work as expected
 ---
+
+## [2026-03-11] - S17: SEO, Sitemap & Final Polish
+Thread: 
+Run: 20260311-151158-48493 (iteration 20)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-20.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-20.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 8b54e22 feat(seo): add SEO meta tags, sitemap.xml, and robots.txt for all pages
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm run build -> PASS (26/26 pages generated, sitemap.xml + robots.txt present)
+  - Command: pnpm tsc --noEmit -> PASS (no errors)
+- Files changed:
+  - src/app/layout.tsx (enhanced root metadata: metadataBase, title template, Twitter card, canonical)
+  - src/app/about/layout.tsx (new - page metadata)
+  - src/app/alethia/layout.tsx (new - page metadata)
+  - src/app/brand-assets/layout.tsx (new - page metadata)
+  - src/app/dao/layout.tsx (new - page metadata)
+  - src/app/ecosystem/layout.tsx (new - page metadata)
+  - src/app/events/layout.tsx (new - page metadata)
+  - src/app/grant-program/layout.tsx (new - page metadata)
+  - src/app/gwyneth/layout.tsx (new - page metadata)
+  - src/app/gwyneth/apps/layout.tsx (new - page metadata)
+  - src/app/solutions/layout.tsx (new - page metadata)
+  - src/app/blog/page.tsx (enhanced metadata with OG, Twitter, canonical)
+  - src/app/blog/[slug]/page.tsx (fixed title for template, added OG/Twitter/canonical)
+  - src/app/careers/page.tsx (enhanced metadata with OG, Twitter, canonical)
+  - src/app/careers/[slug]/page.tsx (fixed title for template, added OG/Twitter/canonical)
+  - src/app/sitemap.ts (new - generates sitemap.xml with all static + dynamic routes)
+  - src/app/robots.ts (new - generates robots.txt allowing all crawlers)
+- What was implemented:
+  - All pages now have proper title, description, OpenGraph, and Twitter card meta tags
+  - Root layout uses title template pattern ("%s — Taiko") for consistent page titles
+  - metadataBase set to https://taiko.xyz for proper URL resolution
+  - sitemap.xml generated with all 13 static routes + dynamic blog/career routes
+  - robots.txt generated allowing all user agents, pointing to sitemap
+  - Font preloading verified: all 10 woff2 fonts correctly preloaded in layout.tsx
+  - Blog/career dynamic pages fixed to work with title template (avoid double "Taiko")
+  - Canonical URLs added to all pages via alternates.canonical
+- **Learnings for future iterations:**
+  - "use client" pages cannot export metadata - use route-specific layout.tsx files instead
+  - When using title.template in root layout, dynamic generateMetadata must return short titles
+  - metadataBase enables relative canonical URLs (e.g., "/about" resolves to "https://taiko.xyz/about")
+---
