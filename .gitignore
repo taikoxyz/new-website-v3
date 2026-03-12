@@ -34,6 +34,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# ralph / agents
+.ralph/
+.agents/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
