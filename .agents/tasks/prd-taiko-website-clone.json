@@ -951,7 +951,7 @@
       "id": "S12",
       "title": "Events Page",
       "description": "Implement the Events page (/events) with hero (suptitle, title, text), event schedule table (title, location, date, image), location filter, month filter, and learn more links. Use data from src/content/data/events.ts. Client-side filtering.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -964,14 +964,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-11T21:50:35.771717+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-11T21:50:35.771862+00:00"
+      "completedAt": "2026-03-11T22:03:29.356402+00:00",
+      "updatedAt": "2026-03-11T22:03:29.356271+00:00"
     },
     {
       "id": "S13",
       "title": "Grant Program Page",
       "description": "Implement the Grant Program page (/grant-program) with hero (title, text), key dates section (title, date/description table), mission section (title with HTML, 4 mission items with icon/title/text), community approach section (suptitle, title, text, learn more), grant tracks \u2014 3 tracks: Community, Partner, RFP (icon, title, track label, link, text, timeline, active status), support/FAQs section (title, text, FAQ accordion with Q&A pairs), and learn more banner. Use the Accordion component for FAQs.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -982,7 +982,10 @@
         "Key dates table renders correctly",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-11T22:03:31.425881+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-11T22:03:31.426013+00:00"
     },
     {
       "id": "S14",

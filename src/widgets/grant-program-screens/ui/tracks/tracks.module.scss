@@ -1,0 +1,119 @@
+.title {
+    font: 500 40px/1 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: $kColorBlack;
+}
+
+.list {
+    margin-top: 40px;
+    list-style: none;
+    @include setGrid(3, 20);
+}
+
+.card {
+    padding: 28px;
+    border-radius: 30px;
+    background: #FFF;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card_inactive {
+    opacity: .6;
+}
+
+.card_header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.card_icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.card_titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_title {
+    font: 500 28px/.95 $kFontClashGrotesk;
+    color: $kColorBlack;
+}
+
+.card_track {
+    font: 600 14px/1.2 $kFontPublicSans;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $kColorPink;
+}
+
+.card_text {
+    margin-top: 24px;
+    flex-grow: 1;
+
+    font: 400 16px/1.5 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+}
+
+.card_footer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(#000, .08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card_timeline {
+    font: 400 14px/1.2 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+
+    b {
+        font-weight: 600;
+        color: $kColorBlack;
+    }
+}
+
+.card_button {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .list {
+        @include setGrid(2, 20);
+    }
+}
+
+@media screen and (max-width: $kTabletXXL) {
+    .title {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: $kTabletSM) {
+    .list {
+        @include setGrid(1, 16);
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .title {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 22px 20px;
+        border-radius: 20px;
+    }
+
+    .card_title {
+        font-size: 24px;
+    }
+}
