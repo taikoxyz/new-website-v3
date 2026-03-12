@@ -840,3 +840,44 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Headless Chromium may not render CSS transitions correctly in zoomed screenshots — full-page screenshots are more reliable for visual verification
   - The dev server needs a few seconds to compile new routes before they return 200 (initial 404 is expected)
 ---
+
+## [2026-03-11] - S15: Alethia & Gwyneth Pages
+Thread:
+Run: 20260311-151158-48493 (iteration 17)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-17.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-17.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: (see below) docs: add progress log and run summary for S15
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm run build -> PASS (22 static pages generated, no errors)
+  - Command: pnpm tsc --noEmit -> PASS (no type errors)
+  - Command: Browser /alethia desktop 1440px -> PASS (all sections render correctly)
+  - Command: Browser /gwyneth desktop 1440px -> PASS (all sections render correctly)
+  - Command: Browser FAQ accordion click -> PASS (expands/collapses with animation)
+  - Command: Browser /alethia mobile 375px -> PASS (responsive layout correct)
+  - Command: Browser /gwyneth mobile 375px -> PASS (responsive layout correct)
+  - Command: Disabled cards visual check -> PASS (dimmed opacity, no pointer events)
+- Files changed (from prior iterations, code commit 9bcacc7):
+  - src/app/alethia/page.tsx
+  - src/app/alethia/alethia.module.scss
+  - src/app/gwyneth/page.tsx
+  - src/app/gwyneth/gwyneth.module.scss
+  - src/content/pages/alethia.ts
+  - src/content/pages/gwyneth.ts
+  - src/content/types/index.ts (AlethiaGwynethPageData, FeatureItem, CardItem, FaqItem)
+  - src/widgets/product-page-screens/ (Hero, About, Features, Explore, Cards, Faq)
+  - src/components/accordeon/ (accordion component for FAQ)
+  - src/components/label/ (label/suptitle component)
+- Implementation complete across iterations 13-17:
+  - Reusable ProductPage component structure via product-page-screens widget
+  - Both pages share Hero, About, Features, Explore, Cards, Faq sections
+  - FAQ accordion with click-outside-to-close, animated height transition
+  - Disabled cards/features show dimmed opacity state
+  - Full responsive breakpoints (desktop, laptop, tablet, mobile)
+- **Learnings for future iterations:**
+  - S15 was implemented across multiple iterations due to commit/progress log issues
+  - The actual code was solid from iteration 13 onward (commit 9bcacc7)
+  - Browser verification is essential for confirming interactive features like accordions
+---
