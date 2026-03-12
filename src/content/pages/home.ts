@@ -120,7 +120,7 @@ export const homePageData: HomePageData = {
   about_suptitle: "ABOUT TAIKO",
   about_title: "We envision a based, fearless, ownerless, and unstoppable ecosystem",
   about_text:
-    "Our mission is to scale Ethereum while staying true to the principles that made it thrive. No centralized sequencers, no compromises. In the future, Taiko won\u2019t need leaders, only those driven to change the world one block at a time.",
+    "Our mission is to scale Ethereum while staying true to the principles that made it thrive. No centralized sequencers, no compromises. In the future, Taiko won't need leaders, only those driven to change the world one block at a time.",
   solutions: {
     solutions: "Our solutions",
     list: [
@@ -246,7 +246,7 @@ export const homePageData: HomePageData = {
       title: "Q3 2025",
       data: [
         { id: 10, text: "Whitelisted preconfirmations on mainnet" },
-        { id: 11, text: "Post-launch stability optimizations for preconfirmations" },
+        { id: 11, text: "Post-launch stability optimizations for perconfirmations" },
         { id: 12, text: "Launch Gwyneth testnet" },
       ],
     },
