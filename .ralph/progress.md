@@ -770,3 +770,47 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - All responsive breakpoints match source repo exactly using existing SCSS variables
   - Brand assets page links from About page now resolve correctly
 ---
+
+## [2026-03-11] - S15: Alethia & Gwyneth Pages
+Thread: 
+Run: 20260311-151158-48493 (iteration 15)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-15.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-15.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 9bcacc7 feat(alethia-gwyneth): add Alethia and Gwyneth product pages with shared reusable component structure
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm run build -> PASS
+  - Command: pnpm tsc --noEmit -> PASS
+  - Command: Browser test /alethia -> PASS (all sections render, FAQ accordion works)
+  - Command: Browser test /gwyneth -> PASS (all sections render, disabled cards shown correctly)
+- Files changed:
+  - src/app/alethia/page.tsx
+  - src/app/alethia/alethia.module.scss
+  - src/app/gwyneth/page.tsx
+  - src/app/gwyneth/gwyneth.module.scss
+  - src/widgets/product-page-screens/index.ts
+  - src/widgets/product-page-screens/ui/index.ts
+  - src/widgets/product-page-screens/ui/hero/index.tsx
+  - src/widgets/product-page-screens/ui/hero/hero.module.scss
+  - src/widgets/product-page-screens/ui/about/index.tsx
+  - src/widgets/product-page-screens/ui/about/about.module.scss
+  - src/widgets/product-page-screens/ui/features/index.tsx
+  - src/widgets/product-page-screens/ui/features/features.module.scss
+  - src/widgets/product-page-screens/ui/explore/index.tsx
+  - src/widgets/product-page-screens/ui/explore/explore.module.scss
+  - src/widgets/product-page-screens/ui/cards/index.tsx
+  - src/widgets/product-page-screens/ui/cards/cards.module.scss
+  - src/widgets/product-page-screens/ui/faq/index.tsx
+  - src/widgets/product-page-screens/ui/faq/faq.module.scss
+- Created reusable product-page-screens widget with 6 sections: Hero, About, Features, Explore, Cards, FAQ
+- Both /alethia and /gwyneth pages use the same shared component structure with different data
+- Disabled cards/features render with reduced opacity and no pointer events
+- FAQ uses existing Accordeon component with smooth open/close animation
+- **Learnings for future iterations:**
+  - The widget pattern in this project uses barrel exports: ui/index.ts -> index.ts
+  - Existing Accordeon component (not Accordion) is used for FAQ sections
+  - Image assets referenced in content data may not all exist (e.g. card icons) but this doesn't break the build
+  - Both pages use 'use client' directive since they use interactive components (accordion)
+---
