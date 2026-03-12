@@ -18,13 +18,22 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const article = getBlog(slug);
-    if (!article) return { title: 'Blog — Taiko' };
+    if (!article) return { title: 'Blog' };
 
     return {
-        title: `${article.title} – Taiko`,
+        title: article.title,
         description: article.content.replace(/[#*`\[\]_>]/g, '').trim().slice(0, 160),
         openGraph: {
+            title: `${article.title} — Taiko`,
             images: [article.image],
+            url: `https://taiko.xyz/blog/${article.slug}`,
+        },
+        twitter: {
+            title: `${article.title} — Taiko`,
+            description: article.content.replace(/[#*`\[\]_>]/g, '').trim().slice(0, 160),
+        },
+        alternates: {
+            canonical: `/blog/${article.slug}`,
         },
     };
 }

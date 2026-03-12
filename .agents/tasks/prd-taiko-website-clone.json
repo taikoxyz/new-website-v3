@@ -1031,7 +1031,7 @@
       "id": "S16",
       "title": "Gwyneth Apps & DAO Pages",
       "description": "Implement the Gwyneth Apps page (/gwyneth/apps) with hero (title), about section (suptitle, text, CTA button), dapps stat (name, value, icon array), apps list (name, text, type, active, icon, categories, URL), and disclaimer (title, text, active toggle). Implement the DAO page (/dao) with welcome (suptitle, title, text, CTA button), about (suptitle, title, text, features list), join section (suptitle, title, CTA button), and FAQ (title, text, accordion with question/answer pairs). Use page data from src/content/pages/gwyneth-apps.ts and src/content/pages/dao.ts.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -1044,14 +1044,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-12T02:27:19.736081+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-12T02:27:19.736326+00:00"
+      "completedAt": "2026-03-12T02:30:37.239053+00:00",
+      "updatedAt": "2026-03-12T02:30:37.237509+00:00"
     },
     {
       "id": "S17",
       "title": "SEO, Sitemap & Final Polish",
       "description": "Add proper SEO meta tags to all pages using Next.js Metadata API (title, description, OG tags, Twitter cards, canonical URL). Generate sitemap.xml and robots.txt. Verify font preloading works for all 10 woff2 fonts. Run pnpm run build and fix any remaining errors. Verify no console errors in production mode. Run basic performance check.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S06",
         "S07",
@@ -1072,7 +1072,10 @@
         "Font preloading works for all 10 woff2 fonts",
         "pnpm run build succeeds with no errors",
         "No console errors in production build"
-      ]
+      ],
+      "startedAt": "2026-03-12T02:30:39.310852+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-12T02:30:39.311030+00:00"
     }
   ]
 }

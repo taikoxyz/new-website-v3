@@ -17,21 +17,28 @@ const FONT_PRELOADS = [
 ];
 
 export const metadata: Metadata = {
-  title: "Taiko",
+  metadataBase: new URL("https://taiko.xyz"),
+  title: {
+    default: "Taiko — Ethereum Scaling Solution",
+    template: "%s — Taiko",
+  },
   description:
     "The most developer-friendly and secure Ethereum scaling solution.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Taiko",
+    title: "Taiko — Ethereum Scaling Solution",
     description:
       "The most developer-friendly and secure Ethereum scaling solution.",
     url: "https://taiko.xyz",
+    siteName: "Taiko",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
-    title: "Taiko",
+    card: "summary_large_image",
+    title: "Taiko — Ethereum Scaling Solution",
     description:
       "The most developer-friendly and secure Ethereum scaling solution.",
   },
@@ -44,6 +51,9 @@ export const metadata: Metadata = {
     "blockchain",
     "based rollup",
   ],
+  alternates: {
+    canonical: "https://taiko.xyz",
+  },
 };
 
 export const viewport: Viewport = {

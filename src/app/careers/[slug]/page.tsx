@@ -22,11 +22,25 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const career = getCareer(slug);
-    if (!career) return { title: 'Careers — Taiko' };
+    if (!career) return { title: 'Careers' };
+
+    const description = `${career.type} · ${career.location} — Apply now for the ${career.title} position at Taiko.`;
 
     return {
-        title: `${career.title} – Taiko Careers`,
-        description: `${career.type} · ${career.location} — Apply now for the ${career.title} position at Taiko.`,
+        title: `${career.title} – Careers`,
+        description,
+        openGraph: {
+            title: `${career.title} – Careers — Taiko`,
+            description,
+            url: `https://taiko.xyz/careers/${career.slug}`,
+        },
+        twitter: {
+            title: `${career.title} – Careers — Taiko`,
+            description,
+        },
+        alternates: {
+            canonical: `/careers/${career.slug}`,
+        },
     };
 }
 
