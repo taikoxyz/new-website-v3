@@ -991,7 +991,7 @@
       "id": "S14",
       "title": "Brand Assets Page",
       "description": "Implement the Brand Assets page (/brand-assets) with hero (title, text), logo section (suptitle, download button, logo variants with different backgrounds), color palette section (suptitle, color groups with name and hex values), typography section (suptitle, title, font families with variants and download links), and brand book section (title, download button). Download links should point to files in public/files/.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -1004,14 +1004,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-12T01:53:17.315402+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-12T01:53:17.315736+00:00"
+      "completedAt": "2026-03-12T02:02:05.469715+00:00",
+      "updatedAt": "2026-03-12T02:02:05.469591+00:00"
     },
     {
       "id": "S15",
       "title": "Alethia & Gwyneth Pages",
       "description": "Implement the Alethia page (/alethia) with hero (title, text, logo image), about (title, text, subtext), features list (suptitle, array of features with title/text/disabled), explore section (suptitle, title, text), cards list (title, text, href, disabled, icon), and FAQ (title, text, accordion with question/answer pairs \u2014 answers are rich text). Implement the Gwyneth page (/gwyneth) with the same structure. Use page data from src/content/pages/alethia.ts and src/content/pages/gwyneth.ts. Both pages share the same component structure \u2014 create a reusable ProductPage component.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -1022,7 +1022,10 @@
         "Disabled features/cards show appropriate state",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-12T02:02:07.542255+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-12T02:02:07.542418+00:00"
     },
     {
       "id": "S16",

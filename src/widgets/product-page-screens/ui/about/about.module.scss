@@ -1,0 +1,47 @@
+.about {
+    //
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font: 500 48px/1 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: $kColorBlack;
+}
+
+.text {
+    font: 400 18px/1.5 $kFontPublicSans;
+    color: rgba($kColorBlack, .7);
+    max-width: 700px;
+}
+
+.subtext {
+    font: 400 16px/1.5 $kFontPublicSans;
+    color: rgba($kColorBlack, .5);
+    max-width: 700px;
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .title {
+        font-size: 28px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .subtext {
+        font-size: 14px;
+    }
+}

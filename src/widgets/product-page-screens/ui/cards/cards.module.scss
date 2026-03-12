@@ -1,0 +1,83 @@
+.cards {
+    //
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 20px;
+    background: #FFF;
+    text-decoration: none;
+    transition: box-shadow .2s ease;
+
+    &:hover:not(.card_disabled) {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+    }
+}
+
+.card_disabled {
+    opacity: .4;
+    pointer-events: none;
+}
+
+.card_icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.card_title {
+    font: 500 24px/1.1 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: $kColorBlack;
+}
+
+.card_text {
+    font: 400 16px/1.5 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+}
+
+.card_arrow {
+    margin-top: auto;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        stroke: $kColorBlack;
+    }
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .card {
+        padding: 24px;
+    }
+
+    .card_title {
+        font-size: 20px;
+    }
+
+    .card_text {
+        font-size: 14px;
+    }
+}

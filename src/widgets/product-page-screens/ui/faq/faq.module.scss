@@ -1,0 +1,75 @@
+.faq {
+    //
+}
+
+.content {
+    display: flex;
+}
+
+.content_left {
+    width: 365px;
+    flex-shrink: 0;
+}
+
+.content_right {
+    width: calc(100% - 365px);
+    padding-left: 30px;
+}
+
+.title {
+    font: 500 40px/1 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: $kColorBlack;
+    max-width: 300px;
+}
+
+.text {
+    margin-top: 20px;
+    font: 400 16px/1.4 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+    max-width: 270px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .content_left {
+        width: 300px;
+    }
+
+    .content_right {
+        width: calc(100% - 300px);
+    }
+}
+
+@media screen and (max-width: $kTabletXXL) {
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .content_left,
+    .content_right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .title {
+        max-width: 100%;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .title {
+        font-size: 28px;
+    }
+}
