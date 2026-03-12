@@ -14,16 +14,46 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Apps",
-          href: "https://taiko.xyz/ecosystem",
+          href: "/ecosystem",
           icon: "/img/header/apps.svg",
+        },
+        {
+          name: "Taiko Takeoff",
+          href: "https://takeoff.taiko.xyz/",
+          icon: "/img/header/trailblazer.svg",
         },
         {
           name: "Docs",
           href: "https://docs.taiko.xyz/start-here/getting-started",
           icon: "/img/header/docs.svg",
         },
+        {
+          name: "Whitepaper",
+          href: "https://github.com/taikoxyz/taiko-mono/tree/main/packages/whitepaper",
+          icon: "/img/header/docs.svg",
+        },
       ],
       [
+        {
+          name: "Bridge",
+          href: "https://bridge.taiko.xyz/",
+          icon: "/img/header/apps.svg",
+        },
+        {
+          name: "Swap",
+          href: "https://swap.taiko.xyz/",
+          icon: "/img/header/apps.svg",
+        },
+        {
+          name: "Proofs",
+          href: "https://proofs.taiko.xyz/",
+          icon: "/img/header/docs.svg",
+        },
+        {
+          name: "Status",
+          href: "https://status.taiko.xyz/",
+          icon: "/img/header/about.svg",
+        },
         {
           name: "Block Explorers",
           icon: "/img/header/explorers.svg",
@@ -32,16 +62,6 @@ export const headerNavigation: NavItem[] = [
               name: "Taikoscan.io",
               desc: "By Etherscan",
               href: "https://taikoscan.io/",
-            },
-            {
-              name: "Taikoexplorer.com/",
-              desc: "By Routescan",
-              href: "https://taikoscan.network/",
-            },
-            {
-              name: "Taikoscan.net",
-              desc: "By Socialscan",
-              href: "https://taikoscan.net/",
             },
           ],
         },
@@ -60,19 +80,13 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Apps",
-          href: "",
+          href: "/gwyneth/apps",
           icon: "/img/header/apps.svg",
-          disabled: true,
         },
         {
           name: "Docs",
           href: "https://docs.taiko.xyz/start-here/getting-started",
           icon: "/img/header/docs.svg",
-        },
-        {
-          name: "Block Explorers",
-          icon: "/img/header/explorers.svg",
-          href: "",
         },
       ],
     ],
@@ -84,13 +98,18 @@ export const headerNavigation: NavItem[] = [
       [
         {
           name: "Learn",
-          href: "https://taiko.mirror.xyz/9lW3JdFnMJGtoPbmXqFS32XNxf_iK0VDx0vGWk2K7Eo",
+          href: "/dao",
           icon: "/img/header/learn.svg",
         },
         {
-          name: "Aragon",
+          name: "DAO App",
           href: "https://dao.taiko.xyz/",
           icon: "/img/header/aragon.svg",
+        },
+        {
+          name: "Docs",
+          href: "https://dao-docs.taiko.xyz/start-here/getting-started",
+          icon: "/img/header/docs.svg",
         },
       ],
     ],
@@ -118,6 +137,11 @@ export const headerNavigation: NavItem[] = [
         {
           name: "Careers",
           href: "/careers",
+          icon: "/img/header/careers.svg",
+        },
+        {
+          name: "Grants",
+          href: "/grant-program",
           icon: "/img/header/careers.svg",
         },
       ],
