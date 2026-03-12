@@ -881,3 +881,36 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - The actual code was solid from iteration 13 onward (commit 9bcacc7)
   - Browser verification is essential for confirming interactive features like accordions
 ---
+
+## [2026-03-11] - S16: Gwyneth Apps & DAO Pages
+Thread: 
+Run: 20260311-151158-48493 (iteration 18)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-18.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-18.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 102ea5f feat(gwyneth-apps,dao): add Gwyneth Apps and DAO pages with interactive components
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm tsc --noEmit -> PASS
+  - Command: pnpm run build -> PASS
+  - Browser: /gwyneth/apps renders correctly with all sections -> PASS
+  - Browser: /dao renders correctly with all sections -> PASS
+  - Browser: Disclaimer toggle on/off -> PASS
+  - Browser: FAQ accordion expand/collapse -> PASS
+- Files changed:
+  - src/app/gwyneth/apps/page.tsx (Gwyneth Apps page with hero, about, dApps stat, apps list, disclaimer toggle)
+  - src/app/gwyneth/apps/gwyneth-apps.module.scss (responsive styles for Gwyneth Apps page)
+  - src/app/dao/page.tsx (DAO page with welcome, about, features, join, FAQ sections)
+  - src/app/dao/dao.module.scss (responsive styles for DAO page)
+- What was implemented:
+  - Gwyneth Apps page (/gwyneth/apps) with hero title, about section with suptitle/text/CTA, dApps stat display, apps list with card grid (currently empty), and disclaimer with active toggle
+  - DAO page (/dao) with welcome section (suptitle/title/text/CTA), about section (features grid), join section (CTA), and FAQ with accordion using existing ProductScreens.Faq component
+  - Both pages use DefaultLayout, Label, WrapperButton reusable components
+  - Full responsive breakpoints matching existing project patterns
+- **Learnings for future iterations:**
+  - Content data files (gwyneth-apps.ts, dao.ts) were pre-created with typed exports
+  - Reused ProductScreens.Faq for DAO FAQ — no need to build a custom accordion section
+  - The setGrid mixin from mixins.scss is the project's standard for responsive card grids
+  - Project uses both old ($kLaptopM etc.) and new ($lg etc.) breakpoint variables
+---
