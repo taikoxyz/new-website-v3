@@ -4,6 +4,10 @@
 
 .suptitle {
     margin-bottom: 32px;
+    font: 500 14px/1.2 $kFontClashGrotesk;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: $kColorBlack;
 }
 
 .list {

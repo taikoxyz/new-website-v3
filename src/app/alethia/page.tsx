@@ -24,6 +24,8 @@ export default function AlethiaPage() {
                     title={data.about_title}
                     text={data.about_text}
                     subtext={data.about_subtext}
+                    label="About"
+                    logo="/img/home-new/taiko.webp"
                 />
                 <ProductScreens.Features
                     suptitle={data.features_suptitle}

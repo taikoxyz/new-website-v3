@@ -1,6 +1,6 @@
 .accordeon {
     background: #FFF;
-    border-radius: 20px;
+    border-radius: 16px;
 
     &Active {
         button {
@@ -12,13 +12,12 @@
 }
 
 .button {
-    padding: 40px 36px;
-    border-radius: 20px;
+    padding: 24px;
     width: 100%;
 
     text-align: left;
 
-    font: 500 28px/.84 $kFontClashGrotesk;
+    font: 500 20px/1 $kFontClashGrotesk;
     color: $kColorBlack;
 
     display: flex;
@@ -27,8 +26,8 @@
     gap: 24px;
 
     svg {
-        width: 1.28em;
-        height: 1.28em;
+        width: 1.2em;
+        height: 1.2em;
         stroke: #292D32;
         transition: transform .2s ease;
         flex-shrink: 0;
@@ -41,7 +40,7 @@
 }
 
 .content_inner {
-    padding: 0 36px 36px;
+    padding: 0 24px 24px;
 
     font: 400 18px/1.2 $kFontPublicSans;
     color: rgba($kColorBlack, .6);

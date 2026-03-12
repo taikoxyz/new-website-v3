@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Label } from '@/components/label';
 import type { FeatureItem } from '@/content/types';
 import css from './features.module.scss';
 
@@ -13,7 +12,7 @@ export const Features: React.FC<Props> = ({ suptitle, features }) => {
     return (
         <section className={css.features}>
             <div className="container">
-                <Label text={suptitle} className={css.suptitle} />
+                <p className={css.suptitle}>{suptitle}</p>
                 <ul className={css.list}>
                     {features.map((feature, index) => (
                         <li

@@ -9,15 +9,30 @@
 .dropdown_default {
     border-radius: 10px;
     background: #FFF;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .dropdownContainer {}
 
-.dropdownContainer_default {}
+.dropdownContainer_default {
+    padding: 8px 0;
+}
 
-.option {}
+.option {
+    cursor: pointer;
+}
 
-.option_default {}
+.option_default {
+    padding: 10px 16px;
+    font: 400 14px/1.4 $kDefaultFont;
+    color: #000;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.04);
+    }
+}
 
 .optionActive_default {
     opacity: .5;
