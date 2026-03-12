@@ -1011,7 +1011,7 @@
       "id": "S15",
       "title": "Alethia & Gwyneth Pages",
       "description": "Implement the Alethia page (/alethia) with hero (title, text, logo image), about (title, text, subtext), features list (suptitle, array of features with title/text/disabled), explore section (suptitle, title, text), cards list (title, text, href, disabled, icon), and FAQ (title, text, accordion with question/answer pairs \u2014 answers are rich text). Implement the Gwyneth page (/gwyneth) with the same structure. Use page data from src/content/pages/alethia.ts and src/content/pages/gwyneth.ts. Both pages share the same component structure \u2014 create a reusable ProductPage component.",
-      "status": "in_progress",
+      "status": "done",
       "dependsOn": [
         "S05"
       ],
@@ -1024,14 +1024,14 @@
         "pnpm run build succeeds"
       ],
       "startedAt": "2026-03-12T02:16:19.270757+00:00",
-      "completedAt": null,
-      "updatedAt": "2026-03-12T02:16:19.271298+00:00"
+      "completedAt": "2026-03-12T02:20:45.034441+00:00",
+      "updatedAt": "2026-03-12T02:20:45.034205+00:00"
     },
     {
       "id": "S16",
       "title": "Gwyneth Apps & DAO Pages",
       "description": "Implement the Gwyneth Apps page (/gwyneth/apps) with hero (title), about section (suptitle, text, CTA button), dapps stat (name, value, icon array), apps list (name, text, type, active, icon, categories, URL), and disclaimer (title, text, active toggle). Implement the DAO page (/dao) with welcome (suptitle, title, text, CTA button), about (suptitle, title, text, features list), join section (suptitle, title, CTA button), and FAQ (title, text, accordion with question/answer pairs). Use page data from src/content/pages/gwyneth-apps.ts and src/content/pages/dao.ts.",
-      "status": "open",
+      "status": "in_progress",
       "dependsOn": [
         "S05"
       ],
@@ -1042,7 +1042,10 @@
         "DAO FAQ accordion works",
         "Responsive layout works across all breakpoints",
         "pnpm run build succeeds"
-      ]
+      ],
+      "startedAt": "2026-03-12T02:20:47.114697+00:00",
+      "completedAt": null,
+      "updatedAt": "2026-03-12T02:20:47.114899+00:00"
     },
     {
       "id": "S17",

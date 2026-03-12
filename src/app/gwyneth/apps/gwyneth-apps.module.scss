@@ -1,0 +1,270 @@
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+// Hero
+.hero {
+    //
+}
+
+.hero_title {
+    font: 500 75px/.9 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: $kColorBlack;
+}
+
+// About
+.about {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about_info {
+    flex: 1;
+}
+
+.about_suptitle {
+    margin-bottom: 16px;
+}
+
+.about_text {
+    font: 400 18px/1.5 $kFontPublicSans;
+    color: rgba($kColorBlack, .7);
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+.about_stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: #fff;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.about_stat_value {
+    font: 500 36px/1 $kFontClashGrotesk;
+    color: $kColorBlack;
+}
+
+.about_stat_name {
+    font: 400 14px/1.2 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+}
+
+.about_stat_icons {
+    display: flex;
+    gap: 4px;
+
+    img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+}
+
+// Disclaimer
+.disclaimer {
+    padding: 24px 32px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.disclaimer_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.disclaimer_title {
+    font: 500 20px/1.2 $kFontClashGrotesk;
+    color: $kColorBlack;
+}
+
+.disclaimer_toggle {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: #ddd;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background .2s ease;
+    flex-shrink: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        transition: transform .2s ease;
+    }
+}
+
+.disclaimer_toggle_active {
+    background: $kColorPink;
+
+    &::after {
+        transform: translateX(20px);
+    }
+}
+
+.disclaimer_text {
+    margin-top: 16px;
+    font: 400 14px/1.6 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+}
+
+// Apps list
+.apps_list {
+    @include setGrid(4, 24);
+}
+
+.apps_list_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.app_card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 20px;
+    background: #fff;
+    height: 100%;
+    text-decoration: none;
+    transition: box-shadow .25s ease, transform .25s ease;
+
+    &:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        transform: translateY(-2px);
+    }
+}
+
+.app_card_inactive {
+    opacity: .4;
+    pointer-events: none;
+}
+
+.app_card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.app_card_icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.app_card_type {
+    font: 500 12px/1.2 $kFontPublicSans;
+    padding: 4px 10px;
+    border-radius: 100px;
+    text-transform: capitalize;
+    background: rgba(#8e8e93, .12);
+    color: #636366;
+}
+
+.app_card_title {
+    font: 500 18px/1.2 $kFontClashGrotesk;
+    color: $kColorBlack;
+    margin-bottom: 8px;
+}
+
+.app_card_text {
+    font: 400 14px/1.4 $kFontPublicSans;
+    color: rgba($kColorBlack, .6);
+    margin-bottom: 16px;
+    flex-grow: 1;
+    @include setTextLinesOverflow(3);
+}
+
+.app_card_categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.app_card_category {
+    font: 500 12px/1.2 $kFontPublicSans;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: #efefef;
+    color: rgba($kColorBlack, .7);
+}
+
+// Empty state
+.apps_empty {
+    text-align: center;
+    padding: 60px 20px;
+    font: 400 16px/1.5 $kFontPublicSans;
+    color: rgba($kColorBlack, .5);
+}
+
+@media screen and (max-width: $kLaptopM) {
+    .hero_title {
+        font-size: 60px;
+    }
+
+    .apps_list {
+        @include setGrid(3, 24);
+    }
+}
+
+@media screen and (max-width: $kTabletXXL) {
+    .about {
+        flex-direction: column;
+    }
+
+    .apps_list {
+        @include setGrid(2, 24);
+    }
+}
+
+@media screen and (max-width: $kTabletM) {
+    .apps_list {
+        @include setGrid(2, 12);
+    }
+}
+
+@media screen and (max-width: $kMobileXXL) {
+    .hero_title {
+        font-size: 40px;
+    }
+
+    .about_text {
+        font-size: 16px;
+    }
+
+    .apps_list {
+        @include setGrid(1, 18);
+    }
+
+    .disclaimer {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: $kMobileSM) {
+    .hero_title {
+        font-size: 32px;
+    }
+}
