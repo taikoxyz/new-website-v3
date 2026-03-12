@@ -729,3 +729,44 @@ Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-
   - Content data in grant-program.ts uses HTML strings (e.g., `<span>`, `<b>`, `<u>`) that need dangerouslySetInnerHTML — safe since it's static repo data
   - The Accordeon component handles FAQ expand/collapse with height animation and click-outside-to-close
 ---
+
+## [2026-03-11] - S14: Brand Assets Page
+Thread:
+Run: 20260311-151158-48493 (iteration 14)
+Run log: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-14.log
+Run summary: /Users/gustavo/apps/new-website-v3/.ralph/runs/run-20260311-151158-48493-iter-14.md
+- Guardrails reviewed: yes
+- No-commit run: false
+- Commit: 82a8eeb feat(brand-assets): add brand assets page with logo, colors, typography, and brand book sections
+- Post-commit status: clean
+- Verification:
+  - Command: pnpm run build -> PASS
+  - Command: pnpm tsc --noEmit -> PASS
+  - Command: Browser testing (dev-browser screenshots) -> PASS
+- Files changed:
+  - src/app/brand-assets/page.tsx
+  - src/app/brand-assets/brand-assets.module.scss
+  - src/widgets/brand-assets-screens/index.ts
+  - src/widgets/brand-assets-screens/ui/index.ts
+  - src/widgets/brand-assets-screens/ui/hero/index.tsx
+  - src/widgets/brand-assets-screens/ui/hero/hero.module.scss
+  - src/widgets/brand-assets-screens/ui/logo/index.tsx
+  - src/widgets/brand-assets-screens/ui/logo/logo.module.scss
+  - src/widgets/brand-assets-screens/ui/color-palette/index.tsx
+  - src/widgets/brand-assets-screens/ui/color-palette/color-palette.module.scss
+  - src/widgets/brand-assets-screens/ui/topography/index.tsx
+  - src/widgets/brand-assets-screens/ui/topography/topography.module.scss
+  - src/widgets/brand-assets-screens/ui/brand-book/index.tsx
+  - src/widgets/brand-assets-screens/ui/brand-book/brand-book.module.scss
+- Implemented brand assets page at /brand-assets with 5 sections:
+  - Hero: title with pink accent span, description text
+  - Logo: interactive logo selector with 4 variants on different backgrounds, download button
+  - Color Palette: 2-column grid with primary (Taiko Pink, Deep Gray) and secondary colors, hex values, group labels
+  - Typography: left card with suptitle/title/numbered font descriptions, right side with font showcases (Clash Grotesk, Public Sans), variants list, download buttons
+  - Brand Book: Banner component linking to Figma brand guidelines
+- **Learnings for future iterations:**
+  - Content data and types were already defined in src/content/ — only widgets and page route needed creation
+  - The source repo MediaQuery component was replaced with CSS show/hide for mobile vs desktop button visibility (simpler approach)
+  - All responsive breakpoints match source repo exactly using existing SCSS variables
+  - Brand assets page links from About page now resolve correctly
+---
