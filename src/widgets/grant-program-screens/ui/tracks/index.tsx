@@ -23,49 +23,34 @@ export const Tracks: React.FC = () => {
                             )}
                             key={item.title}
                         >
-                            <div className={css.card_header}>
-                                <img
-                                    className={css.card_icon}
-                                    src={item.icon}
-                                    alt=""
-                                />
-                                <div className={css.card_titles}>
-                                    <h3 className={css.card_title}>
-                                        {item.title}
-                                    </h3>
-                                    <p className={css.card_track}>
-                                        {item.track}
-                                    </p>
-                                </div>
+                            <div className={css.card_titles}>
+                                <h3 className={css.card_title}>
+                                    {item.title}
+                                </h3>
+                                <p className={css.card_track}>
+                                    {item.track}
+                                </p>
                             </div>
 
-                            <p
-                                className={css.card_text}
-                                dangerouslySetInnerHTML={{
-                                    __html: item.text,
-                                }}
-                            />
+                            <p className={css.card_text}>
+                                {item.text}
+                            </p>
 
-                            <div className={css.card_footer}>
-                                <p
-                                    className={css.card_timeline}
-                                    dangerouslySetInnerHTML={{
-                                        __html: item.timeline,
-                                    }}
-                                />
-
-                                <Button
-                                    className={css.card_button}
-                                    text={grantProgramPageData.track.applyNow}
-                                    component="a"
-                                    href={item.link}
-                                    target="_blank"
-                                    disabled={!item.active}
-                                />
-                            </div>
+                            <p className={css.card_timeline}>
+                                {item.timeline}
+                            </p>
                         </li>
                     ))}
                 </ul>
+
+                <div className={css.apply}>
+                    <Button
+                        text={grantProgramPageData.track.applyNow}
+                        component="a"
+                        href="https://airtable.com/appiHMc0glvIWmuan/shrvmPOFrTleLFQJd"
+                        target="_blank"
+                    />
+                </div>
             </div>
         </section>
     );

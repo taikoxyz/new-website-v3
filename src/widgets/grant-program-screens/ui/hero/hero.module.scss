@@ -31,9 +31,26 @@
     }
 }
 
+.subtitle {
+    font: 500 24px/1.2 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: $kColorBlack;
+    margin-bottom: 16px;
+}
+
 .text {
     font: 400 16px/1.5 $kFontPublicSans;
     color: rgba($kColorBlack, .7);
+    margin-bottom: 12px;
+}
+
+.link {
+    color: $kColorPink;
+    text-decoration: underline;
+}
+
+.cta {
+    margin-top: 24px;
 }
 
 @media screen and (max-width: $kLaptopM) {

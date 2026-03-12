@@ -2,6 +2,7 @@
 
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
 import * as ProductScreens from '@/widgets/product-page-screens';
+import { FooterSubscribe } from '@/features/footer-subscribe';
 import { gwynethPageData } from '@/content/pages/gwyneth';
 import css from './gwyneth.module.scss';
 
@@ -39,6 +40,7 @@ export default function GwynethPage() {
                     text={data.faq_text}
                     faqData={data.faq_data}
                 />
+                <FooterSubscribe />
             </div>
         </DefaultLayout>
     );

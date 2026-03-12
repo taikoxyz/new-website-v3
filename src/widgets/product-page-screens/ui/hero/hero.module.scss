@@ -1,76 +1,65 @@
 .hero {
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.content {
-    display: flex;
+.badge {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background: rgba($kColorBlack, .04);
+    margin-bottom: 32px;
 }
 
-.info {
-    max-width: 650px;
+.badge_logo {
+    height: 20px;
+    width: auto;
 }
 
 .title {
-    font: 500 75px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    font: 500 72px/.95 $kFontClashGrotesk;
+    letter-spacing: -.03em;
     color: $kColorBlack;
+    max-width: 800px;
 }
 
 .text {
     margin-top: 24px;
     font: 400 18px/1.5 $kFontPublicSans;
-    color: rgba($kColorBlack, .7);
+    color: rgba($kColorBlack, .6);
     max-width: 550px;
-}
-
-.logo {
-    width: 200px;
-    height: auto;
-    flex-shrink: 0;
 }
 
 @media screen and (max-width: $kLaptopM) {
     .title {
-        font-size: 60px;
-    }
-
-    .logo {
-        width: 160px;
+        font-size: 56px;
     }
 }
 
 @media screen and (max-width: $kTabletXXL) {
-    .content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-    }
-
-    .logo {
-        order: -1;
-        width: 120px;
+    .title {
+        font-size: 48px;
     }
 }
 
 @media screen and (max-width: $kMobileXXL) {
+    .hero {
+        padding-top: 24px;
+    }
+
     .title {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .text {
         font-size: 16px;
     }
-
-    .logo {
-        width: 100px;
-    }
 }
 
 @media screen and (max-width: $kMobileSM) {
     .title {
-        font-size: 32px;
+        font-size: 28px;
     }
 }

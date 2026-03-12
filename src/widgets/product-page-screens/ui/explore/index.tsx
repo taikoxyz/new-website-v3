@@ -20,8 +20,15 @@ export const Explore: React.FC<Props> = ({ suptitle, title, text, background }) 
                         className={css.background}
                     />
                     <div className={css.content}>
-                        <Label text={suptitle} className={css.suptitle} />
-                        <h2 className={css.title}>{title}</h2>
+                        {suptitle && <Label text={suptitle} className={css.suptitle} />}
+                        <h2 className={css.title}>
+                            {title.split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                    {i > 0 && <br />}
+                                    {line}
+                                </React.Fragment>
+                            ))}
+                        </h2>
                         <p className={css.text}>{text}</p>
                     </div>
                 </div>

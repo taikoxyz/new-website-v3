@@ -9,12 +9,9 @@ export default function GrantProgramPage() {
         <DefaultLayout>
             <div className={css.gap}>
                 <GrantScreens.Hero />
-                <GrantScreens.KeyDates />
                 <GrantScreens.Mission />
-                <GrantScreens.Community />
                 <GrantScreens.Tracks />
                 <GrantScreens.Support />
-                <GrantScreens.Process />
             </div>
         </DefaultLayout>
     );

@@ -1,40 +1,78 @@
 .about {
-    //
+    padding: 60px 0;
 }
 
 .content {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.left {
+    flex-shrink: 0;
 }
 
 .title {
     font: 500 48px/1 $kFontClashGrotesk;
     letter-spacing: -.02em;
     color: $kColorBlack;
+    margin-bottom: 32px;
+}
+
+.knot {
+    width: 180px;
+    height: auto;
+}
+
+.right {
+    max-width: 400px;
+    padding-top: 8px;
 }
 
 .text {
     font: 400 18px/1.5 $kFontPublicSans;
     color: rgba($kColorBlack, .7);
-    max-width: 700px;
 }
 
 .subtext {
+    margin-top: 12px;
     font: 400 16px/1.5 $kFontPublicSans;
     color: rgba($kColorBlack, .5);
-    max-width: 700px;
 }
 
 @media screen and (max-width: $kLaptopM) {
     .title {
         font-size: 40px;
     }
+
+    .knot {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: $kTabletXXL) {
+    .content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .right {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: $kMobileXXL) {
+    .about {
+        padding: 40px 0;
+    }
+
     .title {
         font-size: 28px;
+    }
+
+    .knot {
+        width: 100px;
     }
 
     .text {

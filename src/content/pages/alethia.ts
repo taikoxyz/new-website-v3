@@ -2,93 +2,116 @@ import type { AlethiaGwynethPageData } from "@/content/types";
 
 export const alethiaPageData: AlethiaGwynethPageData = {
   id: 1,
-  hero_title: "Alethia",
+  hero_title: "The based way of scaling Ethereum.",
   hero_text:
-    "A based contestable rollup — Taiko's first rollup, live on Ethereum Mainnet.",
-  hero_logo: "/img/alethia/logo.svg",
-  about_title: "What is Alethia?",
-  about_text:
-    "Alethia is Taiko's flagship Based Contestable Rollup (BCR), combining the strengths of optimistic and ZK-rollups into a modular, multi-proof design.",
-  about_subtext:
-    "Alethia inherits Ethereum's security, liveness, and credible neutrality through based sequencing.",
+    "A type-1 general-purpose based rollup with no centralized sequencer.",
+  hero_logo: "/img/alethia/taikoalethia-logo.svg",
+  about_title: "Alethia is Taiko",
+  about_text: "A based rollup on Ethereum",
+  about_subtext: "Ownerless, permissionless, decentralized.",
   features_suptitle: "Key Features",
   features_list: [
     {
       id: 1,
-      title: "Based Sequencing",
-      text: "Transaction ordering is handled by Ethereum L1 validators — no centralized sequencer.",
+      title: "Decentralized, Truly",
+      text: "With based sequencing, Alethia\u2019s block-building process is open (and potentially profitable) for everyone!",
       disabled: false,
     },
     {
       id: 2,
-      title: "Multi-Proof System",
-      text: "A contestation mechanism with multiple proof systems for maximum security.",
+      title: "Based of Both Worlds",
+      text: "Everything good about Ethereum meets everything good about L2s. No compromise, pure advancement.",
       disabled: false,
     },
     {
       id: 3,
-      title: "EVM Equivalent",
-      text: "Type 1 ZK-EVM compatibility — all Ethereum tooling works out of the box.",
+      title: "Easiest to Migrate",
+      text: "Type-1 ZK-VM allows dApps to migrate easily. Anything that works on Ethereum works on Alethia. No changes needed.",
       disabled: false,
     },
     {
       id: 4,
-      title: "Permissionless",
-      text: "Anyone can propose and prove blocks from day one.",
+      title: "Ownerless",
+      text: "Alethia strives to be ownerless by being owned by the community. Take control.",
+      disabled: false,
+    },
+    {
+      id: 5,
+      title: "Power of Preconfirmations",
+      text: "Transactions as fast as a centralized exchange, but fully decentralized.",
+      disabled: false,
+    },
+    {
+      id: 6,
+      title: "A Passionate Community",
+      text: "Alethia draws her power from a community full of Trailblazers. Become one.",
       disabled: false,
     },
   ],
   cards_list: [
     {
       id: 1,
-      title: "Bridge",
-      text: "Transfer assets between Ethereum and Alethia",
-      href: "https://bridge.taiko.xyz/",
+      title: "Documentation",
+      text: "Everything you need to build  on Alethia.",
+      href: "https://docs.taiko.xyz/",
       disabled: false,
-      icon: "/img/alethia/card-bridge.svg",
+      icon: "/img/alethia/docs.svg",
     },
     {
       id: 2,
-      title: "Explorer",
-      text: "View transactions and contracts on Alethia",
-      href: "https://taikoscan.io/",
+      title: "Discover the Ecosystem",
+      text: "150+ dApps and counting. Find what you\u2019re into!",
+      href: "/ecosystem",
       disabled: false,
-      icon: "/img/alethia/card-explorer.svg",
+      icon: "/img/alethia/ecosystem.svg",
     },
     {
       id: 3,
-      title: "Documentation",
-      text: "Learn how to build on Alethia",
-      href: "https://docs.taiko.xyz/start-here/getting-started",
+      title: "Community",
+      text: "Become a part of our great Taiko community. We are stronger with you!",
+      href: "https://discord.gg/taikoxyz",
       disabled: false,
-      icon: "/img/alethia/card-docs.svg",
+      icon: "/img/alethia/community.svg",
     },
   ],
-  explore_suptitle: "Explore Alethia",
-  explore_title: "Start building on Alethia",
+  explore_suptitle: "",
+  explore_title:
+    "Are you a visionary builder?\nAn oppportunity-seeking user?\nA bold trailblazer?",
   explore_text:
-    "Deploy your existing Ethereum smart contracts without any modifications. Everything works out of the box.",
+    "Alethia is open to all! Explore, discover, and participate. Alethia is yours!",
   explore_background: "/img/alethia/explore.webp",
   faq_title: "Frequently Asked Questions",
-  faq_text: "Common questions about Alethia",
+  faq_text: "Read answers to the most common questions about Alethia.",
   faq_data: [
     {
       id: 1,
-      question: "What is the difference between Alethia and other rollups?",
+      question: "What is Taiko Alethia?",
       answer:
-        "Alethia is a based rollup, meaning transaction sequencing is done by Ethereum validators. This makes it maximally decentralized from day one, unlike rollups that rely on centralized sequencers.",
+        "Taiko Alethia is a based rollup. A scaling solution that highly configurable, fully open source, permissionless, decentralized and Ethereum-equivalent. There are no centralized actors that operate the network; all operations are permissionlessly run by the community.",
     },
     {
       id: 2,
-      question: "Is Alethia compatible with my existing Ethereum dApp?",
+      question: "How Does Taiko Alethia Work?",
       answer:
-        "Yes! Alethia uses a Type 1 ZK-EVM, which means it is fully Ethereum-equivalent at the bytecode level. No recompilation or changes needed.",
+        "Rollups have three core modules:\n\n1. Data Availability: (where they store their data).\n2. Execution (how they execute transactions)\n3. Sequencing (who orders the transactions)\n\nTraditional rollups only use Ethereum for one of these modules \u2013 Data Availabilty. Unlike other rollups, Taiko also uses Ethereum for sequencing.",
     },
     {
       id: 3,
-      question: "How do I bridge assets to Alethia?",
+      question: "What differentiates Taiko Alethia from others?",
       answer:
-        "You can use the Taiko Bridge at bridge.taiko.xyz to transfer ETH and other supported tokens between Ethereum and Alethia.",
+        "Permissionless and decentralized: Taiko Alethia is a based rollup, the first of its class. Lacking a centralized sequencer, it relies on Ethereum validators to sequence transactions and blocks, elevating Taiko\u2019s permissionless and decentralized ethos.\n\nFrictionless developer experience: Taiko Alethia utilizes an Ethereum-equivalent zkEVM (type-1) to achieve execution-level compatibility with Ethereum, essentially offering \u201cEthereum at scale.\u201d\n\nHighly configurable and future-compatible: Designed as a Contestable Rollup, Taiko Alethia permits app chains to define their proof systems and to embrace newer, more efficient ZK proofs as technology progresses, all without the need to amend Taiko\u2019s core protocol.",
+    },
+    {
+      id: 4,
+      question: "How can I start building on Taiko Alethia?",
+      answer:
+        "Today, Taiko Alethia is live and fully compatible with Ethereum. No additional compiling, re-audits, or tooling needed. Everything works out of the box, guaranteed. Start from here now.",
+    },
+    {
+      id: 5,
+      question: "What is Taiko\u2019s end goal?",
+      answer:
+        "To be censorship-resistant, unstoppable, ownerless, and a natural hub for real-world applications that require these critical properties. A natural extension of Ethereum.",
     },
   ],
 };

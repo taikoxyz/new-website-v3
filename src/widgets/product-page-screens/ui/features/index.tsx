@@ -15,7 +15,7 @@ export const Features: React.FC<Props> = ({ suptitle, features }) => {
             <div className="container">
                 <Label text={suptitle} className={css.suptitle} />
                 <ul className={css.list}>
-                    {features.map((feature) => (
+                    {features.map((feature, index) => (
                         <li
                             key={feature.id}
                             className={clsx(
@@ -23,6 +23,7 @@ export const Features: React.FC<Props> = ({ suptitle, features }) => {
                                 feature.disabled && css.item_disabled
                             )}
                         >
+                            <span className={css.item_number}>{index + 1}.0</span>
                             <h3 className={css.item_title}>{feature.title}</h3>
                             <p className={css.item_text}>{feature.text}</p>
                         </li>

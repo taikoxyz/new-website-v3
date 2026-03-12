@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
 import { Label } from '@/components/label';
 import { WrapperButton } from '@/components/buttons/button';
+import { FooterSubscribe } from '@/features/footer-subscribe';
 import * as ProductScreens from '@/widgets/product-page-screens';
 import { daoPageData } from '@/content/pages/dao';
 import css from './dao.module.scss';
@@ -37,7 +38,7 @@ export default function DaoPage() {
                             <p className={css.about_text}>{data.about_text}</p>
                         </div>
                         <ul className={css.about_features}>
-                            {data.about_features.map((feature) => (
+                            {data.about_features.map((feature, index) => (
                                 <li
                                     key={feature.id}
                                     className={clsx(
@@ -45,6 +46,7 @@ export default function DaoPage() {
                                         feature.disabled && css.about_feature_disabled
                                     )}
                                 >
+                                    <span className={css.about_feature_number}>{index + 1}.0</span>
                                     <h3 className={css.about_feature_title}>{feature.title}</h3>
                                     <p className={css.about_feature_text}>{feature.text}</p>
                                 </li>
@@ -56,13 +58,17 @@ export default function DaoPage() {
                 {/* Join */}
                 <section className={css.join}>
                     <div className="container">
-                        <Label text={data.about_join_suptitle} className={css.join_suptitle} />
-                        <h2 className={css.join_title}>{data.about_join_title}</h2>
-                        {data.about_join_btn && (
-                            <div className={css.join_btn}>
-                                <WrapperButton {...data.about_join_btn} />
+                        <div className={css.join_content}>
+                            <div className={css.join_left}>
+                                <Label text={data.about_join_suptitle} className={css.join_suptitle} />
+                                <p className={css.join_title}>{data.about_join_title}</p>
+                                {data.about_join_btn && (
+                                    <div className={css.join_btn}>
+                                        <WrapperButton {...data.about_join_btn} />
+                                    </div>
+                                )}
                             </div>
-                        )}
+                        </div>
                     </div>
                 </section>
 
@@ -72,6 +78,8 @@ export default function DaoPage() {
                     text={data.faq_text}
                     faqData={data.faq_data}
                 />
+
+                <FooterSubscribe />
             </div>
         </DefaultLayout>
     );

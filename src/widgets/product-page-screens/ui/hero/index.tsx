@@ -11,17 +11,15 @@ export const Hero: React.FC<Props> = ({ title, text, logo }) => {
     return (
         <section className={css.hero}>
             <div className="container">
-                <div className={css.content}>
-                    <div className={css.info}>
-                        <h1 className={css.title}>{title}</h1>
-                        <p className={css.text}>{text}</p>
-                    </div>
+                <div className={css.badge}>
                     <img
                         src={logo}
-                        alt={title}
-                        className={css.logo}
+                        alt=""
+                        className={css.badge_logo}
                     />
                 </div>
+                <h1 className={css.title}>{title}</h1>
+                <p className={css.text}>{text}</p>
             </div>
         </section>
     );

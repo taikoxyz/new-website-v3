@@ -78,6 +78,14 @@
     pointer-events: none;
 }
 
+.about_feature_number {
+    display: block;
+    font: 500 18px/1 $kFontClashGrotesk;
+    letter-spacing: -.02em;
+    color: rgba($kColorBlack, .3);
+    margin-bottom: 12px;
+}
+
 .about_feature_title {
     font: 500 24px/1.1 $kFontClashGrotesk;
     letter-spacing: -.02em;
