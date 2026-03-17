@@ -1,6 +1,6 @@
 import type { Event, EventLocation } from "@/content/types";
 
-// Events data — originally fetched from Strapi /events endpoint.
+// Events data.
 // Add/remove events here as needed.
 export const events: Event[] = [];
 

@@ -1,5 +1,4 @@
-// Content type definitions — adapted from source repo's Strapi types
-// for static file-based content
+// Content type definitions for static file-based content
 
 export interface BaseFields {
   id: number;

@@ -1,6 +1,6 @@
 import type { ProjectCategory } from "@/content/types";
 
-// Project categories — fetched from Strapi /project-categories endpoint.
+// Project categories.
 // Counts are computed dynamically in getProjectCategories() from actual project data.
 export const projectCategories: ProjectCategory[] = [
   {
