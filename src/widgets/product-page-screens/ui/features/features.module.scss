@@ -34,6 +34,13 @@
     pointer-events: none;
 }
 
+.item_icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 24px;
+    color: $kColorPink;
+}
+
 .item_number {
     display: block;
     font: 600 14px/1.2 $kFontPublicSans;

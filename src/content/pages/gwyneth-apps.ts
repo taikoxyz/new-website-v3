@@ -10,7 +10,7 @@ export const gwynethAppsPageData: GwynethAppsPageData = {
     id: 1,
     name: "Submit your project",
     link: "/grant-program",
-    variant: "primary",
+    variant: "secondary",
     newTab: false,
     disabledArrow: false,
   },

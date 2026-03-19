@@ -8,24 +8,34 @@
 
 // Hero
 .hero {
-    //
+    background: linear-gradient(180deg, rgba(#f9e8f0, .5) 0%, rgba(#fff, 0) 100%);
+    padding-bottom: 40px;
 }
 
 .hero_title {
     font: 500 75px/.9 $kFontClashGrotesk;
     letter-spacing: -.02em;
     color: $kColorBlack;
+    text-align: center;
+}
+
+.hero_title_pink {
+    color: $kColorPink;
 }
 
 // About
 .about {
     display: flex;
+    flex-direction: column;
     gap: 40px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .about_info {
-    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about_suptitle {
@@ -154,8 +164,30 @@
 }
 
 .app_card_inactive {
-    opacity: .4;
     pointer-events: none;
+    position: relative;
+}
+
+.app_card_inactive .app_card_content {
+    filter: blur(3px);
+    opacity: .4;
+}
+
+.app_card_overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 600 16px/1.2 $kFontClashGrotesk;
+    color: rgba($kColorBlack, .6);
+    letter-spacing: .02em;
+}
+
+.app_card_content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .app_card_header {

@@ -36,7 +36,9 @@ export const Cards: React.FC<Props> = ({ cards, cols = 3 }) => {
                                     />
                                     <h3 className={css.card_title}>{card.title}</h3>
                                     <p className={css.card_text}>{card.text}</p>
-                                    {!card.disabled && (
+                                    {card.disabled ? (
+                                        <span className={css.card_badge}>Coming soon</span>
+                                    ) : (
                                         <div className={css.card_arrow}>
                                             <Sprite.Default icon="arrow-right" />
                                         </div>

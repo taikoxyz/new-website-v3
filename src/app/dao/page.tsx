@@ -55,7 +55,11 @@ export default function DaoPage() {
                                         feature.disabled && css.about_feature_disabled
                                     )}
                                 >
-                                    <span className={css.about_feature_number}>{(index + 1).toFixed(1)}</span>
+                                    {feature.icon ? (
+                                        <img src={feature.icon} alt="" className={css.about_feature_icon} />
+                                    ) : (
+                                        <span className={css.about_feature_number}>{(index + 1).toFixed(1)}</span>
+                                    )}
                                     <h3 className={css.about_feature_title}>{feature.title}</h3>
                                     <p className={css.about_feature_text}>{feature.text}</p>
                                 </li>

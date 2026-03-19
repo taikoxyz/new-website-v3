@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
-import { Label } from '@/components/label';
+import { FooterSubscribe } from '@/features/footer-subscribe';
 import { WrapperButton } from '@/components/buttons/button';
 import { gwynethAppsPageData } from '@/content/pages/gwyneth-apps';
 import type { GwynethAppsItem } from '@/content/types';
@@ -11,15 +11,15 @@ import css from './gwyneth-apps.module.scss';
 
 export default function GwynethAppsPage() {
     const data = gwynethAppsPageData;
-    const [disclaimerActive, setDisclaimerActive] = useState(data.disclaimer_active);
-
     return (
         <DefaultLayout>
             <div className={css.gap}>
                 {/* Hero */}
                 <section className={css.hero}>
                     <div className="container">
-                        <h1 className={css.hero_title}>{data.hero_title}</h1>
+                        <h1 className={css.hero_title}>
+                            Explore the <span className={css.hero_title_pink}>Taiko Gwyneth</span> Ecosystem
+                        </h1>
                     </div>
                 </section>
 
@@ -28,7 +28,6 @@ export default function GwynethAppsPage() {
                     <div className="container">
                         <div className={css.about}>
                             <div className={css.about_info}>
-                                <Label text={data.hero_about_suptitle} className={css.about_suptitle} />
                                 <p className={css.about_text}>{data.hero_about_text}</p>
                                 {data.hero_about_btn && (
                                     <WrapperButton {...data.hero_about_btn} />
@@ -57,23 +56,8 @@ export default function GwynethAppsPage() {
                 <section>
                     <div className="container">
                         <div className={css.disclaimer}>
-                            <div
-                                className={css.disclaimer_header}
-                                onClick={() => setDisclaimerActive(v => !v)}
-                            >
-                                <h3 className={css.disclaimer_title}>{data.disclaimer_title}</h3>
-                                <button
-                                    type="button"
-                                    className={clsx(
-                                        css.disclaimer_toggle,
-                                        disclaimerActive && css.disclaimer_toggle_active
-                                    )}
-                                    aria-label="Toggle disclaimer"
-                                />
-                            </div>
-                            {disclaimerActive && (
-                                <p className={css.disclaimer_text}>{data.disclaimer_text}</p>
-                            )}
+                            <h3 className={css.disclaimer_title}>{data.disclaimer_title}</h3>
+                            <p className={css.disclaimer_text}>{data.disclaimer_text}</p>
                         </div>
                     </div>
                 </section>
@@ -96,6 +80,8 @@ export default function GwynethAppsPage() {
                         )}
                     </div>
                 </section>
+
+                <FooterSubscribe />
             </div>
         </DefaultLayout>
     );
@@ -115,26 +101,31 @@ const AppCard: React.FC<{ app: GwynethAppsItem }> = ({ app }) => {
             )}
             {...linkProps}
         >
-            <div className={css.app_card_header}>
-                {app.icon && (
-                    <img
-                        className={css.app_card_icon}
-                        src={app.icon}
-                        alt={app.name}
-                    />
-                )}
-                <span className={css.app_card_type}>{app.type}</span>
-            </div>
-            <h3 className={css.app_card_title}>{app.name}</h3>
-            <p className={css.app_card_text}>{app.text}</p>
-            {app.categories.length > 0 && (
-                <div className={css.app_card_categories}>
-                    {app.categories.map((cat) => (
-                        <span className={css.app_card_category} key={cat}>
-                            {cat}
-                        </span>
-                    ))}
+            <div className={css.app_card_content}>
+                <div className={css.app_card_header}>
+                    {app.icon && (
+                        <img
+                            className={css.app_card_icon}
+                            src={app.icon}
+                            alt={app.name}
+                        />
+                    )}
+                    <span className={css.app_card_type}>{app.type}</span>
                 </div>
+                <h3 className={css.app_card_title}>{app.name}</h3>
+                <p className={css.app_card_text}>{app.text}</p>
+                {app.categories.length > 0 && (
+                    <div className={css.app_card_categories}>
+                        {app.categories.map((cat) => (
+                            <span className={css.app_card_category} key={cat}>
+                                {cat}
+                            </span>
+                        ))}
+                    </div>
+                )}
+            </div>
+            {!app.active && (
+                <div className={css.app_card_overlay}>Coming soon</div>
             )}
         </Tag>
     );

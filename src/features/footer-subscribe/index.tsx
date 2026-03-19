@@ -36,7 +36,7 @@ export const FooterSubscribe: React.FC = () => {
             </p>
 
             <div className={css.box}>
-                <form className={`${css.form} aos`} onSubmit={handleSubmit} data-aos-offset="210px">
+                <form className={`${css.form} aos`} onSubmit={handleSubmit} data-aos-offset="50">
                     <div className={css.container}>
                         <Input
                             value={values.email}

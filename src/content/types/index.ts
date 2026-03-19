@@ -378,6 +378,7 @@ export interface FeatureItem {
   title: string;
   text: string;
   disabled: boolean;
+  icon?: string;
 }
 
 export interface CardItem {

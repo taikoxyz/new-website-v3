@@ -22,7 +22,11 @@ export const Features: React.FC<Props> = ({ suptitle, features }) => {
                                 feature.disabled && css.item_disabled
                             )}
                         >
-                            <span className={css.item_number}>{index + 1}.0</span>
+                            {feature.icon ? (
+                                <img src={feature.icon} alt="" className={css.item_icon} />
+                            ) : (
+                                <span className={css.item_number}>{index + 1}.0</span>
+                            )}
                             <h3 className={css.item_title}>{feature.title}</h3>
                             <p className={css.item_text}>{feature.text}</p>
                         </li>

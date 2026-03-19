@@ -33,8 +33,19 @@
 }
 
 .card_disabled {
-    opacity: .4;
+    opacity: .5;
     pointer-events: none;
+}
+
+.card_badge {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font: 500 12px/1.2 $kFontPublicSans;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: rgba(#8e8e93, .12);
+    color: #636366;
 }
 
 .card_icon {
