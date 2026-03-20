@@ -47,7 +47,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Install wget
+        run: |
+          if ! command -v wget &> /dev/null; then
+            sudo apt-get update && sudo apt-get install -y wget
+          fi
+
       - name: Check for typos
-        uses: crate-ci/typos@master
+        uses: crate-ci/typos@v1.44.0
         with:
           config: ${{ github.workspace }}/_typos.toml
