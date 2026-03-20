@@ -76,7 +76,7 @@ export const alethiaPageData: AlethiaGwynethPageData = {
   ],
   explore_suptitle: "",
   explore_title:
-    "Are you a visionary builder?\nAn oppportunity-seeking user?\nA bold trailblazer?",
+    "Are you a visionary builder?\nAn opportunity-seeking user?\nA bold trailblazer?",
   explore_text:
     "Alethia is open to all! Explore, discover, and participate. Alethia is yours!",
   explore_background: "/img/alethia/explore.webp",
@@ -93,7 +93,7 @@ export const alethiaPageData: AlethiaGwynethPageData = {
       id: 2,
       question: "How Does Taiko Alethia Work?",
       answer:
-        "Rollups have three core modules:\n\n1. Data Availability: (where they store their data).\n2. Execution (how they execute transactions)\n3. Sequencing (who orders the transactions)\n\nTraditional rollups only use Ethereum for one of these modules \u2013 Data Availabilty. Unlike other rollups, Taiko also uses Ethereum for sequencing.",
+        "Rollups have three core modules:\n\n1. Data Availability: (where they store their data).\n2. Execution (how they execute transactions)\n3. Sequencing (who orders the transactions)\n\nTraditional rollups only use Ethereum for one of these modules \u2013 Data Availability. Unlike other rollups, Taiko also uses Ethereum for sequencing.",
     },
     {
       id: 3,

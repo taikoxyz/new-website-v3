@@ -787,7 +787,7 @@ export const projects: Project[] = [
     id: 1030,
     name: "Dvote",
     link: "https://evm.dvote.ai/",
-    description: "A public good gas-less goverance vote infra for EVM chains",
+    description: "A public good gas-less governance vote infra for EVM chains",
     icon: "/img/ecosystem/335488017_56528370_2902_4de3_8313_a6be83968ba6_d6f5617bd7.svg",
     type: "Mainnet",
     categories: ["Infrastructure"],

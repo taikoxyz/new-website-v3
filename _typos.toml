@@ -1,0 +1,29 @@
+[default]
+extend-ignore-identifiers-re = [
+  # Component name (would require renaming files/exports to fix)
+  "[Aa]ccordeon",
+  "ACCORDEON",
+]
+
+[default.extend-words]
+# Brand/project names in ecosystem data
+Desig = "Desig"
+Imagin = "Imagin"
+Midle = "Midle"
+notifi = "notifi"
+Daa = "Daa"
+
+[files]
+extend-exclude = [
+  "*.png",
+  "*.jpg",
+  "*.svg",
+  "*.webp",
+  "*.ico",
+  "*.woff",
+  "*.woff2",
+  "*.mp4",
+  "*.webm",
+  "*.json",
+  "pnpm-lock.yaml",
+]
