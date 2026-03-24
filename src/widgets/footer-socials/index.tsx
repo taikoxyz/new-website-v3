@@ -19,9 +19,9 @@ export const FooterSocials: React.FC = () => {
                 >
                     {social.name}
                     <div className={css.socials_wrapper}>
-                        {social.name === "paragraph" ? (
+                        {social.name === "paragraph" || social.name === "proving ground" ? (
                             <div className={css.mirror_logo}>
-                                <Image.Default src="/img/paragraph-logo.png" alt="" />
+                                <Image.Default src={social.name === "proving ground" ? "/img/proving-ground-logo.png" : "/img/paragraph-logo.png"} alt="" />
                             </div>
                         ) : (
                             <Sprite.Default icon={social.icon} />
