@@ -144,6 +144,18 @@ export const headerNavigation: NavItem[] = [
           href: "/grant-program",
           icon: "/img/header/careers.svg",
         },
+        {
+          name: "Proving Ground",
+          href: "https://provinggroundxyz.substack.com/",
+          icon: "/img/header/blog.svg",
+        },
+      ],
+      [
+        {
+          name: "Guides",
+          icon: "/img/header/docs.svg",
+          href: "/guides/deploy-ai-agent-on-ethereum-l2",
+        },
       ],
     ],
   },
@@ -239,6 +251,11 @@ export const footerSocials: SocialLink[] = [
     icon: "gsocial:taiko",
     name: "forum",
     url: "https://community.taiko.xyz/",
+  },
+  {
+    icon: "gsocial:substack",
+    name: "proving ground",
+    url: "https://provinggroundxyz.substack.com/",
   },
   {
     icon: "gsocial:youtube",

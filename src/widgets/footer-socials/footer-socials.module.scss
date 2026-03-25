@@ -1,9 +1,9 @@
 .socials {
-    @include setGrid(5, 24, 24, a);
+    @include setGrid(6, 16, 16, a);
 }
 
 .socials_link {
-    padding: 30px 14px;
+    padding: 24px 10px;
     border-radius: 17px;
     background: $kColorThemeWhite;
     border: 2px solid transparent;
@@ -11,16 +11,16 @@
     font-size: 0;
 
     svg {
-        width: 34px;
-        height: 34px;
+        width: 28px;
+        height: 28px;
         flex-shrink: 0;
         fill: rgba(#ACACAC, 0.5);
         transition: fill .2s ease;
     }
 
     .mirror_logo {
-        width: 34px;
-        height: 34px;
+        width: 28px;
+        height: 28px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,7 +35,7 @@
     }
 
     span {
-        font: 500 24px/1.255 $kFontClashGrotesk;
+        font: 500 20px/1.255 $kFontClashGrotesk;
         letter-spacing: -0.02em;
         color: #000;
     }
@@ -57,7 +57,12 @@
         &:nth-child(4) svg {
             fill: $kColorPink;
         }
-        &:nth-child(5) svg {
+        &:nth-child(5) {
+            .mirror_logo img {
+                opacity: 1;
+            }
+        }
+        &:nth-child(6) svg {
             fill: #FF0000;
         }
     }
@@ -67,7 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
+    gap: 12px;
 }
 
 @media screen and (max-width: $kLaptopSM) {
@@ -87,7 +92,7 @@
 
 @media screen and (max-width: $kTabletXXL) {
     .socials {
-        @include setGrid(5, 12, 12, a);
+        @include setGrid(6, 10, 10, a);
     }
 }
 
@@ -104,7 +109,7 @@
 
 @media screen and (max-width: $kMobileXXL) {
     .socials {
-        @include setGrid(5, 9, 9, a);
+        @include setGrid(6, 6, 6, a);
     }
     .socials_link {
         padding: 17px;
