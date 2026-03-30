@@ -9,7 +9,6 @@ export const Erc8004Content: React.FC = () => {
 
   return (
     <section className={css.content} id="content">
-      <div className="container">
         <div className={css.wrapper}>
           {/* TL;DR */}
           <div className={css.tldr}>
@@ -160,7 +159,6 @@ export const Erc8004Content: React.FC = () => {
 
           <p className={css.updated}>{d.updated}</p>
         </div>
-      </div>
     </section>
   );
 };
