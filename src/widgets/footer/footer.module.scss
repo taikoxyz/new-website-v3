@@ -44,8 +44,6 @@
     width: calc(100% - 242px);
     padding: 40px 45px;
     border-radius: 20px;
-
-    align-self: flex-start;
 }
 .footer_nav_inner {
 
@@ -113,12 +111,12 @@
         width: 100%;
         padding: 30px 0;
     }
+    .footer_content {
+        text-align: center;
+    }
     .footer_copyright {
         text-align: center;
         margin-top: 20px;
-    }
-    .footer_content {
-        text-align: center;
     }
 }
 
