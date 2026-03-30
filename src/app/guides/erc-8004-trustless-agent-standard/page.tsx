@@ -13,11 +13,11 @@ export default function Erc8004GuidePage() {
         <Erc8004Hero />
         <div className="container">
           <div className={css.layout}>
-            <div className={css.main}>
-              <Erc8004Content />
-            </div>
             <div className={css.side}>
               <GuideSidebar />
+            </div>
+            <div className={css.main}>
+              <Erc8004Content />
             </div>
           </div>
         </div>

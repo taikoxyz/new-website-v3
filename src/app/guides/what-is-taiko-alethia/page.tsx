@@ -13,11 +13,11 @@ export default function TaikoAlethiaGuidePage() {
         <AlethiaHero />
         <div className="container">
           <div className={css.layout}>
-            <div className={css.main}>
-              <AlethiaContent />
-            </div>
             <div className={css.side}>
               <GuideSidebar />
+            </div>
+            <div className={css.main}>
+              <AlethiaContent />
             </div>
           </div>
         </div>

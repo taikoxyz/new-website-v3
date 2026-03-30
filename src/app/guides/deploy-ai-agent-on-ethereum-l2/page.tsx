@@ -13,11 +13,11 @@ export default function DeployAiAgentGuidePage() {
         <GuideHero />
         <div className="container">
           <div className={css.layout}>
-            <div className={css.main}>
-              <GuideContent />
-            </div>
             <div className={css.side}>
               <GuideSidebar />
+            </div>
+            <div className={css.main}>
+              <GuideContent />
             </div>
           </div>
         </div>
