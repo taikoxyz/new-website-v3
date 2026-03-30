@@ -52,9 +52,6 @@ export const Footer: React.FC = () => {
                     </p>
                     <FooterSocials />
                     <div className={css.footer_row}>
-                        <p className={css.footer_copyright}>
-                            &copy; {new Date().getFullYear()} Taiko Labs
-                        </p>
                         <div className={css.footer_content}>
                             <p className={css.footer_content_title}>Taiko</p>
                             <p className={css.footer_content_text}>
@@ -92,6 +89,9 @@ export const Footer: React.FC = () => {
                                     </div>
                                 ))}
                             </div>
+                            <p className={css.footer_copyright}>
+                                &copy; {new Date().getFullYear()} Taiko Labs
+                            </p>
                         </div>
                     </div>
                 </div>
