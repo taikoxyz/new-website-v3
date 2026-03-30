@@ -4,3 +4,28 @@
   flex-direction: column;
   gap: 60px;
 }
+
+.layout {
+  display: flex;
+  gap: 40px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.side {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: $kLaptopSM) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .side {
+    width: 100%;
+  }
+}
