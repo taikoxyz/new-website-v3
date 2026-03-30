@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
 import { WrapperButton } from '@/components/buttons/button';
-import { FooterSubscribe } from '@/features/footer-subscribe';
+
 import * as ProductScreens from '@/widgets/product-page-screens';
 import { daoPageData } from '@/content/pages/dao';
 import css from './dao.module.scss';
@@ -85,7 +85,6 @@ export default function DaoPage() {
                     faqData={data.faq_data}
                 />
 
-                <FooterSubscribe />
             </div>
         </DefaultLayout>
     );
