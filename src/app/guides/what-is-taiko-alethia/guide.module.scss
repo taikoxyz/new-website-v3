@@ -20,7 +20,7 @@
   flex-shrink: 0;
 }
 
-@media screen and (max-width: $kLaptopSM) {
+@media screen and (max-width: $kTabletM) {
   .layout {
     flex-direction: column;
   }
