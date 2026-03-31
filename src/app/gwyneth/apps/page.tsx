@@ -3,7 +3,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
-import { FooterSubscribe } from '@/features/footer-subscribe';
+
 import { WrapperButton } from '@/components/buttons/button';
 import { gwynethAppsPageData } from '@/content/pages/gwyneth-apps';
 import type { GwynethAppsItem } from '@/content/types';
@@ -81,7 +81,6 @@ export default function GwynethAppsPage() {
                     </div>
                 </section>
 
-                <FooterSubscribe />
             </div>
         </DefaultLayout>
     );

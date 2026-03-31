@@ -1,23 +1,23 @@
 "use client";
 
 import { DefaultLayout } from "@/widgets/layouts/default-layout";
-import { GuideHero } from "@/widgets/guide-screens/ui/hero";
-import { GuideContent } from "@/widgets/guide-screens/ui/content";
+import { AlethiaHero } from "@/widgets/guide-screens/ui/alethia-hero";
+import { AlethiaContent } from "@/widgets/guide-screens/ui/alethia-content";
 import { GuideSidebar } from "@/widgets/guide-screens/ui/guide-sidebar";
 import css from "./guide.module.scss";
 
-export default function DeployAiAgentGuidePage() {
+export default function TaikoAlethiaGuidePage() {
   return (
     <DefaultLayout>
       <div className={css.gap}>
-        <GuideHero />
+        <AlethiaHero />
         <div className="container">
           <div className={css.layout}>
             <div className={css.side}>
               <GuideSidebar />
             </div>
             <div className={css.main}>
-              <GuideContent />
+              <AlethiaContent />
             </div>
           </div>
         </div>
