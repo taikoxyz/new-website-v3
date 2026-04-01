@@ -1,4 +1,4 @@
-# What is Taiko Alethia?
+# Taiko Alethia is the Based Rollup for AI Agents
 
 An Ethereum-equivalent rollup designed for based sequencing, where AI agents and decentralized applications scale at sub-cent cost.
 

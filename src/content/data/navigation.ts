@@ -120,64 +120,19 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "About",
-          href: "/about",
-          icon: "/img/header/about.svg",
-        },
-        {
-          name: "Blog",
-          href: "/blog",
-          icon: "/img/header/blog.svg",
-        },
-        {
-          name: "Brand Kit",
-          href: "/brand-assets",
-          icon: "/img/header/brand-kit.svg",
-        },
-        {
-          name: "Careers",
-          href: "/careers",
-          icon: "/img/header/careers.svg",
-        },
-        {
-          name: "Grants",
-          href: "/grant-program",
-          icon: "/img/header/careers.svg",
+          name: "Guides",
+          icon: "/img/header/docs.svg",
+          href: "/guides/deploy-ai-agent-on-ethereum-l2",
         },
         {
           name: "Proving Ground",
           href: "https://provinggroundxyz.substack.com/",
           icon: "/img/header/blog.svg",
         },
-      ],
-      [
         {
-          name: "Guides",
-          icon: "/img/header/docs.svg",
-          href: "/guides/deploy-ai-agent-on-ethereum-l2",
-        },
-      ],
-    ],
-  },
-  {
-    name: "Engage",
-    img: "/img/header/taiko-engage.jpg",
-    children: [
-      [
-        {
-          name: "Trailblazer",
-          href: "https://trailblazers.taiko.xyz/",
-          icon: "/img/header/trailblazer.svg",
-        },
-        {
-          name: "Snaefell NFT",
-          href: "https://snaefellnft.taiko.xyz/",
-          icon: "/img/header/snaefell.svg",
-        },
-        {
-          name: "Taikoons NFT",
-          href: "https://taikoons.taiko.xyz/",
-          icon: "/img/header/taikoons.svg",
+          name: "Blog",
+          href: "/blog",
+          icon: "/img/header/blog.svg",
         },
       ],
     ],
