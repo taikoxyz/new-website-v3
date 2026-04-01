@@ -129,30 +129,35 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
 
     return (
         <div className={clsx(css.nav, navActive && css._active, className)} onMouseLeave={close}>
-            {navigation.map((item) => (
-                <button
-                    className={clsx(css.nav_item, item.name === navActive?.name && css._active)}
-                    onMouseEnter={() => open(item)}
-                    key={item.name}
-                >
-                    {item.name}
-                    <ArrowDownIcon />
-                </button>
-            ))}
-
-            <CSSTransition classNames={css} timeout={300} in={active} mountOnEnter unmountOnExit nodeRef={menuRef}>
-                <div className={css.menu} ref={menuRef}>
-                    <div className={css.menu_content}>
-                        {(navActive?.links || []).map((column, id) => (
-                            <div className={css.menu_content_column} key={id}>
-                                {column.map((link) => (
-                                    <RenderItem {...link} key={link.name + link.href} />
-                                ))}
-                            </div>
-                        ))}
+            {navigation.map((item) => {
+                const isActive = item.name === navActive?.name;
+                return (
+                    <div className={css.nav_item_wrapper} key={item.name}>
+                        <button
+                            className={clsx(css.nav_item, isActive && css._active)}
+                            onMouseEnter={() => open(item)}
+                        >
+                            {item.name}
+                            <ArrowDownIcon />
+                        </button>
+                        {isActive && (
+                            <CSSTransition classNames={css} timeout={300} in={active} mountOnEnter unmountOnExit nodeRef={menuRef} appear>
+                                <div className={css.menu} ref={menuRef}>
+                                    <div className={css.menu_content}>
+                                        {(navActive?.links || []).map((column, id) => (
+                                            <div className={css.menu_content_column} key={id}>
+                                                {column.map((link) => (
+                                                    <RenderItem {...link} key={link.name + link.href} />
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </CSSTransition>
+                        )}
                     </div>
-                </div>
-            </CSSTransition>
+                );
+            })}
         </div>
     );
 };
