@@ -39,9 +39,9 @@
     width: auto;
     min-width: 200px;
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 100%;
-    transform: translate(-50%, 20px);
+    transform: translateY(20px);
 
     padding: 12px;
     padding-left: 20px;
@@ -164,20 +164,20 @@
 
 .enter {
     opacity: 0;
-    transform: translate(-50%, -10px);
+    transform: translateY(-10px);
 }
 .enterActive {
-    transform: translate(-50%, 20px);
+    transform: translateY(20px);
     opacity: 1;
     transition: 300ms ease;
     transition-property: opacity, transform;
 }
 .exit {
-    transform: translate(-50%, 20px);
+    transform: translateY(20px);
     opacity: 1;
 }
 .exitActive {
-    transform: translate(-50%, 50px);
+    transform: translateY(50px);
     opacity: 0;
     transition: 300ms ease;
     transition-property: opacity, transform;
