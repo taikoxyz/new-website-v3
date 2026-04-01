@@ -10,21 +10,18 @@ import { headerNavigation } from "@/content/data/navigation";
 import type { NavItem, NavItemLink } from "@/content/types";
 import { executeOnReadyPage } from "@/lib/utils/browser";
 import { loadImage } from "@/lib/utils/loadImage";
-import { loadVideo } from "@/lib/utils/loadVideo";
 import Accordion from "@/components/accordion";
 import Image from "@/components/image";
 import css from "./header-navigation.module.scss";
 
 type NavHeader = {
     name: string;
-    media: string;
     links: NavItemLink[][];
 };
 
 function toNavHeaders(items: NavItem[]): NavHeader[] {
     return items.map((item) => ({
         name: item.name,
-        media: item.img,
         links: item.children,
     }));
 }
@@ -118,13 +115,6 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
         () =>
             executeOnReadyPage(() => {
                 navigation.forEach((item) => {
-                    if (item.media) {
-                        if (/(mp4)|(avi)|(webm)$/.test(item.media)) {
-                            loadVideo(item.media);
-                        } else {
-                            loadImage(item.media);
-                        }
-                    }
                     item.links.forEach((column) => {
                         column.forEach((link) => {
                             if (link.icon) {
@@ -160,22 +150,6 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
                                 ))}
                             </div>
                         ))}
-                    </div>
-                    <div className={css.menu_image}>
-                        {/(mp4)|(avif)|(webm)$/.test(navActive?.media || "") ? (
-                            <video
-                                src={navActive?.media as string}
-                                autoPlay
-                                loop
-                                playsInline
-                                muted
-                            />
-                        ) : (
-                            <Image.Default
-                                src={navActive?.media as string}
-                                alt=""
-                            />
-                        )}
                     </div>
                 </div>
             </CSSTransition>

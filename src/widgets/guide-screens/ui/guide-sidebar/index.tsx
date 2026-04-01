@@ -12,7 +12,7 @@ export const GuideSidebar: React.FC = () => {
 
   return (
     <div className={css.sidebar}>
-      <p className={css.title}>Guides</p>
+      <p className={css.title}>AI Agent Guides</p>
       <nav className={css.nav}>
         {guidesList.map((guide) => {
           const isActive = pathname === guide.href;

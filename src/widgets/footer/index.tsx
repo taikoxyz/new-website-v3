@@ -13,7 +13,9 @@ const footerNavigation = [
             { name: "Docs", href: "https://docs.taiko.xyz/start-here/getting-started" },
             { name: "Bridge", href: "https://bridge.taiko.xyz/" },
             { name: "Swap", href: "https://swap.taiko.xyz/" },
-            { name: "AI Agents Guide", href: "https://taiko.xyz/guides/deploy-ai-agent-on-ethereum-l2" },
+            { name: "AI Agent Guides", href: "/guides/deploy-ai-agent-on-ethereum-l2" },
+            { name: "Whitepaper", href: "https://github.com/taikoxyz/taiko-mono/tree/main/packages/whitepaper" },
+            { name: "Proofs", href: "https://proofs.taiko.xyz/" },
         ],
     },
     {
@@ -22,6 +24,8 @@ const footerNavigation = [
             { name: "Ecosystem", href: "/ecosystem" },
             { name: "Proving Ground", href: "https://provinggroundxyz.substack.com/" },
             { name: "Blog", href: "/blog" },
+            { name: "Taiko Takeoff", href: "https://takeoff.taiko.xyz/" },
+            { name: "Status", href: "https://status.taiko.xyz/" },
         ],
     },
     {
