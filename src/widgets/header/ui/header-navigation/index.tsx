@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import { CSSTransition } from "react-transition-group";
 import Link from "next/link";
 import clsx from "clsx";
 import ArrowDownIcon from "@/components/icons/arrow-down";
@@ -98,17 +97,14 @@ interface Props {
 
 export const HeaderNavigation: React.FC<Props> = ({ className }) => {
     const [navActive, setNavActive] = React.useState<NavHeader | null>(null);
-    const [active, setActive] = React.useState(false);
     const navigation = React.useMemo(() => toNavHeaders(headerNavigation), []);
-    const menuRef = React.useRef<HTMLDivElement>(null);
 
     const open = (item: NavHeader) => {
-        setActive(true);
         setNavActive(item);
     };
 
     const close = () => {
-        setActive(false);
+        setNavActive(null);
     };
 
     React.useEffect(
@@ -141,19 +137,17 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
                             <ArrowDownIcon />
                         </button>
                         {isActive && (
-                            <CSSTransition classNames={css} timeout={300} in={active} mountOnEnter unmountOnExit nodeRef={menuRef} appear>
-                                <div className={css.menu} ref={menuRef}>
-                                    <div className={css.menu_content}>
-                                        {(navActive?.links || []).map((column, id) => (
-                                            <div className={css.menu_content_column} key={id}>
-                                                {column.map((link) => (
-                                                    <RenderItem {...link} key={link.name + link.href} />
-                                                ))}
-                                            </div>
-                                        ))}
-                                    </div>
+                            <div className={css.menu}>
+                                <div className={css.menu_content}>
+                                    {item.links.map((column, id) => (
+                                        <div className={css.menu_content_column} key={id}>
+                                            {column.map((link) => (
+                                                <RenderItem {...link} key={link.name + link.href} />
+                                            ))}
+                                        </div>
+                                    ))}
                                 </div>
-                            </CSSTransition>
+                            </div>
                         )}
                     </div>
                 );
