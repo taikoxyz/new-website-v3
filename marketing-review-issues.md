@@ -25,7 +25,7 @@ Compared against the local new-website-v3 codebase and live taiko.xyz.
 - **Is it correct?** Yes. Currently in `src/content/pages/gwyneth.ts`:
   - "Documentation" links to `https://docs.taiko.xyz/` (line 45)
   - "Join Testnet" links to `https://docs.taiko.xyz/` (line 53)
-  - "Community" links to `https://discord.gg/taikoxyz` (line 69)
+  - "Community" links to `https://discord.com/invite/taiko-984015101017346058` (line 69)
 
   All 3 cards have `disabled: false` and active links. The "Discover the Ecosystem" card links to `/ecosystem` and was NOT annotated, so that one should remain as-is.
 - **Suggested fix:** For the 3 annotated cards, set `disabled: true` and either clear the `href` or change the text/UI to show "Coming soon". The Cards component (`src/widgets/product-page-screens/ui/cards/index.tsx`) already supports a `disabled` state — verify that it renders a "coming soon" label or add one.

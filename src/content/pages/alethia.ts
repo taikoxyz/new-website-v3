@@ -69,7 +69,7 @@ export const alethiaPageData: AlethiaGwynethPageData = {
       id: 3,
       title: "Community",
       text: "Become a part of our great Taiko community. We are stronger with you!",
-      href: "https://discord.gg/taikoxyz",
+      href: "https://discord.com/invite/taiko-984015101017346058",
       disabled: false,
       icon: "/img/alethia/community.svg",
     },

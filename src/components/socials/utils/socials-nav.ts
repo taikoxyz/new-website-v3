@@ -9,6 +9,6 @@ export const socialsNav = [
     },
     {
         "icon": "socials:discord",
-        "url": "https://discord.com/invite/taikoxyz"
+        "url": "https://discord.com/invite/taiko-984015101017346058"
     }
 ];

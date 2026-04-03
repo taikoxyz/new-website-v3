@@ -60,7 +60,7 @@ export const homePageData: HomePageData = {
   solution_screen_4_btn: {
     id: 12,
     name: "Learn More",
-    link: "https://discord.gg/taikoxyz",
+    link: "https://discord.com/invite/taiko-984015101017346058",
     variant: "pink",
     newTab: true,
     disabledArrow: false,
