@@ -112,7 +112,7 @@
 .about_features {
     list-style: none;
     display: grid;
-    align-items: flex-start;
+    align-items: stretch;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }

@@ -107,6 +107,11 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/aragon.svg",
         },
         {
+          name: "Forum",
+          href: "https://community.taiko.xyz/",
+          icon: "/img/header/learn.svg",
+        },
+        {
           name: "Docs",
           href: "https://dao-docs.taiko.xyz/start-here/getting-started",
           icon: "/img/header/docs.svg",
@@ -115,7 +120,7 @@ export const headerNavigation: NavItem[] = [
     ],
   },
   {
-    name: "Learn",
+    name: "About",
     img: "/media/menu-learn.mp4",
     children: [
       [
