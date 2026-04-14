@@ -15,7 +15,7 @@
                     "icon": "/img/icons/nav-bridge.svg" 
                 }, { 
                     "name": "Documentation", 
-                    "url": "https://docs.taiko.xyz/start-here/getting-started",
+                    "url": "https://docs.taiko.xyz/",
                     "icon": "/img/icons/nav-docs.svg" 
                 }, { 
                     "name": "Explorers", 

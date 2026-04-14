@@ -24,7 +24,7 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Docs",
-          href: "https://docs.taiko.xyz/start-here/getting-started",
+          href: "https://docs.taiko.xyz/",
           icon: "/img/header/docs.svg",
         },
         {
@@ -85,7 +85,7 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Docs",
-          href: "https://docs.taiko.xyz/start-here/getting-started",
+          href: "https://docs.taiko.xyz/",
           icon: "/img/header/docs.svg",
         },
       ],
@@ -108,7 +108,7 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Docs",
-          href: "https://dao-docs.taiko.xyz/start-here/getting-started",
+          href: "https://dao-docs.taiko.xyz/",
           icon: "/img/header/docs.svg",
         },
       ],
@@ -199,7 +199,7 @@ export const footerNav: FooterNavGroup[] = [
     list: [
       {
         name: "Get started",
-        url: "https://docs.taiko.xyz/start-here/getting-started",
+        url: "https://docs.taiko.xyz/",
       },
       { name: "GitHub", url: "https://github.com/taikoxyz" },
     ],
