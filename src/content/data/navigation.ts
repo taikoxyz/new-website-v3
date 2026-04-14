@@ -139,8 +139,6 @@ export const headerNavigation: NavItem[] = [
           href: "https://provinggroundxyz.substack.com/",
           icon: "/img/header/blog.svg",
         },
-      ],
-      [
         {
           name: "Guides",
           icon: "/img/header/docs.svg",
