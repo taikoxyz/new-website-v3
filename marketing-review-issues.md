@@ -160,7 +160,7 @@ The browser agent checked the live site's source (from the `taikoxyz/website-v4`
 - **Action:** Clarify with marketing whether to keep this section (with the "A PURIST APPROACH TO ETHEREUM'S FUTURE" suptitle per Issue 1.2) or remove it to match live. The PDF annotation adding a suptitle suggests they want to keep it.
 
 ### 5.5: Card text and links differ from live
-- **Live "Documentation"** links to `https://docs.taiko.xyz/start-here/getting-started/` (more specific)
+- **Live "Documentation"** links to `https://docs.taiko.xyz/` (more specific)
 - **Live "Join Testnet"** is already **disabled/"Coming soon"** (matches the PDF annotation)
 - **Live "Discover the Ecosystem"** is already **disabled/"Coming soon"** (matches the PDF annotation)
 - **Live "Community"** links to `https://x.com/gwyneth_taiko` (Twitter), not Discord

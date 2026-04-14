@@ -39,7 +39,7 @@ export const gwynethPageData: AlethiaGwynethPageData = {
       id: 1,
       title: "Documentation",
       text: "Everything you need to build on Gwyneth",
-      href: "https://docs.taiko.xyz/start-here/getting-started/",
+      href: "https://docs.taiko.xyz/",
       disabled: false,
       icon: "/img/alethia/docs.svg",
     },

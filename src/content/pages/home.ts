@@ -52,7 +52,7 @@ export const homePageData: HomePageData = {
   solution_screen_3_btn: {
     id: 11,
     name: "Learn More",
-    link: "https://docs.taiko.xyz/network-reference/addresses",
+    link: "https://docs.taiko.xyz/network/contract-addresses",
     variant: "pink",
     newTab: true,
     disabledArrow: false,

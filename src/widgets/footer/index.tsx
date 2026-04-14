@@ -10,7 +10,7 @@ const footerNavigation = [
     {
         name: "Build",
         links: [
-            { name: "Docs", href: "https://docs.taiko.xyz/start-here/getting-started" },
+            { name: "Docs", href: "https://docs.taiko.xyz/" },
             { name: "Bridge", href: "https://bridge.taiko.xyz/" },
             { name: "Swap", href: "https://swap.taiko.xyz/" },
             { name: "AI Agents Guide", href: "https://taiko.xyz/guides/deploy-ai-agent-on-ethereum-l2" },
@@ -28,7 +28,7 @@ const footerNavigation = [
         name: "Governance",
         links: [
             { name: "DAO", href: "https://dao.taiko.xyz/" },
-            { name: "Docs", href: "https://dao-docs.taiko.xyz/start-here/getting-started" },
+            { name: "Docs", href: "https://dao-docs.taiko.xyz/" },
         ],
     },
     {
