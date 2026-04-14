@@ -120,7 +120,7 @@ export const headerNavigation: NavItem[] = [
     ],
   },
   {
-    name: "About",
+    name: "Learn",
     img: "/media/menu-learn.mp4",
     children: [
       [
