@@ -4,7 +4,7 @@ import type { NavItem, NavItemLink, FooterNavGroup, SocialLink } from "@/content
 export const headerNavigation: NavItem[] = [
   {
     name: "Alethia",
-    img: "/media/menu-alethia.mp4",
+    img: "",
     children: [
       [
         {
@@ -18,22 +18,10 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/apps.svg",
         },
         {
-          name: "Taiko Takeoff",
-          href: "https://takeoff.taiko.xyz/",
-          icon: "/img/header/trailblazer.svg",
-        },
-        {
           name: "Docs",
           href: "https://docs.taiko.xyz/",
           icon: "/img/header/docs.svg",
         },
-        {
-          name: "Whitepaper",
-          href: "https://github.com/taikoxyz/taiko-mono/tree/main/packages/whitepaper",
-          icon: "/img/header/docs.svg",
-        },
-      ],
-      [
         {
           name: "Bridge",
           href: "https://bridge.taiko.xyz/",
@@ -43,16 +31,6 @@ export const headerNavigation: NavItem[] = [
           name: "Swap",
           href: "https://swap.taiko.xyz/",
           icon: "/img/header/apps.svg",
-        },
-        {
-          name: "Proofs",
-          href: "https://proofs.taiko.xyz/",
-          icon: "/img/header/docs.svg",
-        },
-        {
-          name: "Status",
-          href: "https://status.taiko.xyz/",
-          icon: "/img/header/about.svg",
         },
         {
           name: "Block Explorers",
@@ -70,7 +48,7 @@ export const headerNavigation: NavItem[] = [
   },
   {
     name: "Gwyneth",
-    img: "/media/menu-gwyneth.mp4",
+    img: "",
     children: [
       [
         {
@@ -93,7 +71,7 @@ export const headerNavigation: NavItem[] = [
   },
   {
     name: "Governance",
-    img: "/media/menu-governance.mp4",
+    img: "",
     children: [
       [
         {
@@ -116,68 +94,23 @@ export const headerNavigation: NavItem[] = [
   },
   {
     name: "Learn",
-    img: "/media/menu-learn.mp4",
+    img: "",
     children: [
       [
         {
-          name: "About",
-          href: "/about",
-          icon: "/img/header/about.svg",
-        },
-        {
-          name: "Blog",
-          href: "/blog",
-          icon: "/img/header/blog.svg",
-        },
-        {
-          name: "Brand Kit",
-          href: "/brand-assets",
-          icon: "/img/header/brand-kit.svg",
-        },
-        {
-          name: "Careers",
-          href: "/careers",
-          icon: "/img/header/careers.svg",
-        },
-        {
-          name: "Grants",
-          href: "/grant-program",
-          icon: "/img/header/careers.svg",
+          name: "AI Agent Guides",
+          icon: "/img/header/docs.svg",
+          href: "/guides/deploy-ai-agent-on-ethereum-l2",
         },
         {
           name: "Proving Ground",
           href: "https://provinggroundxyz.substack.com/",
           icon: "/img/header/blog.svg",
         },
-      ],
-      [
         {
-          name: "Guides",
-          icon: "/img/header/docs.svg",
-          href: "/guides/deploy-ai-agent-on-ethereum-l2",
-        },
-      ],
-    ],
-  },
-  {
-    name: "Engage",
-    img: "/img/header/taiko-engage.jpg",
-    children: [
-      [
-        {
-          name: "Trailblazer",
-          href: "https://trailblazers.taiko.xyz/",
-          icon: "/img/header/trailblazer.svg",
-        },
-        {
-          name: "Snaefell NFT",
-          href: "https://snaefellnft.taiko.xyz/",
-          icon: "/img/header/snaefell.svg",
-        },
-        {
-          name: "Taikoons NFT",
-          href: "https://taikoons.taiko.xyz/",
-          icon: "/img/header/taikoons.svg",
+          name: "Blog",
+          href: "/blog",
+          icon: "/img/header/blog.svg",
         },
       ],
     ],

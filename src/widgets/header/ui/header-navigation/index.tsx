@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import { CSSTransition } from "react-transition-group";
 import Link from "next/link";
 import clsx from "clsx";
 import ArrowDownIcon from "@/components/icons/arrow-down";
@@ -10,21 +9,18 @@ import { headerNavigation } from "@/content/data/navigation";
 import type { NavItem, NavItemLink } from "@/content/types";
 import { executeOnReadyPage } from "@/lib/utils/browser";
 import { loadImage } from "@/lib/utils/loadImage";
-import { loadVideo } from "@/lib/utils/loadVideo";
 import Accordion from "@/components/accordion";
 import Image from "@/components/image";
 import css from "./header-navigation.module.scss";
 
 type NavHeader = {
     name: string;
-    media: string;
     links: NavItemLink[][];
 };
 
 function toNavHeaders(items: NavItem[]): NavHeader[] {
     return items.map((item) => ({
         name: item.name,
-        media: item.img,
         links: item.children,
     }));
 }
@@ -101,30 +97,20 @@ interface Props {
 
 export const HeaderNavigation: React.FC<Props> = ({ className }) => {
     const [navActive, setNavActive] = React.useState<NavHeader | null>(null);
-    const [active, setActive] = React.useState(false);
     const navigation = React.useMemo(() => toNavHeaders(headerNavigation), []);
-    const menuRef = React.useRef<HTMLDivElement>(null);
 
     const open = (item: NavHeader) => {
-        setActive(true);
         setNavActive(item);
     };
 
     const close = () => {
-        setActive(false);
+        setNavActive(null);
     };
 
     React.useEffect(
         () =>
             executeOnReadyPage(() => {
                 navigation.forEach((item) => {
-                    if (item.media) {
-                        if (/(mp4)|(avi)|(webm)$/.test(item.media)) {
-                            loadVideo(item.media);
-                        } else {
-                            loadImage(item.media);
-                        }
-                    }
                     item.links.forEach((column) => {
                         column.forEach((link) => {
                             if (link.icon) {
@@ -139,46 +125,33 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
 
     return (
         <div className={clsx(css.nav, navActive && css._active, className)} onMouseLeave={close}>
-            {navigation.map((item) => (
-                <button
-                    className={clsx(css.nav_item, item.name === navActive?.name && css._active)}
-                    onMouseEnter={() => open(item)}
-                    key={item.name}
-                >
-                    {item.name}
-                    <ArrowDownIcon />
-                </button>
-            ))}
-
-            <CSSTransition classNames={css} timeout={300} in={active} mountOnEnter unmountOnExit nodeRef={menuRef}>
-                <div className={css.menu} ref={menuRef}>
-                    <div className={css.menu_content}>
-                        {(navActive?.links || []).map((column, id) => (
-                            <div className={css.menu_content_column} key={id}>
-                                {column.map((link) => (
-                                    <RenderItem {...link} key={link.name + link.href} />
-                                ))}
+            {navigation.map((item) => {
+                const isActive = item.name === navActive?.name;
+                return (
+                    <div className={css.nav_item_wrapper} key={item.name}>
+                        <button
+                            className={clsx(css.nav_item, isActive && css._active)}
+                            onMouseEnter={() => open(item)}
+                        >
+                            {item.name}
+                            <ArrowDownIcon />
+                        </button>
+                        {isActive && (
+                            <div className={css.menu}>
+                                <div className={css.menu_content}>
+                                    {item.links.map((column, id) => (
+                                        <div className={css.menu_content_column} key={id}>
+                                            {column.map((link) => (
+                                                <RenderItem {...link} key={link.name + link.href} />
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        ))}
-                    </div>
-                    <div className={css.menu_image}>
-                        {/(mp4)|(avif)|(webm)$/.test(navActive?.media || "") ? (
-                            <video
-                                src={navActive?.media as string}
-                                autoPlay
-                                loop
-                                playsInline
-                                muted
-                            />
-                        ) : (
-                            <Image.Default
-                                src={navActive?.media as string}
-                                alt=""
-                            />
                         )}
                     </div>
-                </div>
-            </CSSTransition>
+                );
+            })}
         </div>
     );
 };

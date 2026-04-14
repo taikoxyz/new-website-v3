@@ -19,6 +19,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/trailblazers",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/snaefell",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/taikoons",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

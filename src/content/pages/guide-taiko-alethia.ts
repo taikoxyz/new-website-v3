@@ -1,7 +1,7 @@
 export const guideTaikoAlethiaData = {
   hero: {
     label: "Guide",
-    title: "What is Taiko Alethia?",
+    title: "Taiko Alethia is the Based Rollup for AI Agents",
     subtitle:
       "An Ethereum-equivalent rollup designed for based sequencing, where AI agents and decentralized applications scale at sub-cent cost.",
   },

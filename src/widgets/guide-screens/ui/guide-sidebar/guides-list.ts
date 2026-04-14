@@ -1,6 +1,6 @@
 export const guidesList = [
   {
-    title: "What is Taiko Alethia?",
+    title: "Taiko Alethia is the Based Rollup for AI Agents",
     description: "Ethereum-equivalent rollup with based sequencing and sub-cent costs",
     href: "/guides/what-is-taiko-alethia",
   },
