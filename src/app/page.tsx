@@ -27,7 +27,6 @@ export default function Home() {
                 <Screens.Journey />
                 <Screens.Governance />
             </WrapSVG>
-            <Screens.Subscribe />
         </DefaultLayout>
     );
 }
