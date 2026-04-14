@@ -2,7 +2,6 @@
 
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
 import * as ProductScreens from '@/widgets/product-page-screens';
-import { FooterSubscribe } from '@/features/footer-subscribe';
 import { alethiaPageData } from '@/content/pages/alethia';
 import css from './alethia.module.scss';
 
@@ -45,7 +44,6 @@ export default function AlethiaPage() {
                     text={data.faq_text}
                     faqData={data.faq_data}
                 />
-                <FooterSubscribe />
             </div>
         </DefaultLayout>
     );

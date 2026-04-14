@@ -1,32 +1,21 @@
 export const featuresHeightCalc = (className = ".features-item") => {
-    const featuresOdd = Array.from(
-        document.querySelectorAll(`${className}:nth-child(odd)`)
-    ) as HTMLElement[];
-    const featuresEven = Array.from(
-        document.querySelectorAll(`${className}:nth-child(even)`)
+    const allItems = Array.from(
+        document.querySelectorAll(className)
     ) as HTMLElement[];
 
-    const getMaxHeight = (elements: HTMLElement[]) => {
-        let h = 0;
-        elements.forEach((el) => {
-            el.style.height = "";
-            el.style.marginTop = "";
-            if (el.offsetHeight > h) {
-                h = el.offsetHeight;
-            }
-        });
-        return h;
-    };
-
-    const feO = getMaxHeight(featuresOdd);
-    const feE = getMaxHeight(featuresEven);
+    // Reset heights
+    allItems.forEach((el) => {
+        el.style.height = "";
+        el.style.marginTop = "";
+    });
 
     if (window.innerWidth > 991) {
-        featuresOdd.forEach((el) => (el.style.height = `${feO}px`));
-        featuresEven.forEach((el) => (el.style.height = `${feE}px`));
-
-        if (featuresOdd[2]) {
-            featuresOdd[2].style.marginTop = feE - feO + "px";
-        }
+        let maxHeight = 0;
+        allItems.forEach((el) => {
+            if (el.offsetHeight > maxHeight) {
+                maxHeight = el.offsetHeight;
+            }
+        });
+        allItems.forEach((el) => (el.style.height = `${maxHeight}px`));
     }
 };

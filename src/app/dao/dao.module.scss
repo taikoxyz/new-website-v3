@@ -112,7 +112,7 @@
 .about_features {
     list-style: none;
     display: grid;
-    align-items: flex-start;
+    align-items: stretch;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
@@ -174,7 +174,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 420px;
 }
 
 .join_suptitle {
@@ -185,11 +184,11 @@
 }
 
 .join_title {
-    margin-top: 24px;
-    font: 500 50px/.9 $kFontClashGrotesk;
+    margin-top: 16px;
+    font: 500 36px/.95 $kFontClashGrotesk;
     color: #fff;
     max-width: 9.2em;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .join_btn {

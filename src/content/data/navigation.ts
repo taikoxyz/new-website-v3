@@ -97,7 +97,7 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "Learn",
+          name: "Overview",
           href: "/dao",
           icon: "/img/header/learn.svg",
         },
@@ -105,6 +105,11 @@ export const headerNavigation: NavItem[] = [
           name: "DAO App",
           href: "https://dao.taiko.xyz/",
           icon: "/img/header/aragon.svg",
+        },
+        {
+          name: "Forum",
+          href: "https://community.taiko.xyz/",
+          icon: "/img/header/learn.svg",
         },
         {
           name: "Docs",
@@ -130,54 +135,14 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/blog.svg",
         },
         {
-          name: "Brand Kit",
-          href: "/brand-assets",
-          icon: "/img/header/brand-kit.svg",
-        },
-        {
-          name: "Careers",
-          href: "/careers",
-          icon: "/img/header/careers.svg",
-        },
-        {
-          name: "Grants",
-          href: "/grant-program",
-          icon: "/img/header/careers.svg",
-        },
-        {
           name: "Proving Ground",
           href: "https://provinggroundxyz.substack.com/",
           icon: "/img/header/blog.svg",
         },
-      ],
-      [
         {
           name: "Guides",
           icon: "/img/header/docs.svg",
           href: "/guides/deploy-ai-agent-on-ethereum-l2",
-        },
-      ],
-    ],
-  },
-  {
-    name: "Engage",
-    img: "/img/header/taiko-engage.jpg",
-    children: [
-      [
-        {
-          name: "Trailblazer",
-          href: "https://trailblazers.taiko.xyz/",
-          icon: "/img/header/trailblazer.svg",
-        },
-        {
-          name: "Snaefell NFT",
-          href: "https://snaefellnft.taiko.xyz/",
-          icon: "/img/header/snaefell.svg",
-        },
-        {
-          name: "Taikoons NFT",
-          href: "https://taikoons.taiko.xyz/",
-          icon: "/img/header/taikoons.svg",
         },
       ],
     ],
@@ -190,7 +155,6 @@ export const footerNav: FooterNavGroup[] = [
     title: "About",
     list: [
       { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "/careers" },
       { name: "Brand kit", url: "/brand-assets" },
     ],
   },
