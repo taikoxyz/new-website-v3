@@ -97,7 +97,7 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "Learn",
+          name: "Overview",
           href: "/dao",
           icon: "/img/header/learn.svg",
         },
@@ -135,21 +135,6 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/blog.svg",
         },
         {
-          name: "Brand Kit",
-          href: "/brand-assets",
-          icon: "/img/header/brand-kit.svg",
-        },
-        {
-          name: "Careers",
-          href: "/careers",
-          icon: "/img/header/careers.svg",
-        },
-        {
-          name: "Grants",
-          href: "/grant-program",
-          icon: "/img/header/careers.svg",
-        },
-        {
           name: "Proving Ground",
           href: "https://provinggroundxyz.substack.com/",
           icon: "/img/header/blog.svg",
@@ -164,29 +149,6 @@ export const headerNavigation: NavItem[] = [
       ],
     ],
   },
-  {
-    name: "Engage",
-    img: "/img/header/taiko-engage.jpg",
-    children: [
-      [
-        {
-          name: "Trailblazer",
-          href: "https://trailblazers.taiko.xyz/",
-          icon: "/img/header/trailblazer.svg",
-        },
-        {
-          name: "Snaefell NFT",
-          href: "https://snaefellnft.taiko.xyz/",
-          icon: "/img/header/snaefell.svg",
-        },
-        {
-          name: "Taikoons NFT",
-          href: "https://taikoons.taiko.xyz/",
-          icon: "/img/header/taikoons.svg",
-        },
-      ],
-    ],
-  },
 ];
 
 // Footer navigation columns
@@ -195,7 +157,6 @@ export const footerNav: FooterNavGroup[] = [
     title: "About",
     list: [
       { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "/careers" },
       { name: "Brand kit", url: "/brand-assets" },
     ],
   },
