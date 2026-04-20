@@ -1,22 +1,53 @@
 import type { Metadata } from "next";
 
+const TITLE = "ERC-8004: The Trustless Agent Standard on Taiko";
+const DESCRIPTION =
+  "A guide to ERC-8004 on Taiko: what it is, how it works and how to register an AI Agent.";
+const URL = "https://taiko.xyz/guides/erc-8004-trustless-agent-standard";
+const IMAGE = "https://taiko.xyz/img/og-image.png";
+
 export const metadata: Metadata = {
-  title: "ERC-8004: The Trustless Agent Standard on Taiko",
-  description:
-    "A guide to ERC-8004 on Taiko: what it is, how it works and how to register an AI Agent.",
+  title: TITLE,
+  description: DESCRIPTION,
   openGraph: {
-    title: "ERC-8004: The Trustless Agent Standard on Taiko \u2013 Taiko",
-    description:
-      "A guide to ERC-8004 on Taiko: what it is, how it works and how to register an AI Agent.",
-    url: "https://taiko.xyz/guides/erc-8004-trustless-agent-standard",
+    title: `${TITLE} \u2013 Taiko`,
+    description: DESCRIPTION,
+    url: URL,
+    type: "article",
+    images: [{ url: IMAGE }],
   },
   twitter: {
-    title: "ERC-8004: The Trustless Agent Standard on Taiko \u2013 Taiko",
-    description:
-      "A guide to ERC-8004 on Taiko: what it is, how it works and how to register an AI Agent.",
+    card: "summary_large_image",
+    title: `${TITLE} \u2013 Taiko`,
+    description: DESCRIPTION,
+    images: [IMAGE],
   },
   alternates: {
     canonical: "/guides/erc-8004-trustless-agent-standard",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: TITLE,
+  description: DESCRIPTION,
+  url: URL,
+  mainEntityOfPage: URL,
+  image: IMAGE,
+  author: {
+    "@type": "Organization",
+    name: "Taiko Labs",
+    url: "https://taiko.xyz",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Taiko Labs",
+    url: "https://taiko.xyz",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://taiko.xyz/img/logo.svg",
+    },
   },
 };
 
@@ -25,5 +56,13 @@ export default function GuideLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

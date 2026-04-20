@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBlogs } from "@/content/utils";
 import { getCareers } from "@/content/utils";
+import { guidesList } from "@/widgets/guide-screens/ui/guide-sidebar/guides-list";
 
 const BASE_URL = "https://taiko.xyz";
 
@@ -102,5 +103,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...careerRoutes];
+  const guideRoutes: MetadataRoute.Sitemap = guidesList.map((guide) => ({
+    url: `${BASE_URL}${guide.href}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...careerRoutes, ...guideRoutes];
 }
