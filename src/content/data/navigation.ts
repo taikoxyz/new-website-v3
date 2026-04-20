@@ -154,7 +154,23 @@ export const headerNavigation: NavItem[] = [
         {
           name: "Guides",
           icon: "/img/header/docs.svg",
-          href: "/guides/deploy-ai-agent-on-ethereum-l2",
+          children: [
+            {
+              name: "What is Taiko Alethia?",
+              desc: "Intro to Taiko Alethia",
+              href: "/guides/what-is-taiko-alethia",
+            },
+            {
+              name: "Deploy AI Agents on Taiko",
+              desc: "ERC-8004 agents on an L2",
+              href: "/guides/deploy-ai-agent-on-ethereum-l2",
+            },
+            {
+              name: "ERC-8004 Trustless Agents",
+              desc: "Identity and reputation registries",
+              href: "/guides/erc-8004-trustless-agent-standard",
+            },
+          ],
         },
       ],
     ],
@@ -192,6 +208,7 @@ export const footerNav: FooterNavGroup[] = [
       { name: "Blog", url: "/blog" },
       { name: "Careers", url: "/careers" },
       { name: "Brand kit", url: "/brand-assets" },
+      { name: "What is Taiko Alethia?", url: "/guides/what-is-taiko-alethia" },
     ],
   },
   {
@@ -202,6 +219,8 @@ export const footerNav: FooterNavGroup[] = [
         url: "https://docs.taiko.xyz/start-here/getting-started",
       },
       { name: "GitHub", url: "https://github.com/taikoxyz" },
+      { name: "Deploy AI Agents guide", url: "/guides/deploy-ai-agent-on-ethereum-l2" },
+      { name: "ERC-8004 guide", url: "/guides/erc-8004-trustless-agent-standard" },
     ],
   },
   {
