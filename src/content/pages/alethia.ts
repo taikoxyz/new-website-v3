@@ -1,6 +1,6 @@
-import type { AlethiaGwynethPageData } from "@/content/types";
+import type { AlethiaPageData } from "@/content/types";
 
-export const alethiaPageData: AlethiaGwynethPageData = {
+export const alethiaPageData: AlethiaPageData = {
   id: 1,
   hero_title: "The based way of scaling Ethereum.",
   hero_text:
@@ -69,7 +69,7 @@ export const alethiaPageData: AlethiaGwynethPageData = {
       id: 3,
       title: "Community",
       text: "Become a part of our great Taiko community. We are stronger with you!",
-      href: "https://discord.com/invite/taiko-984015101017346058",
+      href: "https://discord.gg/taikoxyz",
       disabled: false,
       icon: "/img/alethia/community.svg",
     },

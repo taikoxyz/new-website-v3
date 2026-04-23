@@ -1,38 +1,39 @@
 import type { NavItem, NavItemLink, FooterNavGroup, SocialLink } from "@/content/types";
 
-// Header mega-menu navigation — ported from source repo's hardcoded navigation
+// Header mega-menu navigation
 export const headerNavigation: NavItem[] = [
   {
-    name: "Alethia",
-    img: "/media/menu-alethia.mp4",
+    name: "About",
+    img: "/media/menu-learn.mp4",
     children: [
       [
         {
-          name: "About",
+          name: "Alethia",
           href: "/alethia",
           icon: "/img/header/about.svg",
-        },
-        {
-          name: "Apps",
-          href: "/ecosystem",
-          icon: "/img/header/apps.svg",
-        },
-        {
-          name: "Taiko Takeoff",
-          href: "https://takeoff.taiko.xyz/",
-          icon: "/img/header/trailblazer.svg",
-        },
-        {
-          name: "Docs",
-          href: "https://docs.taiko.xyz/",
-          icon: "/img/header/docs.svg",
         },
         {
           name: "Whitepaper",
           href: "https://github.com/taikoxyz/taiko-mono/tree/main/packages/whitepaper",
           icon: "/img/header/docs.svg",
         },
+        {
+          name: "Blog",
+          href: "/blog",
+          icon: "/img/header/blog.svg",
+        },
+        {
+          name: "Proving Ground",
+          href: "https://provinggroundxyz.substack.com/",
+          icon: "/img/header/blog.svg",
+        },
       ],
+    ],
+  },
+  {
+    name: "Ecosystem",
+    img: "/media/menu-alethia.mp4",
+    children: [
       [
         {
           name: "Bridge",
@@ -40,9 +41,37 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/apps.svg",
         },
         {
+          name: "Apps",
+          href: "/ecosystem",
+          icon: "/img/header/apps.svg",
+        },
+        {
           name: "Swap",
           href: "https://swap.taiko.xyz/",
           icon: "/img/header/apps.svg",
+        },
+        {
+          name: "Taiko Takeoff",
+          href: "https://takeoff.taiko.xyz/",
+          icon: "/img/header/trailblazer.svg",
+        },
+      ],
+    ],
+  },
+  {
+    name: "Build",
+    img: "/media/menu-governance.mp4",
+    children: [
+      [
+        {
+          name: "Docs",
+          href: "https://docs.taiko.xyz/",
+          icon: "/img/header/docs.svg",
+        },
+        {
+          name: "Guides",
+          href: "/guides/what-is-taiko-alethia",
+          icon: "/img/header/docs.svg",
         },
         {
           name: "Proofs",
@@ -56,37 +85,8 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Block Explorers",
+          href: "https://taikoscan.io/",
           icon: "/img/header/explorers.svg",
-          children: [
-            {
-              name: "Taikoscan.io",
-              desc: "By Etherscan",
-              href: "https://taikoscan.io/",
-            },
-          ],
-        },
-      ],
-    ],
-  },
-  {
-    name: "Gwyneth",
-    img: "/media/menu-gwyneth.mp4",
-    children: [
-      [
-        {
-          name: "About",
-          href: "/gwyneth",
-          icon: "/img/header/about.svg",
-        },
-        {
-          name: "Apps",
-          href: "/gwyneth/apps",
-          icon: "/img/header/apps.svg",
-        },
-        {
-          name: "Docs",
-          href: "https://docs.taiko.xyz/",
-          icon: "/img/header/docs.svg",
         },
       ],
     ],
@@ -97,7 +97,7 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "Overview",
+          name: "Learn",
           href: "/dao",
           icon: "/img/header/learn.svg",
         },
@@ -107,58 +107,9 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/aragon.svg",
         },
         {
-          name: "Forum",
-          href: "https://community.taiko.xyz/",
-          icon: "/img/header/learn.svg",
-        },
-        {
           name: "Docs",
-          href: "https://dao-docs.taiko.xyz/",
+          href: "https://dao-docs.taiko.xyz/start-here/getting-started",
           icon: "/img/header/docs.svg",
-        },
-      ],
-    ],
-  },
-  {
-    name: "Learn",
-    img: "/media/menu-learn.mp4",
-    children: [
-      [
-        {
-          name: "About",
-          href: "/about",
-          icon: "/img/header/about.svg",
-        },
-        {
-          name: "Blog",
-          href: "/blog",
-          icon: "/img/header/blog.svg",
-        },
-        {
-          name: "Proving Ground",
-          href: "https://provinggroundxyz.substack.com/",
-          icon: "/img/header/blog.svg",
-        },
-        {
-          name: "Guides",
-          icon: "/img/header/docs.svg",
-          children: [
-            {
-              name: "What is Taiko Alethia?",
-              desc: "Intro to Taiko Alethia",
-              href: "/guides/what-is-taiko-alethia",
-            },
-            {
-              name: "Deploy AI Agents on Taiko",
-              desc: "ERC-8004 agents on an L2",
-              href: "/guides/deploy-ai-agent-on-ethereum-l2",
-            },
-            {
-              name: "ERC-8004 Trustless Agents",
-              desc: "Identity and reputation registries",
-              href: "/guides/erc-8004-trustless-agent-standard",
-            },
-          ],
         },
       ],
     ],
@@ -171,8 +122,8 @@ export const footerNav: FooterNavGroup[] = [
     title: "About",
     list: [
       { name: "Blog", url: "/blog" },
+      { name: "Careers", url: "/careers" },
       { name: "Brand kit", url: "/brand-assets" },
-      { name: "What is Taiko Alethia?", url: "/guides/what-is-taiko-alethia" },
     ],
   },
   {
@@ -180,11 +131,9 @@ export const footerNav: FooterNavGroup[] = [
     list: [
       {
         name: "Get started",
-        url: "https://docs.taiko.xyz/",
+        url: "https://docs.taiko.xyz/start-here/getting-started",
       },
       { name: "GitHub", url: "https://github.com/taikoxyz" },
-      { name: "Deploy AI Agents guide", url: "/guides/deploy-ai-agent-on-ethereum-l2" },
-      { name: "ERC-8004 guide", url: "/guides/erc-8004-trustless-agent-standard" },
     ],
   },
   {
@@ -218,7 +167,7 @@ export const footerSocials: SocialLink[] = [
   {
     icon: "gsocial:discord",
     name: "discord",
-    url: "https://discord.com/invite/taiko-984015101017346058",
+    url: "https://discord.com/invite/taikoxyz",
   },
   {
     icon: "gsocial:twitter",
@@ -253,7 +202,7 @@ export const headerSocials: SocialLink[] = [
   { icon: "socials:twitter", url: "https://twitter.com/taikoxyz" },
   {
     icon: "socials:discord",
-    url: "https://discord.com/invite/taiko-984015101017346058",
+    url: "https://discord.com/invite/taikoxyz",
   },
 ];
 

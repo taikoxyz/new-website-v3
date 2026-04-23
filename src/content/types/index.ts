@@ -372,7 +372,7 @@ export interface ImageData {
   alternativeText: string | null;
 }
 
-// Alethia / Gwyneth shared page types
+// Alethia page types
 export interface FeatureItem {
   id: number;
   title: string;
@@ -396,7 +396,7 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface AlethiaGwynethPageData {
+export interface AlethiaPageData {
   id: number;
   hero_title: string;
   hero_text: string;
@@ -435,32 +435,3 @@ export interface DaoPageData {
   faq_data: FaqItem[];
 }
 
-// Gwyneth Apps page types
-export interface GwynethAppsItem {
-  id: number;
-  name: string;
-  text: string;
-  type: string;
-  active: boolean;
-  icon: string;
-  categories: string[];
-  url?: string;
-}
-
-export interface GwynethAppsPageData {
-  id: number;
-  hero_title: string;
-  hero_about_suptitle: string;
-  hero_about_text: string;
-  hero_about_btn?: ButtonData;
-  hero_dapps?: {
-    id: number;
-    name: string;
-    value: string;
-    icons: string[];
-  };
-  disclaimer_title: string;
-  disclaimer_text: string;
-  disclaimer_active: boolean;
-  apps_list: GwynethAppsItem[];
-}

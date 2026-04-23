@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/gwyneth", "/gwyneth/"],
     },
     sitemap: "https://taiko.xyz/sitemap.xml",
   };

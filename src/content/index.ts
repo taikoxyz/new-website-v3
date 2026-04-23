@@ -15,8 +15,6 @@ export {
   articleLabels,
   positionLabels,
   alethiaPageData,
-  gwynethPageData,
-  gwynethAppsPageData,
   daoPageData,
 } from "./pages";
 

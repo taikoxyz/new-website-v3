@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getBlogs } from "@/content/utils";
 import { getCareers } from "@/content/utils";
-import { guidesList } from "@/widgets/guide-screens/ui/guide-sidebar/guides-list";
 
 const BASE_URL = "https://taiko.xyz";
 
@@ -23,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/alethia`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/blog`,
@@ -47,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/dao`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/ecosystem`,
@@ -59,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/events`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/grant-program`,
@@ -68,22 +67,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/gwyneth`,
+      url: `${BASE_URL}/guides/what-is-taiko-alethia`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/gwyneth/apps`,
+      url: `${BASE_URL}/guides/deploy-ai-agent-on-ethereum-l2`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/guides/erc-8004-trustless-agent-standard`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${BASE_URL}/solutions`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.7,
     },
   ];
 
@@ -103,12 +108,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const guideRoutes: MetadataRoute.Sitemap = guidesList.map((guide) => ({
-    url: `${BASE_URL}${guide.href}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  return [...staticRoutes, ...blogRoutes, ...careerRoutes, ...guideRoutes];
+  return [...staticRoutes, ...blogRoutes, ...careerRoutes];
 }
