@@ -1,40 +1,103 @@
 .disclaimer {
-    font: 600 14px/1.8 $kFontPublicSans;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-    background-color: transparent;
+    padding: 24px 0 64px;
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
     max-width: 1100px;
-    width: 100%;
-    margin: 15px auto;
-    padding: 20px 35px;
-    background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    padding: 20px 28px;
+    background-color: $kColorThemeWhite;
+    border: 1px solid rgba($kColorGray, 0.15);
+    border-radius: 12px;
+}
+
+.body {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: $kColorGray;
+    opacity: 0.7;
+}
+
+.text {
+    margin: 0;
+    font: 400 13px/1.6 $kFontPublicSans;
+    color: $kColorGray;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font: 500 13px/1 $kFontPublicSans;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     border: 1px solid transparent;
+}
+
+.action_primary {
+    background-color: $kColorBlack;
+    color: $kColorStrictWhite;
 
     &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-        border: 1px solid #e81899;
+        background-color: $kColorPink;
     }
 }
 
-.content {
-    margin: 0;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.8;
-    color: #e81899;
+.action_ghost {
+    background-color: transparent;
+    color: $kColorBlack;
+    border-color: rgba($kColorGray, 0.25);
+
+    &:hover {
+        border-color: $kColorBlack;
+    }
 }
 
-.link {
-    color: #0073e6;
-    text-decoration: underline;
-    font-weight: 700;
+.actionIcon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: $kTabletM) {
+    .wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+
+    .action {
+        flex: 1;
+        justify-content: center;
+        min-width: 140px;
+    }
 }

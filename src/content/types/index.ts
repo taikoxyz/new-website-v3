@@ -215,7 +215,14 @@ export interface EcosystemPageData {
     applyText: string;
     contactUs: string;
   };
-  disclaimer: { subtitle: string };
+  disclaimer: {
+    text: string;
+    actions: Array<{
+      label: string;
+      href: string;
+      variant: "primary" | "ghost";
+    }>;
+  };
 }
 
 export interface EventsPageData {

@@ -18,7 +18,18 @@ export const ecosystemPageData: EcosystemPageData = {
     contactUs: "Learn more",
   },
   disclaimer: {
-    subtitle:
-      'The following applications all allege they are building atop the Taiko ecosystem. Please note that no guarantee is made as to the authenticity, veracity, or safety of any of these protocols. You assume all risks for using any links, so please conduct your own research and exercise caution. If you observe any issues with any link or would like to add to this list, please create a PR in the following Github repository: ',
+    text: "Listings are community-submitted and not endorsed by Taiko. We make no guarantees about the authenticity, security, or reliability of any listed project. Always do your own research before interacting with any application.",
+    actions: [
+      {
+        label: "Submit a project",
+        href: "https://github.com/taikoxyz/new-website-v3/issues/new?assignees=&labels=category.enhancement%2Cstatus.needs-triage&projects=&template=add_project.yml",
+        variant: "primary",
+      },
+      {
+        label: "Report an issue",
+        href: "https://github.com/taikoxyz/new-website-v3/issues/new",
+        variant: "ghost",
+      },
+    ],
   },
 };

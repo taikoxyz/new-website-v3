@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
                                     text={ecosystemPageData.joinOurEcosystem}
                                     component="a"
                                     target="_blank"
-                                    href="https://github.com/taikoxyz/website-v3/issues/new?assignees=&labels=category.enhancement%2Cstatus.needs-triage&projects=&template=add_project.yml"
+                                    href="https://github.com/taikoxyz/new-website-v3/issues/new?assignees=&labels=category.enhancement%2Cstatus.needs-triage&projects=&template=add_project.yml"
                                 />
 
                                 <MediaQuery query="(max-width: 768px)">
