@@ -11,7 +11,6 @@ export const CardContent: React.FC<Props> = ({ menuContent }) => {
         'Taiko Announcements',
         'Ecosystem News',
         'Alethia Updates',
-        'Gwyneth Updates',
     ];
 
     return (

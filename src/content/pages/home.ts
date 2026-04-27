@@ -52,7 +52,7 @@ export const homePageData: HomePageData = {
   solution_screen_3_btn: {
     id: 11,
     name: "Learn More",
-    link: "https://docs.taiko.xyz/network/contract-addresses",
+    link: "https://docs.taiko.xyz/network-reference/addresses",
     variant: "pink",
     newTab: true,
     disabledArrow: false,
@@ -60,7 +60,7 @@ export const homePageData: HomePageData = {
   solution_screen_4_btn: {
     id: 12,
     name: "Learn More",
-    link: "https://discord.com/invite/taiko-984015101017346058",
+    link: "https://discord.gg/taikoxyz",
     variant: "pink",
     newTab: true,
     disabledArrow: false,
@@ -84,20 +84,6 @@ export const homePageData: HomePageData = {
         disabledArrow: false,
       },
     },
-    {
-      id: 2,
-      title: "Taiko\nGwyneth",
-      text: "Gwyneth is Taiko. A based rollup synchronously composable with Ethereum.",
-      suptitle: "TAIKO GWYNETH",
-      link: {
-        id: 21,
-        name: "Explore Gwyneth",
-        link: "/gwyneth",
-        variant: "pink-outlined",
-        newTab: false,
-        disabledArrow: false,
-      },
-    },
   ],
   roadmap_suptitle: "Roadmap",
   roadmap_title: "Explore our journey ahead",
@@ -108,9 +94,8 @@ export const homePageData: HomePageData = {
       data: [
         { id: 1, text: "DAO deployed on testnet" },
         { id: 2, text: "100% ZK coverage for Taiko-proposed blocks" },
-        { id: 3, text: "Gwyneth ULTRA TX integration and L1-L2 liquidity sharing demo" },
-        { id: 4, text: "First Based Rollup Summit (SF)" },
-        { id: 5, text: "TAIKO listed on Revolut" },
+        { id: 3, text: "First Based Rollup Summit (SF)" },
+        { id: 4, text: "TAIKO listed on Revolut" },
       ],
     },
     {
@@ -128,8 +113,7 @@ export const homePageData: HomePageData = {
       title: "Q3 2025",
       data: [
         { id: 10, text: "Whitelisted preconfirmations on mainnet" },
-        { id: 11, text: "Post-launch stability optimizations for perconfirmations" },
-        { id: 12, text: "Launch Gwyneth testnet" },
+        { id: 11, text: "Post-launch stability optimizations for preconfirmations" },
       ],
     },
     {
@@ -137,7 +121,6 @@ export const homePageData: HomePageData = {
       title: "Q4 2025",
       data: [
         { id: 13, text: "Shasta hard fork: improved base fees, 100% ZK, lower costs" },
-        { id: 14, text: "Launch Gwyneth mainnet" },
         { id: 15, text: "Upgrade Taiko EVM to Pectra (EIP-7702: AA)" },
       ],
     },

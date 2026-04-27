@@ -9,6 +9,4 @@ export { brandAssetsPageData } from "./brand-assets";
 export { grantProgramPageData } from "./grant-program";
 export { commonLabels, articleLabels, positionLabels } from "./common";
 export { alethiaPageData } from "./alethia";
-export { gwynethPageData } from "./gwyneth";
-export { gwynethAppsPageData } from "./gwyneth-apps";
 export { daoPageData } from "./dao";
