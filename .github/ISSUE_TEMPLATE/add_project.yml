@@ -1,0 +1,130 @@
+name: "Add a project to Taiko's ecosystem 🌐"
+description: "Add a project to Taiko's ecosystem"
+title: "Add [PROJECT_NAME] to the ecosystem page"
+labels: ["area.website", "category.ecosystem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is an application to submit your project to be shown on the [Taiko ecosystem page](https://taiko.xyz/ecosystem).
+        Please only submit a project if you are part of the team. DO NOT submit an application on behalf of a project if you don't work with them.
+        If your project is already on the portal and you would like to update its information, please reach out to the team.
+        **Please keep in mind: A submission doesn't guarantee a listing on the page.**
+
+        > ⚠️ **This issue is public.** Everything you enter below will be visible on GitHub and may be indexed by search engines. Do not include personal information (email, phone, private handles) that you are not comfortable publishing. The Taiko team will follow up via a GitHub comment on this issue; optional private contact fields are provided below only if you prefer to share them publicly.
+
+  - type: input
+    id: project_name
+    attributes:
+      label: What is the name of your project?
+    validations:
+      required: true
+
+  - type: input
+    id: your_name
+    attributes:
+      label: Your name or team handle
+      description: A GitHub username or public team name is fine. This will be visible publicly.
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email (optional)
+      description: Only provide if you are comfortable with this email being publicly visible on GitHub. Leave blank to be contacted via GitHub comment instead.
+    validations:
+      required: false
+
+  - type: input
+    id: telegram
+    attributes:
+      label: Telegram (optional)
+      description: Only provide if you are comfortable with this handle being publicly visible on GitHub.
+    validations:
+      required: false
+
+  - type: input
+    id: project_link
+    attributes:
+      label: Please provide a link to your website, documentation, or project overview
+    validations:
+      required: true
+
+  - type: input
+    id: x_handle
+    attributes:
+      label: What is your project's X handle?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project_category
+    attributes:
+      label: Project Category
+      options:
+        - "Community"
+        - "DeFi"
+        - "Explorers"
+        - "Gaming"
+        - "Infrastructure"
+        - "NFT"
+        - "Privacy"
+        - "Tooling"
+        - "Wallet"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: is_live
+    attributes:
+      label: Is your project currently live on Taiko mainnet?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: input
+    id: github_link
+    attributes:
+      label: Github Link of your project
+    validations:
+      required: true
+
+  - type: textarea
+    id: project_description
+    attributes:
+      label: Please provide a clear and comprehensive description of your project and what value it will bring to Taiko's ecosystem
+    validations:
+      required: true
+
+  - type: input
+    id: other_networks
+    attributes:
+      label: List of other networks you are deployed on
+    validations:
+      required: true
+
+  - type: input
+    id: verified_contract
+    attributes:
+      label: Link to verified contract on Taikoscan
+      description: "For DeFi projects, this is a must question."
+    validations:
+      required: false
+
+  - type: textarea
+    id: logo
+    attributes:
+      label: Please share your logo
+      description: 512x512 or 1:1 ratio is preferred. If no image is provided we will use a placeholder image.
+    validations:
+      required: false
+
+  - type: input
+    id: team_twitter_handle
+    attributes:
+      label: Please share the twitter handle of your team member who will be participating in our twitter activities.
+    validations:
+      required: false
