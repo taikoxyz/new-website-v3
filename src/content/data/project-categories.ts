@@ -73,4 +73,11 @@ export const projectCategories: ProjectCategory[] = [
     createdAt: "2025-06-04T10:34:03.974Z",
     updatedAt: "2025-06-04T10:34:03.974Z",
   },
+  {
+    id: 47,
+    name: "AI Agent",
+    count: 0,
+    createdAt: "2026-05-06T00:00:00.000Z",
+    updatedAt: "2026-05-06T00:00:00.000Z",
+  },
 ];

@@ -22,7 +22,6 @@ export default function EcosystemPage() {
                 <EcosystemScreens.Controls />
                 <EcosystemScreens.Disclaimer />
                 <EcosystemScreens.Projects />
-                <EcosystemScreens.Grant />
             </EcosystemProvider>
         </DefaultLayout>
     );
