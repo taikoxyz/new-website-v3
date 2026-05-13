@@ -24,9 +24,6 @@ export const metadata: Metadata = {
   },
   description:
     "The most developer-friendly and secure Ethereum scaling solution.",
-  icons: {
-    icon: "/favicon.svg",
-  },
   openGraph: {
     title: "Taiko — Ethereum Scaling Solution",
     description:
