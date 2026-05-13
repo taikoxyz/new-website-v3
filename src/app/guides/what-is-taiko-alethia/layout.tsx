@@ -7,7 +7,7 @@ const URL = "https://taiko.xyz/guides/what-is-taiko-alethia";
 const IMAGE = "https://taiko.xyz/img/og-image.png";
 
 export const metadata: Metadata = {
-  title: `${TITLE} \u2013 Taiko`,
+  title: TITLE,
   description: DESCRIPTION,
   openGraph: {
     title: `${TITLE} \u2013 Taiko`,
