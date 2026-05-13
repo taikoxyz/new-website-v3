@@ -69,8 +69,18 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/docs.svg",
         },
         {
-          name: "Guides",
+          name: "Alethia Guide",
           href: "/guides/what-is-taiko-alethia",
+          icon: "/img/header/docs.svg",
+        },
+        {
+          name: "Deploy AI Agents",
+          href: "/guides/deploy-ai-agent-on-ethereum-l2",
+          icon: "/img/header/docs.svg",
+        },
+        {
+          name: "ERC-8004 Standard",
+          href: "/guides/erc-8004-trustless-agent-standard",
           icon: "/img/header/docs.svg",
         },
         {
