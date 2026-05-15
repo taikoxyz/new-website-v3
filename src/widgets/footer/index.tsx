@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
                         </div>
                     </div>
                     <p className={css.footer_copyright}>
-                        &copy; {new Date().getFullYear()} Taiko Labs
+                        &copy; {new Date().getFullYear()} Taiko Foundation
                     </p>
                 </div>
             </div>

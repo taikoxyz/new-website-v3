@@ -158,10 +158,10 @@ export const footerNav: FooterNavGroup[] = [
 
 // Footer content
 export const footerContent = {
-  copyright: "\u00A9 2024 Taiko Labs",
+  copyright: "\u00A9 2024 Taiko Foundation",
   joinTaiko: 'Join the taiko <b>community</b>',
   content: {
-    title: "Taiko Labs",
+    title: "Taiko Foundation",
     text: "The most developer-friendly and secure Ethereum scaling solution.",
   },
   subscribe: {
@@ -183,11 +183,6 @@ export const footerSocials: SocialLink[] = [
     icon: "gsocial:twitter",
     name: "twitter",
     url: "https://twitter.com/taikoxyz",
-  },
-  {
-    icon: "gsocial:paragraph",
-    name: "paragraph",
-    url: "https://paragraph.com/@taiko-labs",
   },
   {
     icon: "gsocial:taiko",

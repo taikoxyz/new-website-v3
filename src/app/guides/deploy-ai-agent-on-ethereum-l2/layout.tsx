@@ -37,7 +37,7 @@ const jsonLd = {
   totalTime: "PT30M",
   publisher: {
     "@type": "Organization",
-    name: "Taiko Labs",
+    name: "Taiko Foundation",
     url: "https://taiko.xyz",
     logo: {
       "@type": "ImageObject",

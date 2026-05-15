@@ -32,7 +32,7 @@ export const grantProgramPageData: GrantProgramPageData = {
       {
         icon: "/img/grant/mission-icon-4.svg",
         title: "Investment opportunities",
-        text: "Taiko Labs or its associated entities receive the right to invest up to $250K USD in the project\u2019s subsequent fundraising round, up to one year post-grant acceptance (if applicable).",
+        text: "The Taiko Foundation or its associated entities receive the right to invest up to $250K USD in the project\u2019s subsequent fundraising round, up to one year post-grant acceptance (if applicable).",
       },
     ],
   },
