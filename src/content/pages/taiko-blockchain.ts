@@ -6,7 +6,7 @@ export const taikoBlockchainPageData: TaikoBlockchainPageData = {
   hero_text:
     "A type-1 general-purpose based rollup with no centralized sequencer.",
   hero_logo: "/img/taiko-blockchain/taikoblockchain-logo.svg",
-  about_title: "Taiko Blockchain",
+  about_title: "Taiko",
   about_text: "A based rollup on Ethereum",
   about_subtext: "Ownerless, permissionless, decentralized.",
   features_suptitle: "Key Features",
@@ -14,7 +14,7 @@ export const taikoBlockchainPageData: TaikoBlockchainPageData = {
     {
       id: 1,
       title: "Decentralized, Truly",
-      text: "With based sequencing, Taiko Blockchain’s block-building process is open (and potentially profitable) for everyone!",
+      text: "With based sequencing, Taiko’s block-building process is open (and potentially profitable) for everyone!",
       disabled: false,
     },
     {
@@ -26,13 +26,13 @@ export const taikoBlockchainPageData: TaikoBlockchainPageData = {
     {
       id: 3,
       title: "Easiest to Migrate",
-      text: "Type-1 ZK-VM allows dApps to migrate easily. Anything that works on Ethereum works on Taiko Blockchain. No changes needed.",
+      text: "Type-1 ZK-VM allows dApps to migrate easily. Anything that works on Ethereum works on Taiko. No changes needed.",
       disabled: false,
     },
     {
       id: 4,
       title: "Ownerless",
-      text: "Taiko Blockchain strives to be ownerless by being owned by the community. Take control.",
+      text: "Taiko strives to be ownerless by being owned by the community. Take control.",
       disabled: false,
     },
     {
@@ -44,7 +44,7 @@ export const taikoBlockchainPageData: TaikoBlockchainPageData = {
     {
       id: 6,
       title: "A Passionate Community",
-      text: "Taiko Blockchain draws its power from a community full of Trailblazers. Become one.",
+      text: "Taiko draws its power from a community full of Trailblazers. Become one.",
       disabled: false,
     },
   ],
@@ -52,7 +52,7 @@ export const taikoBlockchainPageData: TaikoBlockchainPageData = {
     {
       id: 1,
       title: "Documentation",
-      text: "Everything you need to build on Taiko Blockchain.",
+      text: "Everything you need to build on Taiko.",
       href: "https://docs.taiko.xyz/",
       disabled: false,
       icon: "/img/taiko-blockchain/docs.svg",
@@ -78,34 +78,34 @@ export const taikoBlockchainPageData: TaikoBlockchainPageData = {
   explore_title:
     "Are you a visionary builder?\nAn opportunity-seeking user?\nA bold trailblazer?",
   explore_text:
-    "Taiko Blockchain is open to all! Explore, discover, and participate. Taiko Blockchain is yours!",
+    "Taiko is open to all! Explore, discover, and participate. Taiko is yours!",
   explore_background: "/img/taiko-blockchain/explore.webp",
   faq_title: "Frequently Asked Questions",
-  faq_text: "Read answers to the most common questions about Taiko Blockchain.",
+  faq_text: "Read answers to the most common questions about Taiko.",
   faq_data: [
     {
       id: 1,
-      question: "What is Taiko Blockchain?",
+      question: "What is Taiko?",
       answer:
-        "Taiko Blockchain is a based rollup. A scaling solution that is highly configurable, fully open source, permissionless, decentralized and Ethereum-equivalent. There are no centralized actors that operate the network; all operations are permissionlessly run by the community.",
+        "Taiko is a based rollup. A scaling solution that is highly configurable, fully open source, permissionless, decentralized and Ethereum-equivalent. There are no centralized actors that operate the network; all operations are permissionlessly run by the community.",
     },
     {
       id: 2,
-      question: "How Does Taiko Blockchain Work?",
+      question: "How Does Taiko Work?",
       answer:
         "Rollups have three core modules:\n\n1. Data Availability: (where they store their data).\n2. Execution (how they execute transactions)\n3. Sequencing (who orders the transactions)\n\nTraditional rollups only use Ethereum for one of these modules – Data Availability. Unlike other rollups, Taiko also uses Ethereum for sequencing.",
     },
     {
       id: 3,
-      question: "What differentiates Taiko Blockchain from others?",
+      question: "What differentiates Taiko from others?",
       answer:
-        "Permissionless and decentralized: Taiko Blockchain is a based rollup, the first of its class. Lacking a centralized sequencer, it relies on Ethereum validators to sequence transactions and blocks, elevating Taiko’s permissionless and decentralized ethos.\n\nFrictionless developer experience: Taiko Blockchain utilizes an Ethereum-equivalent zkEVM (type-1) to achieve execution-level compatibility with Ethereum, essentially offering “Ethereum at scale.”\n\nHighly configurable and future-compatible: Designed as a Contestable Rollup, Taiko Blockchain permits app chains to define their proof systems and to embrace newer, more efficient ZK proofs as technology progresses, all without the need to amend Taiko’s core protocol.",
+        "Permissionless and decentralized: Taiko is a based rollup, the first of its class. Lacking a centralized sequencer, it relies on Ethereum validators to sequence transactions and blocks, elevating Taiko’s permissionless and decentralized ethos.\n\nFrictionless developer experience: Taiko utilizes an Ethereum-equivalent zkEVM (type-1) to achieve execution-level compatibility with Ethereum, essentially offering “Ethereum at scale.”\n\nHighly configurable and future-compatible: Designed as a Contestable Rollup, Taiko permits app chains to define their proof systems and to embrace newer, more efficient ZK proofs as technology progresses, all without the need to amend Taiko’s core protocol.",
     },
     {
       id: 4,
-      question: "How can I start building on Taiko Blockchain?",
+      question: "How can I start building on Taiko?",
       answer:
-        "Today, Taiko Blockchain is live and fully compatible with Ethereum. No additional compiling, re-audits, or tooling needed. Everything works out of the box, guaranteed. Start from here now.",
+        "Today, Taiko is live and fully compatible with Ethereum. No additional compiling, re-audits, or tooling needed. Everything works out of the box, guaranteed. Start from here now.",
     },
     {
       id: 5,

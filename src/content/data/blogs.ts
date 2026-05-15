@@ -228,8 +228,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 715,
-    title: "Taiko Blockchain: The New Name of Our Mainnet",
-    slug: "taiko-blockchain-the-new-name-of-our-mainnet",
+    title: "An Update on Our Mainnet Naming",
+    slug: "an-update-on-our-mainnet-naming",
     link: "https://taiko.mirror.xyz/SGqEPPMGDX47s2ix9YsyPtq5KnUQcQ_7Gsha-gQGXTc",
     date: "2025-02-07",
     timeToRead: "6 min",

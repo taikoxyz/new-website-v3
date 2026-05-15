@@ -72,12 +72,12 @@ export const homePageData: HomePageData = {
   explore_screens: [
     {
       id: 1,
-      title: "Taiko\nBlockchain",
+      title: "Taiko",
       text: "A type-1 general-purpose based rollup with no centralized sequencer.",
-      suptitle: "TAIKO BLOCKCHAIN",
+      suptitle: "TAIKO",
       link: {
         id: 20,
-        name: "Explore Taiko Blockchain",
+        name: "Explore Taiko",
         link: "/taiko-blockchain",
         variant: "pink",
         newTab: false,

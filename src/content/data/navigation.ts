@@ -8,7 +8,7 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "Taiko Blockchain",
+          name: "Taiko",
           href: "/taiko-blockchain",
           icon: "/img/header/about.svg",
         },
@@ -69,7 +69,7 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/docs.svg",
         },
         {
-          name: "Taiko Blockchain Guide",
+          name: "What is Taiko?",
           href: "/guides/what-is-taiko-blockchain",
           icon: "/img/header/docs.svg",
         },

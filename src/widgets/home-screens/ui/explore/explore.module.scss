@@ -55,7 +55,7 @@
     }
 }
 
-.explore_taiko_taiko_blockchain {
+.explore_taiko_section {
     position: absolute;
     z-index: 2;
     padding-bottom: 10px;
@@ -169,7 +169,7 @@
             width: 245px;
         }
     }
-    .explore_taiko_taiko_blockchain {
+    .explore_taiko_section {
         width: 130px;
         right: auto;
         left: 50%;
@@ -193,7 +193,7 @@
 }
 
 @include -screen-sm {
-    .explore_taiko_taiko_blockchain {
+    .explore_taiko_section {
         width: 134px;
         padding-bottom: 6px;
     }

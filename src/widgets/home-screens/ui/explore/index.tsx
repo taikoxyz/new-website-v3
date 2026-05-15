@@ -10,7 +10,7 @@ import { homePageData } from "@/content/pages/home";
 import css from "./explore.module.scss";
 
 export const Explore: React.FC = () => {
-    const [taikoBlockchain] = homePageData.explore_screens;
+    const [taikoScreen] = homePageData.explore_screens;
     const exploreRef = React.useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -36,7 +36,7 @@ export const Explore: React.FC = () => {
         { scope: exploreRef }
     );
 
-    if (!taikoBlockchain) {
+    if (!taikoScreen) {
         return null;
     }
 
@@ -58,18 +58,18 @@ export const Explore: React.FC = () => {
                             />
                         </div>
                     </div>
-                    <div className={css.explore_taiko_taiko_blockchain}>
+                    <div className={css.explore_taiko_section}>
                         <p className={css.explore_taiko_text}>
-                            <span>[</span> {taikoBlockchain.suptitle} <span>]</span>
+                            <span>[</span> {taikoScreen.suptitle} <span>]</span>
                         </p>
                     </div>
                 </div>
                 <div className={css.explore_container}>
                     <div className={css.explore_item}>
-                        <h2 className={css.explore_title}>{taikoBlockchain.title}</h2>
-                        <p className={css.explore_text}>{taikoBlockchain.text}</p>
+                        <h2 className={css.explore_title}>{taikoScreen.title}</h2>
+                        <p className={css.explore_text}>{taikoScreen.text}</p>
                         <WrapperButton
-                            {...taikoBlockchain.link}
+                            {...taikoScreen.link}
                             className={css.explore_btn}
                         />
                     </div>

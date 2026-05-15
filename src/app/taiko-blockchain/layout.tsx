@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Taiko Blockchain",
+  title: "Taiko",
   description:
-    "Discover Taiko Blockchain, a based contestable rollup providing secure and decentralized Ethereum scaling.",
+    "Discover Taiko, a based contestable rollup providing secure and decentralized Ethereum scaling.",
   openGraph: {
-    title: "Taiko Blockchain — Taiko",
+    title: "Taiko",
     description:
-      "Discover Taiko Blockchain, a based contestable rollup providing secure and decentralized Ethereum scaling.",
+      "Discover Taiko, a based contestable rollup providing secure and decentralized Ethereum scaling.",
     url: "https://taiko.xyz/taiko-blockchain",
   },
   twitter: {
-    title: "Taiko Blockchain — Taiko",
+    title: "Taiko",
     description:
-      "Discover Taiko Blockchain, a based contestable rollup providing secure and decentralized Ethereum scaling.",
+      "Discover Taiko, a based contestable rollup providing secure and decentralized Ethereum scaling.",
   },
   alternates: {
     canonical: "/taiko-blockchain",

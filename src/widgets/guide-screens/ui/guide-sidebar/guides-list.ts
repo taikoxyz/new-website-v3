@@ -1,6 +1,6 @@
 export const guidesList = [
   {
-    title: "What is Taiko Blockchain?",
+    title: "What is Taiko?",
     description: "Ethereum-equivalent rollup with based sequencing and sub-cent costs",
     href: "/guides/what-is-taiko-blockchain",
   },

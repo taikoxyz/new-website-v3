@@ -373,7 +373,7 @@ export interface ImageData {
   alternativeText: string | null;
 }
 
-// Taiko Blockchain page types
+// Taiko page types
 export interface FeatureItem {
   id: number;
   title: string;

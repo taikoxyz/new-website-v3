@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const TITLE = "What is Taiko Blockchain?";
+const TITLE = "What is Taiko?";
 const DESCRIPTION =
   "An Ethereum-equivalent rollup designed for based sequencing, where AI agents and decentralized applications scale at sub-cent cost.";
 const URL = "https://taiko.xyz/guides/what-is-taiko-blockchain";

@@ -20,7 +20,7 @@ export const TaikoBlockchainContent: React.FC = () => {
           </ul>
         </div>
 
-        {/* What is Taiko Blockchain */}
+        {/* Overview */}
         <div className={css.section}>
           <h2 className={css.sectionTitle}>{d.what.title}</h2>
           {d.what.paragraphs.map((p, i) => (
