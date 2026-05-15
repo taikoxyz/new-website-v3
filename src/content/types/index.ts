@@ -34,15 +34,6 @@ export interface BlogShort {
   slug: string;
 }
 
-export interface Career extends BaseFields {
-  title: string;
-  slug: string;
-  type: string;
-  location: string;
-  content: string; // MDX content body
-  howToApply?: string;
-}
-
 export interface Event extends BaseFields {
   title: string;
   slug: string;
@@ -190,12 +181,6 @@ export interface AboutPageData {
     text: string;
     fact: { title: string; text_1: string; text_2: string };
   };
-  careers: {
-    suptitle: string;
-    title: string;
-    text: string;
-    viewBtn: string;
-  };
 }
 
 export interface EcosystemPageData {
@@ -238,18 +223,6 @@ export interface EventsPageData {
 
 export interface BlogPageData {
   date: { title: string; value: string }[];
-}
-
-export interface CareersPageData {
-  hero: { title: string; aboutBtn: string };
-  about: { suptitle: string; title: string; text: string };
-  positions: {
-    title: string;
-    position: string;
-    location: string;
-    type: string;
-  };
-  banner: { title: string; contactUs: string };
 }
 
 export interface BrandAssetsPageData {
@@ -336,32 +309,6 @@ export interface CommonLabels {
   viewMore: string;
   time: string;
   topic: string;
-  applyForm: {
-    applyNow: string;
-    text: string;
-    email: string;
-    extraInfo: string;
-    attachCV: string;
-  };
-  uploadFile: {
-    empty_text: string;
-    fill_text: string;
-    new_text: string;
-  };
-}
-
-export interface ArticleLabels {
-  howToApply: string;
-  latestArticles: string;
-  previous: string;
-  next: string;
-}
-
-export interface PositionLabels {
-  taikoCareers: string;
-  applyNow: string;
-  aboutPosition: string;
-  howToApply: string;
 }
 
 // Utility types from source repo

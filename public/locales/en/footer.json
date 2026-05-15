@@ -14,12 +14,9 @@
         {
             "title": "About",
             "list": [
-                { 
-                    "name": "Blog", 
+                {
+                    "name": "Blog",
                     "url": "/blog"
-                }, {
-                    "name": "Careers",
-                    "url": "/careers"
                 }, {
                     "name": "Brand kit",
                     "url": "/brand-assets"

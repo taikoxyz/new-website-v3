@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const TITLE = "How to Deploy AI Agents on Taiko";
 const DESCRIPTION =
   "Deploy autonomous AI agents on Taiko, an Ethereum L2 with sub-cent fees, ERC-8004 support and censorship-resistant sequencing.";
-const URL = "https://taiko.xyz/guides/deploy-ai-agent-on-ethereum-l2";
+const URL = "https://taiko.xyz/guides/deploy-ai-agent-on-taiko-network";
 const IMAGE = "https://taiko.xyz/img/og-image.png";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [IMAGE],
   },
   alternates: {
-    canonical: "/guides/deploy-ai-agent-on-ethereum-l2",
+    canonical: "/guides/deploy-ai-agent-on-taiko-network",
   },
 };
 

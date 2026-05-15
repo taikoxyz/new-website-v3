@@ -7,7 +7,7 @@ export const guidesList = [
   {
     title: "Deploy AI Agents on Taiko",
     description: "ERC-8004, sub-cent fees, censorship-resistant sequencing",
-    href: "/guides/deploy-ai-agent-on-ethereum-l2",
+    href: "/guides/deploy-ai-agent-on-taiko-network",
   },
   {
     title: "ERC-8004: The Trustless Agent Standard",

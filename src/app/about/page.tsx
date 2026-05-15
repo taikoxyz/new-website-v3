@@ -12,7 +12,6 @@ export default function AboutPage() {
                 <AboutScreens.Community />
                 <AboutScreens.Mission />
                 <AboutScreens.Brand />
-                <AboutScreens.Careers />
             </div>
         </DefaultLayout>
     );

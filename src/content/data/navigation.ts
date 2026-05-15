@@ -75,7 +75,7 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Deploy AI Agents",
-          href: "/guides/deploy-ai-agent-on-ethereum-l2",
+          href: "/guides/deploy-ai-agent-on-taiko-network",
           icon: "/img/header/docs.svg",
         },
         {
@@ -132,7 +132,6 @@ export const footerNav: FooterNavGroup[] = [
     title: "About",
     list: [
       { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "/careers" },
       { name: "Brand kit", url: "/brand-assets" },
     ],
   },

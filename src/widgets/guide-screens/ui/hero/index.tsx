@@ -16,7 +16,7 @@ export const GuideHero: React.FC = () => {
           </div>
           <Link
             className={css.copyBtn}
-            href="/guides/deploy-ai-agent-on-ethereum-l2.md"
+            href="/guides/deploy-ai-agent-on-taiko-network.md"
             target="_blank"
           >
             View markdown
