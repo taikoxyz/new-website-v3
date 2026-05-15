@@ -1,4 +1,7 @@
-import type { BlogPost, BlogShort, BlogNear, Event } from "./types";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import type { BlogPost, BlogShort, BlogNear, Career, Event } from "./types";
 import { events as allEvents } from "./data/events";
 import { projects as allProjects } from "./data/projects";
 import { projectCategories as allProjectCategories } from "./data/project-categories";
@@ -34,6 +37,40 @@ export function getBlogNear(id: number): BlogNear {
 
 export function getBlogCategories() {
   return allBlogCategories;
+}
+
+// ── Career utilities ──────────────────────────────────────────────
+
+const CAREER_DIR = path.join(process.cwd(), "src/content/careers");
+
+function parseCareerMdx(filePath: string): Career {
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(raw);
+  return {
+    id: data.id,
+    title: data.title,
+    slug: data.slug,
+    type: data.type,
+    location: data.location,
+    content,
+    howToApply: data.howToApply,
+    createdAt: data.createdAt || new Date().toISOString(),
+    updatedAt: data.updatedAt || new Date().toISOString(),
+    publishedAt: data.publishedAt || new Date().toISOString(),
+  };
+}
+
+export function getCareers(): Career[] {
+  if (!fs.existsSync(CAREER_DIR)) return [];
+  const files = fs
+    .readdirSync(CAREER_DIR)
+    .filter((f) => f.endsWith(".mdx"));
+  return files.map((f) => parseCareerMdx(path.join(CAREER_DIR, f)));
+}
+
+export function getCareer(slug: string): Career | undefined {
+  const careers = getCareers();
+  return careers.find((c) => c.slug === slug);
 }
 
 // ── Event utilities ───────────────────────────────────────────────
