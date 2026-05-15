@@ -72,13 +72,13 @@ export const homePageData: HomePageData = {
   explore_screens: [
     {
       id: 1,
-      title: "Taiko\nAlethia",
-      text: "Alethia is Taiko. A type-1 general purpose based Rollup with no centralized sequencer.",
-      suptitle: "TAIKO ALETHIA",
+      title: "Taiko\nBlockchain",
+      text: "A type-1 general-purpose based rollup with no centralized sequencer.",
+      suptitle: "TAIKO BLOCKCHAIN",
       link: {
         id: 20,
-        name: "Explore Alethia",
-        link: "/alethia",
+        name: "Explore Taiko Blockchain",
+        link: "/taiko-blockchain",
         variant: "pink",
         newTab: false,
         disabledArrow: false,

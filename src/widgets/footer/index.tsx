@@ -13,7 +13,7 @@ const footerNavigation = [
             { name: "Docs", href: "https://docs.taiko.xyz/" },
             { name: "Bridge", href: "https://bridge.taiko.xyz/" },
             { name: "Swap", href: "https://swap.taiko.xyz/" },
-            { name: "Alethia Guide", href: "/guides/what-is-taiko-alethia" },
+            { name: "Taiko Blockchain Guide", href: "/guides/what-is-taiko-blockchain" },
             { name: "Deploy AI Agents", href: "/guides/deploy-ai-agent-on-taiko-network" },
             { name: "ERC-8004 Standard", href: "/guides/erc-8004-trustless-agent-standard" },
         ],

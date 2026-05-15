@@ -326,7 +326,7 @@ export interface ImageData {
   alternativeText: string | null;
 }
 
-// Alethia page types
+// Taiko Blockchain page types
 export interface FeatureItem {
   id: number;
   title: string;
@@ -350,7 +350,7 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface AlethiaPageData {
+export interface TaikoBlockchainPageData {
   id: number;
   hero_title: string;
   hero_text: string;

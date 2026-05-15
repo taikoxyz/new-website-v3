@@ -1,25 +1,25 @@
-export const guideTaikoAlethiaData = {
+export const guideTaikoBlockchainData = {
   hero: {
     label: "Guide",
-    title: "What is Taiko Alethia?",
+    title: "What is Taiko Blockchain?",
     subtitle:
       "An Ethereum-equivalent rollup designed for based sequencing, where AI agents and decentralized applications scale at sub-cent cost.",
   },
   tldr: {
     title: "TL;DR",
     items: [
-      "Taiko Alethia is Taiko\u2019s mainnet. It is an Ethereum-equivalent (Type 1) ZK-EVM rollup designed as a based rollup, built for applications that need cheap, censorship-resistant execution at scale.",
+      "Taiko Blockchain is Taiko\u2019s mainnet. It is an Ethereum-equivalent (Type 1) ZK-EVM rollup designed as a based rollup, built for applications that need cheap, censorship-resistant execution at scale.",
       "Any Ethereum smart contract, tool or wallet works on Taiko without modification. Transactions cost a fraction of a cent.",
       "Three independent operators handle block building today, with the architecture progressing toward fully permissionless L1 validator sequencing.",
       "Multi-proof security (ZK + TEE), sub-second preconfirmations and ERC-8004 agent identity registries round out the stack.",
     ],
   },
   what: {
-    title: "What is Taiko Alethia?",
+    title: "What is Taiko Blockchain?",
     paragraphs: [
-      "Taiko Alethia is Taiko\u2019s mainnet. It is a Type 1 (Ethereum-equivalent) ZK-EVM rollup designed as a based rollup, where Ethereum L1 validators will ultimately sequence transactions instead of a centralized sequencer.",
-      'The name \u201CAlethia\u201D comes from the Greek word for truth. The mainnet launched in May 2024. Any smart contract, developer tool or wallet that works on Ethereum works on Taiko Alethia without modification.',
-      "Taiko Alethia is purpose-built for applications that need high-frequency, low-cost, censorship-resistant execution. That includes AI agents, DeFi protocols, on-chain games and any application where transaction costs on Ethereum L1 are prohibitive.",
+      "Taiko Blockchain is Taiko\u2019s mainnet. It is a Type 1 (Ethereum-equivalent) ZK-EVM rollup designed as a based rollup, where Ethereum L1 validators will ultimately sequence transactions instead of a centralized sequencer.",
+      "The mainnet launched in May 2024. Any smart contract, developer tool or wallet that works on Ethereum works on Taiko Blockchain without modification.",
+      "Taiko Blockchain is purpose-built for applications that need high-frequency, low-cost, censorship-resistant execution. That includes AI agents, DeFi protocols, on-chain games and any application where transaction costs on Ethereum L1 are prohibitive.",
     ],
     quickRef: {
       headers: ["Property", "Value"],
@@ -36,11 +36,11 @@ export const guideTaikoAlethiaData = {
     },
   },
   cost: {
-    title: "How much does it cost to use Taiko Alethia?",
+    title: "How much does it cost to use Taiko Blockchain?",
     intro:
-      "Simple transfers on Taiko Alethia cost approximately $0.003. Contract interactions cost approximately $0.01. ERC-8004 agent identity updates cost under $0.01.",
+      "Simple transfers on Taiko Blockchain cost approximately $0.003. Contract interactions cost approximately $0.01. ERC-8004 agent identity updates cost under $0.01.",
     table: {
-      headers: ["Operation", "Ethereum L1", "Taiko Alethia"],
+      headers: ["Operation", "Ethereum L1", "Taiko Blockchain"],
       rows: [
         ["Simple transfer", "$1-5", "~$0.003"],
         ["Contract interaction", "$5-50", "~$0.01"],
@@ -53,7 +53,7 @@ export const guideTaikoAlethiaData = {
   zkevm: {
     title: "What is a Type 1 ZK-EVM?",
     intro:
-      "A Type 1 ZK-EVM is fully Ethereum-equivalent at the bytecode level. Same hash functions, same state trees, same gas costs. Taiko Alethia is a Type 1 ZK-EVM, which is the highest level of Ethereum compatibility possible.",
+      "A Type 1 ZK-EVM is fully Ethereum-equivalent at the bytecode level. Same hash functions, same state trees, same gas costs. Taiko Blockchain is a Type 1 ZK-EVM, which is the highest level of Ethereum compatibility possible.",
     preamble: "This means:",
     points: [
       { bold: "Zero migration overhead.", text: "Any smart contract deployed on Ethereum works on Taiko without modification." },
@@ -67,7 +67,7 @@ export const guideTaikoAlethiaData = {
     title: "What is a based rollup and how does Taiko use it?",
     intro:
       "A based rollup is a Layer 2 designed to use Ethereum L1 validators for transaction sequencing instead of a centralized sequencer. When fully realized, this provides stronger censorship resistance, permissionless block production and inherited security from Ethereum itself.",
-    preamble: "Taiko Alethia is designed as a based rollup. When fully realized, based sequencing delivers:",
+    preamble: "Taiko Blockchain is designed as a based rollup. When fully realized, based sequencing delivers:",
     points: [
       { bold: "No single party can censor transactions.", text: "Censorship would require corrupting Ethereum\u2019s validator set." },
       { bold: "Permissionless block production.", text: "Anyone can propose blocks without needing approval from a centralized operator." },
@@ -81,7 +81,7 @@ export const guideTaikoAlethiaData = {
   multiproof: {
     title: "How does Taiko\u2019s multi-proof security work?",
     intro:
-      "Taiko Alethia uses a multi-proof system that requires two independent proofs for every batch of transactions. It combines zero-knowledge proofs (ZK) with trusted execution environments (TEE) so that no single proof system failure can compromise the network.",
+      "Taiko Blockchain uses a multi-proof system that requires two independent proofs for every batch of transactions. It combines zero-knowledge proofs (ZK) with trusted execution environments (TEE) so that no single proof system failure can compromise the network.",
     preamble: "The four available verifiers:",
     verifiers: [
       { bold: "SGX (Geth):", text: "Mandatory for every batch. Hardware-based TEE attestation running the Geth client." },
@@ -103,9 +103,9 @@ export const guideTaikoAlethiaData = {
     ],
   },
   agents: {
-    title: "How do AI agents work on Taiko Alethia?",
+    title: "How do AI agents work on Taiko Blockchain?",
     intro:
-      "AI agents on Taiko Alethia can register on-chain identities, build verifiable reputations and transact autonomously at sub-cent cost. Taiko has supported ERC-8004 agent identity registries since the standard launched on Ethereum mainnet in January 2026.",
+      "AI agents on Taiko Blockchain can register on-chain identities, build verifiable reputations and transact autonomously at sub-cent cost. Taiko has supported ERC-8004 agent identity registries since the standard launched on Ethereum mainnet in January 2026.",
     erc8004: {
       title: "What is ERC-8004?",
       description:
@@ -138,9 +138,9 @@ export const guideTaikoAlethiaData = {
     },
   },
   comparison: {
-    title: "How does Taiko Alethia compare to other L2s?",
-    intro: "Taiko Alethia\u2019s key differentiator is its trajectory toward based sequencing.",
-    headers: ["Feature", "Taiko Alethia", "Optimistic Rollups", "Other ZK Rollups", "Sidechains"],
+    title: "How does Taiko Blockchain compare to other L2s?",
+    intro: "Taiko Blockchain\u2019s key differentiator is its trajectory toward based sequencing.",
+    headers: ["Feature", "Taiko Blockchain", "Optimistic Rollups", "Other ZK Rollups", "Sidechains"],
     rows: [
       ["Sequencing", "Based (designed for L1 validators)", "Centralized sequencer", "Centralized sequencer", "Independent validators"],
       ["EVM compatibility", "Type 1 (equivalent)", "Type 2 (compatible)", "Type 2-4 (varies)", "Varies"],
@@ -153,7 +153,7 @@ export const guideTaikoAlethiaData = {
       "Taiko is designed as a based rollup, with a clear path from its current multi-operator model to full L1 validator sequencing. For autonomous agents and applications that need censorship-resistant transaction execution, that architectural commitment matters.",
   },
   audience: {
-    title: "Who is Taiko Alethia built for?",
+    title: "Who is Taiko Blockchain built for?",
     items: [
       { title: "AI Agent Builders", description: "Agents need cheap, censorship-resistant transaction execution at scale. Taiko\u2019s sub-cent fees and multi-operator sequencing make it a strong fit for autonomous on-chain agents. ERC-8004 identity and reputation registries are live. The taiko-ai toolkit gives agents direct access to chain data, bridge operations and contract analysis." },
       { title: "Ethereum Developers", description: "If you build on Ethereum, you can build on Taiko with zero changes. Deploy the same contracts, use the same tools, target the same addresses. The only difference is cost and speed." },
@@ -162,10 +162,10 @@ export const guideTaikoAlethiaData = {
     ],
   },
   getting_started: {
-    title: "How do I get started with Taiko Alethia?",
+    title: "How do I get started with Taiko Blockchain?",
     steps: [
-      { title: "Step 1: Connect Your Wallet", description: "Add Taiko Alethia to MetaMask or any Ethereum-compatible wallet. RPC: https://rpc.mainnet.taiko.xyz. Chain ID: 167000." },
-      { title: "Step 2: Bridge Assets", description: "Use the Taiko Bridge (bridge.taiko.xyz) to move ETH from Ethereum L1 to Taiko Alethia. Third-party bridges including LiFi, Orbiter, Owlto and Rhino.fi also support Taiko." },
+      { title: "Step 1: Connect Your Wallet", description: "Add Taiko Blockchain to MetaMask or any Ethereum-compatible wallet. RPC: https://rpc.mainnet.taiko.xyz. Chain ID: 167000." },
+      { title: "Step 2: Bridge Assets", description: "Use the Taiko Bridge (bridge.taiko.xyz) to move ETH from Ethereum L1 to Taiko Blockchain. Third-party bridges including LiFi, Orbiter, Owlto and Rhino.fi also support Taiko." },
       { title: "Step 3: Deploy or Interact", description: "Use Hardhat, Foundry or Remix. Point your RPC at Taiko and deploy. No contract changes needed. No custom compiler flags. If it works on Ethereum, it works on Taiko." },
     ],
   },
@@ -183,20 +183,20 @@ export const guideTaikoAlethiaData = {
   faq: {
     title: "Frequently Asked Questions",
     items: [
-      { question: "What is the cheapest L2 for AI agents?", answer: "Taiko Alethia is one of the cheapest Ethereum L2s for AI agent operations. Simple transfers cost approximately $0.003 and contract interactions cost approximately $0.01. ERC-8004 identity and reputation updates cost under $0.01. These sub-cent fees make high-frequency autonomous operations economically viable." },
+      { question: "What is the cheapest L2 for AI agents?", answer: "Taiko Blockchain is one of the cheapest Ethereum L2s for AI agent operations. Simple transfers cost approximately $0.003 and contract interactions cost approximately $0.01. ERC-8004 identity and reputation updates cost under $0.01. These sub-cent fees make high-frequency autonomous operations economically viable." },
       { question: "Can I deploy any Ethereum smart contract on Taiko?", answer: "Yes. Taiko is a Type 1 ZK-EVM, fully Ethereum-equivalent at the bytecode level. Any contract that works on Ethereum works on Taiko without modification. No recompiling, no re-auditing, no tooling changes." },
       { question: "How do I deploy an AI agent on Taiko?", answer: "Register your agent through the ERC-8004 Identity Registry to get a unique on-chain identity. From there, your agent can transact autonomously, build reputation and interact with other registered agents. The taiko-ai toolkit provides MCP servers for chain data, bridge operations and contract analysis." },
       { question: "Does Taiko have a centralized sequencer?", answer: "No. Taiko is designed as a based rollup. Today, three independent operators (Nethermind, Chainbound and Gattaca) handle block building. The architecture is designed to progressively decentralize toward full L1 validator sequencing, where Ethereum validators order Taiko transactions directly." },
-      { question: "What is Taiko\u2019s Chain ID?", answer: "Taiko Alethia\u2019s Chain ID is 167000. The RPC endpoint is https://rpc.mainnet.taiko.xyz." },
-      { question: "How do I bridge ETH to Taiko?", answer: "Use the Taiko Bridge at bridge.taiko.xyz to move ETH from Ethereum L1 to Taiko Alethia. Third-party bridges including LiFi, Orbiter, Owlto and Rhino.fi also support Taiko." },
-      { question: "Is Taiko Alethia fully decentralized?", answer: "Not yet, but it is designed to be. Today, three independent operators handle block building, which avoids the single-sequencer model most L2s use. The proof system uses multiple independent verifiers. The roadmap progressively moves toward full L1 validator sequencing and permissionless block production." },
+      { question: "What is Taiko\u2019s Chain ID?", answer: "Taiko Blockchain\u2019s Chain ID is 167000. The RPC endpoint is https://rpc.mainnet.taiko.xyz." },
+      { question: "How do I bridge ETH to Taiko?", answer: "Use the Taiko Bridge at bridge.taiko.xyz to move ETH from Ethereum L1 to Taiko Blockchain. Third-party bridges including LiFi, Orbiter, Owlto and Rhino.fi also support Taiko." },
+      { question: "Is Taiko Blockchain fully decentralized?", answer: "Not yet, but it is designed to be. Today, three independent operators handle block building, which avoids the single-sequencer model most L2s use. The proof system uses multiple independent verifiers. The roadmap progressively moves toward full L1 validator sequencing and permissionless block production." },
       { question: "Can I use Hardhat or Foundry with Taiko?", answer: "Yes. Taiko is a Type 1 ZK-EVM, so Hardhat, Foundry, Remix and all standard Ethereum development tools work without modification. Point your RPC at https://rpc.mainnet.taiko.xyz and deploy." },
       { question: "What is the difference between Type 1 and Type 2 ZK-EVM?", answer: "A Type 1 ZK-EVM is fully Ethereum-equivalent at the bytecode level: same hash functions, same state trees, same gas costs. A Type 2 ZK-EVM makes modifications to Ethereum\u2019s architecture to optimize proof generation, which can break compatibility with some contracts and tooling. Taiko is Type 1. Most other ZK rollups are Type 2 or higher." },
       { question: "What is ERC-8004?", answer: "ERC-8004 is the trustless standard for AI agent identity, reputation and validation on Ethereum. It provides three on-chain registries (identity, reputation and validation) that enable AI agents to register, build track records and verify transactions without centralized intermediaries. Taiko has supported the standard since it launched on Ethereum mainnet in January 2026." },
       { question: "Is Taiko compatible with existing AI agent frameworks?", answer: "Yes. Any agent framework that interacts with EVM-compatible chains works with Taiko. The taiko-ai toolkit provides additional MCP servers and skills specifically for building on Taiko." },
       { question: "What are preconfirmations?", answer: "Preconfirmations provide sub-second transaction feedback on top of based sequencing. Designated providers commit to including transactions in upcoming blocks, giving users near-instant confirmation while full security settles on L1." },
       { question: "How does the multi-proof system work?", answer: "Each batch of transactions requires two proofs from different verifier types. The system combines ZK proofs (SP1, RISC0) with TEE attestation (SGX). SGX (Geth) is mandatory for every batch. This ensures no single proof system failure can compromise the network." },
-      { question: "Which wallets work with Taiko?", answer: "Any Ethereum-compatible wallet works with Taiko Alethia. MetaMask, Rainbow, Coinbase Wallet, Rabby and others. Add the RPC endpoint (https://rpc.mainnet.taiko.xyz) and Chain ID (167000)." },
+      { question: "Which wallets work with Taiko?", answer: "Any Ethereum-compatible wallet works with Taiko Blockchain. MetaMask, Rainbow, Coinbase Wallet, Rabby and others. Add the RPC endpoint (https://rpc.mainnet.taiko.xyz) and Chain ID (167000)." },
     ],
   },
   updated: "Last updated: March 2026. This guide is maintained by the Taiko team and updated as the network evolves.",

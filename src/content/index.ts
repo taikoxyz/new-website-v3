@@ -11,7 +11,7 @@ export {
   brandAssetsPageData,
   grantProgramPageData,
   commonLabels,
-  alethiaPageData,
+  taikoBlockchainPageData,
   daoPageData,
 } from "./pages";
 

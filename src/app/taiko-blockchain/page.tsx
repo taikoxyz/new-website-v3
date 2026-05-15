@@ -2,11 +2,11 @@
 
 import { DefaultLayout } from '@/widgets/layouts/default-layout';
 import * as ProductScreens from '@/widgets/product-page-screens';
-import { alethiaPageData } from '@/content/pages/alethia';
-import css from './alethia.module.scss';
+import { taikoBlockchainPageData } from '@/content/pages/taiko-blockchain';
+import css from './taiko-blockchain.module.scss';
 
-export default function AlethiaPage() {
-    const data = alethiaPageData;
+export default function TaikoBlockchainPage() {
+    const data = taikoBlockchainPageData;
 
     return (
         <DefaultLayout>
@@ -15,9 +15,9 @@ export default function AlethiaPage() {
                     title={data.hero_title}
                     text={data.hero_text}
                     logo={data.hero_logo}
-                    background="/img/alethia/hero-bg.webp"
-                    gridLines="/img/alethia/grid-lines.svg"
-                    heroIcon="/img/alethia/hero-icon.svg"
+                    background="/img/taiko-blockchain/hero-bg.webp"
+                    gridLines="/img/taiko-blockchain/grid-lines.svg"
+                    heroIcon="/img/taiko-blockchain/hero-icon.svg"
                 />
                 <ProductScreens.About
                     title={data.about_title}

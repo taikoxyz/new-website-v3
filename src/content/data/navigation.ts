@@ -8,8 +8,8 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "Alethia",
-          href: "/alethia",
+          name: "Taiko Blockchain",
+          href: "/taiko-blockchain",
           icon: "/img/header/about.svg",
         },
         {
@@ -32,7 +32,7 @@ export const headerNavigation: NavItem[] = [
   },
   {
     name: "Ecosystem",
-    img: "/media/menu-alethia.mp4",
+    img: "/media/menu-taiko-blockchain.mp4",
     children: [
       [
         {
@@ -69,8 +69,8 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/docs.svg",
         },
         {
-          name: "Alethia Guide",
-          href: "/guides/what-is-taiko-alethia",
+          name: "Taiko Blockchain Guide",
+          href: "/guides/what-is-taiko-blockchain",
           icon: "/img/header/docs.svg",
         },
         {

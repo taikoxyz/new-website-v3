@@ -7,5 +7,5 @@ export { blogPageData } from "./blog";
 export { brandAssetsPageData } from "./brand-assets";
 export { grantProgramPageData } from "./grant-program";
 export { commonLabels } from "./common";
-export { alethiaPageData } from "./alethia";
+export { taikoBlockchainPageData } from "./taiko-blockchain";
 export { daoPageData } from "./dao";

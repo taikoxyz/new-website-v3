@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-const TITLE = "What is Taiko Alethia?";
+const TITLE = "What is Taiko Blockchain?";
 const DESCRIPTION =
   "An Ethereum-equivalent rollup designed for based sequencing, where AI agents and decentralized applications scale at sub-cent cost.";
-const URL = "https://taiko.xyz/guides/what-is-taiko-alethia";
+const URL = "https://taiko.xyz/guides/what-is-taiko-blockchain";
 const IMAGE = "https://taiko.xyz/img/og-image.png";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     images: [IMAGE],
   },
   alternates: {
-    canonical: "/guides/what-is-taiko-alethia",
+    canonical: "/guides/what-is-taiko-blockchain",
   },
 };
 

@@ -1,8 +1,8 @@
 export const guidesList = [
   {
-    title: "What is Taiko Alethia?",
+    title: "What is Taiko Blockchain?",
     description: "Ethereum-equivalent rollup with based sequencing and sub-cent costs",
-    href: "/guides/what-is-taiko-alethia",
+    href: "/guides/what-is-taiko-blockchain",
   },
   {
     title: "Deploy AI Agents on Taiko",

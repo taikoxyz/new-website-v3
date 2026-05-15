@@ -10,7 +10,7 @@ import { homePageData } from "@/content/pages/home";
 import css from "./explore.module.scss";
 
 export const Explore: React.FC = () => {
-    const [alethia] = homePageData.explore_screens;
+    const [taikoBlockchain] = homePageData.explore_screens;
     const exploreRef = React.useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -36,7 +36,7 @@ export const Explore: React.FC = () => {
         { scope: exploreRef }
     );
 
-    if (!alethia) {
+    if (!taikoBlockchain) {
         return null;
     }
 
@@ -58,18 +58,18 @@ export const Explore: React.FC = () => {
                             />
                         </div>
                     </div>
-                    <div className={css.explore_taiko_alethia}>
+                    <div className={css.explore_taiko_taiko_blockchain}>
                         <p className={css.explore_taiko_text}>
-                            <span>[</span> {alethia.suptitle} <span>]</span>
+                            <span>[</span> {taikoBlockchain.suptitle} <span>]</span>
                         </p>
                     </div>
                 </div>
                 <div className={css.explore_container}>
                     <div className={css.explore_item}>
-                        <h2 className={css.explore_title}>{alethia.title}</h2>
-                        <p className={css.explore_text}>{alethia.text}</p>
+                        <h2 className={css.explore_title}>{taikoBlockchain.title}</h2>
+                        <p className={css.explore_text}>{taikoBlockchain.text}</p>
                         <WrapperButton
-                            {...alethia.link}
+                            {...taikoBlockchain.link}
                             className={css.explore_btn}
                         />
                     </div>
