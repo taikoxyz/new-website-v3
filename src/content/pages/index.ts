@@ -3,7 +3,6 @@ export { solutionsPageData } from "./solutions";
 export { aboutPageData } from "./about";
 export { ecosystemPageData } from "./ecosystem";
 export { eventsPageData } from "./events";
-export { blogPageData } from "./blog";
 export { careersPageData } from "./careers";
 export { brandAssetsPageData } from "./brand-assets";
 export { grantProgramPageData } from "./grant-program";

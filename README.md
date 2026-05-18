@@ -52,7 +52,6 @@ pnpm tsc --noEmit
 src/
 ├── app/                  # Next.js App Router pages
 │   ├── about/            # About page
-│   ├── blog/             # Blog listing + [slug] posts
 │   ├── brand-assets/     # Brand kit
 │   ├── careers/          # Careers listing + [slug] postings
 │   ├── dao/              # DAO / Governance info
@@ -63,7 +62,7 @@ src/
 │   └── taiko-blockchain/ # Taiko product page
 ├── components/           # Reusable UI components
 ├── content/
-│   ├── data/             # Static data (projects, blogs, navigation)
+│   ├── data/             # Static data (projects, navigation)
 │   ├── pages/            # Page-specific content
 │   └── types/            # TypeScript type definitions
 ├── features/             # Feature-level components (e.g. newsletter)

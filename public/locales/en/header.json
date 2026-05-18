@@ -51,8 +51,8 @@
                     "url": "https://status.taiko.xyz/", 
                     "icon": "/img/icons/nav-status.svg" 
                 }, {
-                    "name": "Blog", 
-                    "url": "/blog", 
+                    "name": "Blog",
+                    "url": "https://paragraph.com/@taiko-labs", 
                     "icon": "/img/icons/nav-blog.svg" 
                 }, { 
                     "name": "Grants", 

@@ -7,33 +7,6 @@ export interface BaseFields {
   publishedAt?: string;
 }
 
-export interface BlogPost extends BaseFields {
-  title: string;
-  slug: string;
-  link: string;
-  date: string;
-  timeToRead: string;
-  category: BlogCategory;
-  image: string;
-  content: string;
-}
-
-export interface BlogCategory {
-  id: number;
-  name: string;
-}
-
-export interface BlogNear {
-  prev: BlogShort | null;
-  next: BlogShort | null;
-}
-
-export interface BlogShort {
-  id: number;
-  title: string;
-  slug: string;
-}
-
 export interface Career extends BaseFields {
   title: string;
   slug: string;
@@ -228,10 +201,6 @@ export interface EventsPageData {
   eventName: string;
   location: string;
   month: string;
-}
-
-export interface BlogPageData {
-  date: { title: string; value: string }[];
 }
 
 export interface CareersPageData {
