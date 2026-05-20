@@ -23,7 +23,7 @@ const footerNavigation = [
         links: [
             { name: "Ecosystem", href: "/ecosystem" },
             { name: "Proving Ground", href: "https://provinggroundxyz.substack.com/" },
-            { name: "Blog", href: "https://paragraph.com/@taiko-labs" },
+            { name: "Blog", href: "/blog" },
         ],
     },
     {

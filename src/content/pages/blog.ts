@@ -1,0 +1,11 @@
+import type { BlogPageData } from "@/content/types";
+
+export const blogPageData: BlogPageData = {
+  date: [
+    { title: "All time", value: "all" },
+    { title: "For the last month", value: "a-month" },
+    { title: "For the last 6 month", value: "6-month" },
+    { title: "For the last year", value: "year" },
+    { title: "Select a period", value: "period" },
+  ],
+};

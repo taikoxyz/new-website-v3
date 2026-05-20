@@ -7,6 +7,7 @@ export {
   aboutPageData,
   ecosystemPageData,
   eventsPageData,
+  blogPageData,
   careersPageData,
   brandAssetsPageData,
   grantProgramPageData,
@@ -27,6 +28,7 @@ export {
   getOneLevelLinks,
   events,
   eventLocations,
+  blogCategories,
   projectCategories,
   projects,
   PRIORITY_PROJECT_IDS,
@@ -34,6 +36,10 @@ export {
 
 // Content utility functions (server-side only — uses fs)
 export {
+  getBlogs,
+  getBlog,
+  getBlogNear,
+  getBlogCategories,
   getCareers,
   getCareer,
   getEvents,

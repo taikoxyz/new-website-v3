@@ -19,7 +19,7 @@ export const headerNavigation: NavItem[] = [
         },
         {
           name: "Blog",
-          href: "https://paragraph.com/@taiko-labs",
+          href: "/blog",
           icon: "/img/header/blog.svg",
         },
         {
@@ -131,7 +131,7 @@ export const footerNav: FooterNavGroup[] = [
   {
     title: "About",
     list: [
-      { name: "Blog", url: "https://paragraph.com/@taiko-labs" },
+      { name: "Blog", url: "/blog" },
       { name: "Brand kit", url: "/brand-assets" },
     ],
   },

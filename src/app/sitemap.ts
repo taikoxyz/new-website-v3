@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { getBlogs } from "@/content/utils";
 
 const BASE_URL = "https://taiko.xyz";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
       lastModified: new Date(),
@@ -20,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/taiko-blockchain`,
       lastModified: new Date(),
       changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
       priority: 0.9,
     },
     {
@@ -77,4 +84,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ];
+
+  const blogs = getBlogs();
+  const blogRoutes: MetadataRoute.Sitemap = blogs.map((blog) => ({
+    url: `${BASE_URL}/blog/${blog.slug}`,
+    lastModified: new Date(blog.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }

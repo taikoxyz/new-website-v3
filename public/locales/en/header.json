@@ -52,7 +52,7 @@
                     "icon": "/img/icons/nav-status.svg" 
                 }, {
                     "name": "Blog",
-                    "url": "https://paragraph.com/@taiko-labs", 
+                    "url": "/blog",
                     "icon": "/img/icons/nav-blog.svg" 
                 }, { 
                     "name": "Grants", 

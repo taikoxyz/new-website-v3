@@ -52,6 +52,7 @@ pnpm tsc --noEmit
 src/
 ├── app/                  # Next.js App Router pages
 │   ├── about/            # About page
+│   ├── blog/             # Blog listing + [slug] posts
 │   ├── brand-assets/     # Brand kit
 │   ├── careers/          # Careers listing + [slug] postings
 │   ├── dao/              # DAO / Governance info
