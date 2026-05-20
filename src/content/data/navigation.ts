@@ -184,6 +184,11 @@ export const footerSocials: SocialLink[] = [
     url: "https://twitter.com/taikoxyz",
   },
   {
+    icon: "gsocial:paragraph",
+    name: "paragraph",
+    url: "https://paragraph.com/@taiko-labs",
+  },
+  {
     icon: "gsocial:taiko",
     name: "forum",
     url: "https://community.taiko.xyz/",
