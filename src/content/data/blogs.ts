@@ -1914,7 +1914,7 @@ export const blogPosts: BlogPost[] = [
     date: "2023-06-08",
     timeToRead: "6 min",
     category: { id: 13, name: "Taiko Community Update" },
-    image: "/img/blog/taiko_labs_raises_22_million_in_funding_to_build_an_ethereum_equivalent_type_1_zk_evm_ccb059fde5.png",
+    image: "/img/blog/taiko_raises_22_million_in_funding_to_build_an_ethereum_equivalent_type_1_zk_evm_ccb059fde5.png",
     content: "",
     createdAt: "2023-06-08",
     updatedAt: "2023-06-08",
