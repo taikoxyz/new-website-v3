@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getBlogs } from "@/content/utils";
+import { getBlogs, getCareers } from "@/content/utils";
 
 const BASE_URL = "https://taiko.xyz";
 
@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/careers`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
     },
     {
       url: `${BASE_URL}/dao`,
@@ -93,5 +99,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const careers = getCareers();
+  const careerRoutes: MetadataRoute.Sitemap = careers.map((career) => ({
+    url: `${BASE_URL}/careers/${career.slug}`,
+    lastModified: new Date(career.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...careerRoutes];
 }
