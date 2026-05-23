@@ -29,11 +29,6 @@ export const grantProgramPageData: GrantProgramPageData = {
         title: "Taiko as a priority platform",
         text: "Projects involving dApps must choose Taiko as one of their first platforms, but they can also deploy and integrate on other L1/L2/L3s.",
       },
-      {
-        icon: "/img/grant/mission-icon-4.svg",
-        title: "Investment opportunities",
-        text: "Taiko Labs or its associated entities receive the right to invest up to $250K USD in the project\u2019s subsequent fundraising round, up to one year post-grant acceptance (if applicable).",
-      },
     ],
   },
   community: {

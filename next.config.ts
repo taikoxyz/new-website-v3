@@ -19,6 +19,35 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/alethia",
+        destination: "/taiko-blockchain",
+        permanent: true,
+      },
+      {
+        source: "/guides/what-is-taiko-alethia",
+        destination: "/guides/what-is-taiko-blockchain",
+        permanent: true,
+      },
+      {
+        source: "/guides/what-is-taiko-alethia.md",
+        destination: "/guides/what-is-taiko-blockchain.md",
+        permanent: true,
+      },
+      {
+        source: "/guides/deploy-ai-agent-on-ethereum-l2",
+        destination: "/guides/deploy-ai-agent-on-taiko-network",
+        permanent: true,
+      },
+      {
+        source: "/guides/deploy-ai-agent-on-ethereum-l2.md",
+        destination: "/guides/deploy-ai-agent-on-taiko-network.md",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

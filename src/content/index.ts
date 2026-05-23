@@ -14,7 +14,7 @@ export {
   commonLabels,
   articleLabels,
   positionLabels,
-  alethiaPageData,
+  taikoBlockchainPageData,
   daoPageData,
 } from "./pages";
 

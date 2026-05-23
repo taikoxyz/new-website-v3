@@ -1,8 +1,8 @@
 {
-    "copyright": "© 2024 Taiko Labs",
+    "copyright": "© 2024 Taiko Foundation",
     "joinTaiko": "Join the taiko <b>community</b>",
     "content": {
-        "title": "Taiko Labs",
+        "title": "Taiko Foundation",
         "text": "The most developer-friendly and secure Ethereum scaling solution."
     },
     "subscribe": {
@@ -14,12 +14,9 @@
         {
             "title": "About",
             "list": [
-                { 
-                    "name": "Blog", 
+                {
+                    "name": "Blog",
                     "url": "/blog"
-                }, {
-                    "name": "Careers",
-                    "url": "/careers"
                 }, {
                     "name": "Brand kit",
                     "url": "/brand-assets"

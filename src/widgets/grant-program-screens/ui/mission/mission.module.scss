@@ -13,7 +13,7 @@
 .list {
     margin-top: 32px;
     list-style: none;
-    @include setGrid(4, 20);
+    @include setGrid(3, 20);
 }
 
 .list_item {

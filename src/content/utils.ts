@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import type { BlogPost, BlogShort, BlogNear, Career, Event } from "./types";
+import type { BlogNear, BlogPost, BlogShort, Career, Event } from "./types";
 import { events as allEvents } from "./data/events";
 import { projects as allProjects } from "./data/projects";
 import { projectCategories as allProjectCategories } from "./data/project-categories";

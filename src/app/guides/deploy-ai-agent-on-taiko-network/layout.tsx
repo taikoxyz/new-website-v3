@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-const TITLE = "What is Taiko Alethia?";
+const TITLE = "How to Deploy AI Agents on Taiko";
 const DESCRIPTION =
-  "An Ethereum-equivalent rollup designed for based sequencing, where AI agents and decentralized applications scale at sub-cent cost.";
-const URL = "https://taiko.xyz/guides/what-is-taiko-alethia";
+  "Deploy autonomous AI agents on Taiko, an Ethereum L2 with sub-cent fees, ERC-8004 support and censorship-resistant sequencing.";
+const URL = "https://taiko.xyz/guides/deploy-ai-agent-on-taiko-network";
 const IMAGE = "https://taiko.xyz/img/og-image.png";
 
 export const metadata: Metadata = {
@@ -23,32 +23,53 @@ export const metadata: Metadata = {
     images: [IMAGE],
   },
   alternates: {
-    canonical: "/guides/what-is-taiko-alethia",
+    canonical: "/guides/deploy-ai-agent-on-taiko-network",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  headline: TITLE,
+  "@type": "HowTo",
+  name: TITLE,
   description: DESCRIPTION,
   url: URL,
-  mainEntityOfPage: URL,
   image: IMAGE,
-  author: {
-    "@type": "Organization",
-    name: "Taiko Labs",
-    url: "https://taiko.xyz",
-  },
+  totalTime: "PT30M",
   publisher: {
     "@type": "Organization",
-    name: "Taiko Labs",
+    name: "Taiko Foundation",
     url: "https://taiko.xyz",
     logo: {
       "@type": "ImageObject",
       url: "https://taiko.xyz/img/logo.svg",
     },
   },
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Set Up Your Environment",
+      url: `${URL}#step-1-set-up-your-environment`,
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Register Your Agent (ERC-8004)",
+      url: `${URL}#step-2-register-your-agent-erc-8004`,
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Build Reputation",
+      url: `${URL}#step-3-build-reputation`,
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Execute",
+      url: `${URL}#step-4-execute`,
+    },
+  ],
 };
 
 export default function GuideLayout({

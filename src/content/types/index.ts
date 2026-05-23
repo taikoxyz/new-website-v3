@@ -190,12 +190,6 @@ export interface AboutPageData {
     text: string;
     fact: { title: string; text_1: string; text_2: string };
   };
-  careers: {
-    suptitle: string;
-    title: string;
-    text: string;
-    viewBtn: string;
-  };
 }
 
 export interface EcosystemPageData {
@@ -379,7 +373,7 @@ export interface ImageData {
   alternativeText: string | null;
 }
 
-// Alethia page types
+// Taiko page types
 export interface FeatureItem {
   id: number;
   title: string;
@@ -403,7 +397,7 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface AlethiaPageData {
+export interface TaikoBlockchainPageData {
   id: number;
   hero_title: string;
   hero_text: string;
@@ -441,4 +435,3 @@ export interface DaoPageData {
   faq_text: string;
   faq_data: FaqItem[];
 }
-

@@ -8,5 +8,5 @@ export { careersPageData } from "./careers";
 export { brandAssetsPageData } from "./brand-assets";
 export { grantProgramPageData } from "./grant-program";
 export { commonLabels, articleLabels, positionLabels } from "./common";
-export { alethiaPageData } from "./alethia";
+export { taikoBlockchainPageData } from "./taiko-blockchain";
 export { daoPageData } from "./dao";

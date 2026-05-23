@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { guideTaikoAlethiaData } from "@/content/pages/guide-taiko-alethia";
+import { guideTaikoBlockchainData } from "@/content/pages/guide-taiko-blockchain";
 import css from "../content/content.module.scss";
 
-export const AlethiaContent: React.FC = () => {
-  const d = guideTaikoAlethiaData;
+export const TaikoBlockchainContent: React.FC = () => {
+  const d = guideTaikoBlockchainData;
 
   return (
     <section className={css.content} id="content">
@@ -20,7 +20,7 @@ export const AlethiaContent: React.FC = () => {
           </ul>
         </div>
 
-        {/* What is Taiko Alethia */}
+        {/* Overview */}
         <div className={css.section}>
           <h2 className={css.sectionTitle}>{d.what.title}</h2>
           {d.what.paragraphs.map((p, i) => (

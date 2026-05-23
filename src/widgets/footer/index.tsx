@@ -13,8 +13,8 @@ const footerNavigation = [
             { name: "Docs", href: "https://docs.taiko.xyz/" },
             { name: "Bridge", href: "https://bridge.taiko.xyz/" },
             { name: "Swap", href: "https://swap.taiko.xyz/" },
-            { name: "Alethia Guide", href: "/guides/what-is-taiko-alethia" },
-            { name: "Deploy AI Agents", href: "/guides/deploy-ai-agent-on-ethereum-l2" },
+            { name: "What is Taiko?", href: "/guides/what-is-taiko-blockchain" },
+            { name: "Deploy AI Agents", href: "/guides/deploy-ai-agent-on-taiko-network" },
             { name: "ERC-8004 Standard", href: "/guides/erc-8004-trustless-agent-standard" },
         ],
     },
@@ -37,7 +37,6 @@ const footerNavigation = [
         name: "Company",
         links: [
             { name: "About", href: "/about" },
-            { name: "Careers", href: "/careers" },
             { name: "Grants", href: "/grant-program" },
             { name: "Brand Kit", href: "/brand-assets" },
         ],
@@ -94,7 +93,7 @@ export const Footer: React.FC = () => {
                         </div>
                     </div>
                     <p className={css.footer_copyright}>
-                        &copy; {new Date().getFullYear()} Taiko Labs
+                        &copy; {new Date().getFullYear()} Taiko Foundation
                     </p>
                 </div>
             </div>

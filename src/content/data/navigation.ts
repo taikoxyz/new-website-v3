@@ -8,8 +8,8 @@ export const headerNavigation: NavItem[] = [
     children: [
       [
         {
-          name: "Alethia",
-          href: "/alethia",
+          name: "Taiko",
+          href: "/taiko-blockchain",
           icon: "/img/header/about.svg",
         },
         {
@@ -32,7 +32,7 @@ export const headerNavigation: NavItem[] = [
   },
   {
     name: "Ecosystem",
-    img: "/media/menu-alethia.mp4",
+    img: "/media/menu-taiko-blockchain.mp4",
     children: [
       [
         {
@@ -69,13 +69,13 @@ export const headerNavigation: NavItem[] = [
           icon: "/img/header/docs.svg",
         },
         {
-          name: "Alethia Guide",
-          href: "/guides/what-is-taiko-alethia",
+          name: "What is Taiko?",
+          href: "/guides/what-is-taiko-blockchain",
           icon: "/img/header/docs.svg",
         },
         {
           name: "Deploy AI Agents",
-          href: "/guides/deploy-ai-agent-on-ethereum-l2",
+          href: "/guides/deploy-ai-agent-on-taiko-network",
           icon: "/img/header/docs.svg",
         },
         {
@@ -132,7 +132,6 @@ export const footerNav: FooterNavGroup[] = [
     title: "About",
     list: [
       { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "/careers" },
       { name: "Brand kit", url: "/brand-assets" },
     ],
   },
@@ -158,10 +157,10 @@ export const footerNav: FooterNavGroup[] = [
 
 // Footer content
 export const footerContent = {
-  copyright: "\u00A9 2024 Taiko Labs",
+  copyright: "\u00A9 2024 Taiko Foundation",
   joinTaiko: 'Join the taiko <b>community</b>',
   content: {
-    title: "Taiko Labs",
+    title: "Taiko Foundation",
     text: "The most developer-friendly and secure Ethereum scaling solution.",
   },
   subscribe: {

@@ -10,7 +10,7 @@ export const CardContent: React.FC<Props> = ({ menuContent }) => {
     const dummyAlerts = [
         'Taiko Announcements',
         'Ecosystem News',
-        'Alethia Updates',
+        'Network Updates',
     ];
 
     return (

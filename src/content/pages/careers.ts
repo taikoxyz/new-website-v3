@@ -8,7 +8,7 @@ export const careersPageData: CareersPageData = {
   about: {
     suptitle: "About careers",
     title:
-      'At Taiko Labs, it\u2019s our goal to <span>unlock Ethereum</span> for the masses. We are developing the Taiko ZK-EVM: <a href="https://taiko.mirror.xyz/anPjF35Mrc_xzYgOTbUmfjr_MlhE3L8ZBZIxqmz9GZ8" target="_blank">a Based Contestable/Booster Rollup.</a>',
+      'At the Taiko Foundation, it\u2019s our goal to <span>unlock Ethereum</span> for the masses. We are developing the Taiko ZK-EVM: <a href="https://taiko.mirror.xyz/anPjF35Mrc_xzYgOTbUmfjr_MlhE3L8ZBZIxqmz9GZ8" target="_blank">a Based Contestable/Booster Rollup.</a>',
     text: "Our roles are remote, offer competitive compensation (cash + equity), and an opportunity to help scale Ethereum \u2014 a technology and ecosystem that is changing the world.",
   },
   positions: {

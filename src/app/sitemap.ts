@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getBlogs } from "@/content/utils";
-import { getCareers } from "@/content/utils";
+import { getBlogs, getCareers } from "@/content/utils";
 
 const BASE_URL = "https://taiko.xyz";
 
@@ -19,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/alethia`,
+      url: `${BASE_URL}/taiko-blockchain`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
@@ -67,13 +66,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/guides/what-is-taiko-alethia`,
+      url: `${BASE_URL}/guides/what-is-taiko-blockchain`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/guides/deploy-ai-agent-on-ethereum-l2`,
+      url: `${BASE_URL}/guides/deploy-ai-agent-on-taiko-network`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,

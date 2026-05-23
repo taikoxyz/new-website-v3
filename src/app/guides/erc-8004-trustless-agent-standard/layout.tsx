@@ -37,12 +37,12 @@ const jsonLd = {
   image: IMAGE,
   author: {
     "@type": "Organization",
-    name: "Taiko Labs",
+    name: "Taiko Foundation",
     url: "https://taiko.xyz",
   },
   publisher: {
     "@type": "Organization",
-    name: "Taiko Labs",
+    name: "Taiko Foundation",
     url: "https://taiko.xyz",
     logo: {
       "@type": "ImageObject",

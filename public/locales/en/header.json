@@ -51,8 +51,8 @@
                     "url": "https://status.taiko.xyz/", 
                     "icon": "/img/icons/nav-status.svg" 
                 }, {
-                    "name": "Blog", 
-                    "url": "/blog", 
+                    "name": "Blog",
+                    "url": "/blog",
                     "icon": "/img/icons/nav-blog.svg" 
                 }, { 
                     "name": "Grants", 
@@ -60,25 +60,20 @@
                     "icon": "/img/icons/nav-grants.svg" 
                 }
             ] 
-        }, { 
+        }, {
             "name": "Contribute",
             "links": [
-                { 
-                    "name": "About Us", 
-                    "url": "/about", 
-                    "icon": "/img/icons/nav-about.svg" 
+                {
+                    "name": "About Us",
+                    "url": "/about",
+                    "icon": "/img/icons/nav-about.svg"
                 },
-                { 
-                    "name": "Brand Kit", 
-                    "url": "/brand-assets", 
-                    "icon": "/img/icons/nav-brandkit.svg" 
-                },
-                { 
-                    "name": "Careers", 
-                    "url": "/careers", 
-                    "icon": "/img/icons/nav-careers.svg" 
+                {
+                    "name": "Brand Kit",
+                    "url": "/brand-assets",
+                    "icon": "/img/icons/nav-brandkit.svg"
                 }
-            ] 
+            ]
         }, { 
             "name": "Engage",
             "links": [
