@@ -176,7 +176,7 @@ export const footerSocials: SocialLink[] = [
   {
     icon: "gsocial:discord",
     name: "discord",
-    url: "https://discord.com/invite/taikoxyz",
+    url: "https://discord.com/invite/taiko-984015101017346058",
   },
   {
     icon: "gsocial:twitter",
@@ -211,7 +211,7 @@ export const headerSocials: SocialLink[] = [
   { icon: "socials:twitter", url: "https://twitter.com/taikoxyz" },
   {
     icon: "socials:discord",
-    url: "https://discord.com/invite/taikoxyz",
+    url: "https://discord.com/invite/taiko-984015101017346058",
   },
 ];
 
