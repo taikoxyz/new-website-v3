@@ -773,6 +773,17 @@ export const projects: Project[] = [
     updatedAt: "2025-01-01T00:00:00.000Z",
   },
   {
+    id: 1302,
+    name: "Envio",
+    link: "https://envio.dev/",
+    description: "Envio is a multi-chain EVM data indexing framework. Its HyperIndex turns smart contract events into a queryable GraphQL API, letting teams building on Taiko Alethia serve real-time and historical on-chain data without building and maintaining their own indexing stack.",
+    icon: "/img/ecosystem/envio.png",
+    type: "Mainnet",
+    categories: ["Infrastructure"],
+    createdAt: "2026-09-18T00:00:00.000Z",
+    updatedAt: "2026-09-18T00:00:00.000Z",
+  },
+  {
     id: 1089,
     name: "Exverse",
     link: "https://exv.io",
