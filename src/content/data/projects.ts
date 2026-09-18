@@ -2412,6 +2412,17 @@ export const projects: Project[] = [
     updatedAt: "2025-01-01T00:00:00.000Z",
   },
   {
+    id: 1305,
+    name: "Uniblock",
+    link: "https://uniblock.dev/",
+    description: "Uniblock is a unified blockchain API platform. One API key reaches 300+ chains and 55+ data providers through JSON-RPC, normalized Unified APIs, provider passthrough, webhooks, and websocket streams. Taiko mainnet (chain ID 167000) is supported, with a smart router that scores upstream providers and fails over automatically.",
+    icon: "/img/ecosystem/uniblock.svg",
+    type: "Mainnet",
+    categories: ["Infrastructure"],
+    createdAt: "2026-09-18T00:00:00.000Z",
+    updatedAt: "2026-09-18T00:00:00.000Z",
+  },
+  {
     id: 1127,
     name: "Upbit",
     link: "https://upbit.com/exchange?code=CRIX.UPBIT.KRW-TAIKO",
