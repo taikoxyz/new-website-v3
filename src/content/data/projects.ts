@@ -2280,6 +2280,17 @@ export const projects: Project[] = [
     updatedAt: "2025-01-01T00:00:00.000Z",
   },
   {
+    id: 1307,
+    name: "SwiftNodes",
+    link: "https://swiftnodes.io/taiko-rpc",
+    description: "SwiftNodes is a multi-chain RPC provider serving Taiko Alethia (chain ID 167000) alongside 75+ other networks under one API key. It offers flat-rate pricing, HTTP and WebSocket on every chain, a free tier with no KYC, and archive access on paid plans.",
+    icon: "/img/ecosystem/swiftnodes.png",
+    type: "Mainnet",
+    categories: ["Infrastructure"],
+    createdAt: "2026-09-18T00:00:00.000Z",
+    updatedAt: "2026-09-18T00:00:00.000Z",
+  },
+  {
     id: 1019,
     name: "Symbiosis",
     link: "https://app.symbiosis.finance/swap",
