@@ -1510,6 +1510,17 @@ export const projects: Project[] = [
     updatedAt: "2025-01-01T00:00:00.000Z",
   },
   {
+    id: 1303,
+    name: "node101",
+    link: "https://node101.io/en/rpc/taiko",
+    description: "node101 provides paid Taiko RPC services and managed dedicated nodes for developers, wallets, exchanges, and infrastructure teams. Capabilities include JSON-RPC over HTTP and WebSocket, a distributed architecture, usage and performance dashboards, incident reports, and 24/7 technical support.",
+    icon: "/img/ecosystem/node101.png",
+    type: "Mainnet",
+    categories: ["Infrastructure"],
+    createdAt: "2026-09-18T00:00:00.000Z",
+    updatedAt: "2026-09-18T00:00:00.000Z",
+  },
+  {
     id: 938,
     name: "Noder",
     link: "https://noder.bot/",
