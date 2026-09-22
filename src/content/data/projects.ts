@@ -69,6 +69,17 @@ export const projects: Project[] = [
     updatedAt: "2025-01-01T00:00:00.000Z",
   },
   {
+    id: 1304,
+    name: "Aperture Wallet",
+    link: "https://aperturex.io/networks/taiko/",
+    description: "Aperture is a free, open-source self-custody wallet for iPhone and iPad. On Taiko Alethia (chain ID 167000) users can hold, send, and receive ETH and supported tokens, review EIP-1559 network fees, sign transactions locally, and inspect state through Taikoscan, all while keeping wallet credentials on-device.",
+    icon: "/img/ecosystem/aperture.png",
+    type: "Mainnet",
+    categories: ["Wallet"],
+    createdAt: "2026-09-18T00:00:00.000Z",
+    updatedAt: "2026-09-18T00:00:00.000Z",
+  },
+  {
     id: 1020,
     name: "API3 DAO",
     link: "https://market.api3.org/taiko",
