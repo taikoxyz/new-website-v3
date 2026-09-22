@@ -1675,6 +1675,17 @@ export const projects: Project[] = [
     updatedAt: "2025-01-01T00:00:00.000Z",
   },
   {
+    id: 1308,
+    name: "OpenChainBench",
+    link: "https://openchainbench.com/benchmarks/taiko-rpc",
+    description: "OpenChainBench is an open-source benchmarking platform that measures the round-trip latency of free public RPC endpoints for Taiko every 60 seconds from three probe regions. It classifies each response, audits archive depth, and tracks Taiko's block time alongside other L2s, giving developers continuously updated data for choosing an RPC endpoint.",
+    icon: "/img/ecosystem/openchainbench.png",
+    type: "Mainnet",
+    categories: ["Tooling"],
+    createdAt: "2026-09-22T00:00:00.000Z",
+    updatedAt: "2026-09-22T00:00:00.000Z",
+  },
+  {
     id: 943,
     name: "Orally",
     link: "https://orally.network",
