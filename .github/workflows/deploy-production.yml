@@ -8,6 +8,8 @@ on:
   push:
     branches:
       - main
+  # Redeploy main from the Actions tab instead of running `vercel deploy --prod` locally.
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,6 +17,8 @@ concurrency:
 
 jobs:
   deploy-production:
+    # Production is only ever built from main, including manual runs.
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
 
     steps:
